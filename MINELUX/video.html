@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <tilte></tilte>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/video.css">
+        <script src="js/script.js"></script>
+</head>
+    <body id="edit-profile">
+        <header>
+            
+                <div class="top-nav">
+                <div class="container clearfix">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#top recherche">Top Recherché</a></li>
+                        <li><a href="#top favorites">Top Favorites</a></li>
+                        <li><a href="#nouvelles">Nouvelles</a></li>
+                    </ul>
+
+                    <div class="pull-left"></div>
+                    <div class="pull-right">
+                        <a class="btn btn-primary" href="login.html">S'identifier</a>
+                        <a class="btn btn-tertiary" href="signup.html">S'inscrire</a>
+                        <a class="btn btn-secondary" href="contact.html">Nous Contater</a>
+                    </div>
+            
+                </div>
+
+                </div>
+                </div>
+                <div class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="logo" href=""><img src="logo/main-logo.png" class="img-responsive" alt="Cameroun Escortes"></a>
+                    </div>
+                    <div id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="/index.html/">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/new/">Nouvelle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/girls/">Filles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/homme/">Hommes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/vip/">VIP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/tours/">Tournées de Ville</a></li>
+                    
+            </div>
+                </div>
+                
+            </div>
+<div class="page-heading">
+            <div class="container">
+            <div class="row">
+                <div class="col-xs-4 back"></div>
+                <a href="/" class="btn btn-black">Retour</a>
+                <div class="col-xs-4">
+                    <h1 class="page-title">video</h1>
+                </div>
+            </div>
+            </div>
+            </div>
+        </header>
+           <main class="container">
+           <style>
+    .dropzone {
+        border: 2px solid #ffffff;
+        background: #3a3a3a;
+        min-height: 218px;
+    }
+
+    .upload-msg {
+        color: #fff;
+        margin: 40px auto;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .upload-msg i {
+        font-size: 58px;
+        margin-bottom: 10px;
+    }
+
+    .dropzone .dz-preview {
+        margin: 15px;
+        width: 90%!important;
+        min-height:20px!important;
+    }
+
+    .dropzone .dz-preview .dz-progress .dz-upload{
+        background: #00cc00;
+    }
+
+    .dropzone .dz-details, .dropzone .dz-image {
+        display:none!important;
+    }
+
+    .upload-msg .btn {
+        margin-top: 14px;
+    }
+
+    .dz-message {
+        margin-top: 39px;
+    }
+
+    .dropzone .dz-preview.dz-image-preview {
+        background: inherit!important;
+    }
+
+
+    /* New Stuff */
+    #player{
+        width: 100%;
+    }
+
+    #edit-profile .box .heading{
+        margin-bottom: 10px;
+    }
+
+    .vstatus{
+        text-align: center;
+        font-size: .9em;
+        padding-bottom:10px;
+    }
+
+    .vstatus p{
+        background: #f3f3f3;
+        padding: 7px 0;
+    }
+
+    .label {
+        background: #ffc137;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 4px 6px;
+        vertical-align: middle;
+        color: #FFFFFF;
+    }
+
+    .label-declined {
+        background: #ff3737;
+    }
+
+    .label-accepted {
+        background: #5bb85b;
+    }
+
+
+    .btn-delete {
+        margin: 20px 0;
+    }
+
+    .plyr__control--overlaid {
+        background: #3275df;
+    }
+
+    .plyr--video .plyr__controls .plyr__control:hover{
+        background: #3275df;
+    }
+
+    .plyr__control--overlaid:hover {
+        background: #3275df;
+    }
+
+    .vstatus p{
+        background: #f3f3f3;
+        padding: 7px 0;
+        text-align: center;
+        margin: 2% 0;
+    }
+
+    .errmsg {
+        margin-bottom:10px;
+    }
+</style>
+
+    <div class="row row-17 flex-row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="col-xs-6 col-xs-push-3">
+                <h3 class="heading">?????  Video </h3>
+                <div class="col-md-12 col-sm-12">
+                    <div class="vstatus">
+                                            </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                                            <form action="/panel/photos/video_upload/9024" class="dropzone dz-clickable" id="pictures">
+                            <div class="upload-msg"><i class="fa fa-image"></i><br>Telecharger la video ici<br><a class="btn btn-success">Telecharger</a></div>
+                        <div class="dz-default dz-message"><span></span></div></form>
+                        <br>
+                        <div class="vstatus">
+                            <p class="errmsg none"><span class="label label-declined"></span></p>
+                        </div>
+                                    </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+    const player = new Plyr('#player');
+
+    $('.upload-msg').on('click', function() {
+        $('.dropzone').click();
+    });
+
+    $('.del_video').on('click', function() {
+        if(confirm('Vous êtes sure?')){
+            $.post( "/panel/photos/delete_video/9024/"+ $(this).attr('data-id')).done(function( data ) {
+                if(data.ok) {
+                    location.reload();
+                }
+            });
+        }
+    });
+
+    Dropzone.options.pictures = {
+        paramName: "files",
+        dictDefaultMessage: '',
+        maxFiles: 1,
+        uploadMultiple: false,
+        maxfilesexceeded: function(file) {
+            this.removeAllFiles();
+            this.addFile(file);
+        },
+        success: function (e, response) {
+            $('.errmsg').addClass('none');
+            if ( !response.files )
+            {
+                return;
+            }
+            $.each(response.files, function (index, file) {
+                if(file.error){
+                    $('.errmsg').removeClass('none').find('span').text(file.error);
+                }else{
+                    location.reload();
+                }
+            });
+        }
+    };
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main>
+        <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <svg viewBox="0 0 64 64">
+                        <use xlink:href="#icon-real-photos"></use>
+                        </svg>
+                        <h4 class="line">Photo des Minettes réelles</h4>
+                    </div>
+                    <div class="col-xs-4">
+                        <svg viewBox="0 0 64 64">
+                        <use xlink:href="#icon-discretion-guaranteed"></use>
+                        </svg>
+                        <h4 class="line">Discretion assurée</h4>
+                    </div>
+                    <div>
+                        <div class="col-xs-4">
+                            <svg viewBox="0 0 64 64">
+                            <use xlink:href="#icon-trusted-website"></use>
+                            </svg>
+                            <h4 class="line">Minette girl Cameroun</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

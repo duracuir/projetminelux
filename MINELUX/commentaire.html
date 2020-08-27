@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <tilte></tilte>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/commentaire.css">
+        <script src="js/script.js"></script>
+</head>
+    <body id="edit-profile">
+        <header>
+            
+                <div class="top-nav">
+                <div class="container clearfix">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#top recherche">Top Recherché</a></li>
+                        <li><a href="#top favorites">Top Favorites</a></li>
+                        <li><a href="#nouvelles">Nouvelles</a></li>
+                    </ul>
+
+                    <div class="pull-left"></div>
+                    <div class="pull-right">
+                        <a class="btn btn-primary" href="login.html">S'identifier</a>
+                        <a class="btn btn-tertiary" href="signup.html">S'inscrire</a>
+                        <a class="btn btn-secondary" href="contact.html">Nous Contater</a>
+                    </div>
+            
+                </div>
+
+                </div>
+                </div>
+                <div class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="logo" href=""><img src="logo/main-logo.png" class="img-responsive" alt="Cameroun Escortes"></a>
+                    </div>
+                    <div id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="/index.html/">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/new/">Nouvelle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/girls/">Filles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/homme/">Hommes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/vip/">VIP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/tours/">Tournées de Ville</a></li>
+                    
+            </div>
+                </div>
+                
+            </div>
+<div class="page-heading">
+            <div class="container">
+            <div class="row">
+                <div class="col-xs-4 back"></div>
+                <a href="/" class="btn btn-black">Retour</a>
+                <div class="col-xs-4">
+                    <h1 class="page-title">commentaires</h1>
+                </div>
+            </div>
+            </div>
+            </div>
+        </header>
+          <main class="container">
+
+    <script type="text/javascript" language="javascript">
+    var view_comment_url = '/panel/comments/';
+
+    $(document).ready(function() {
+        myTable = $('#table_1').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "order": [[ 0, "desc" ]],
+            "ajax": {
+                url :"/panel/comments/",
+                type: "post"
+            },
+            "columnDefs": [
+                { "orderable": false, "targets": [ 1,2,3,4,5 ] },
+                { className: "text-center no-sort col1", "targets": 0 },
+                { className: "text-center no-sort col2", "targets": 1 },
+                { className: "text-center no-sort col3", "targets": 2 },
+                { className: "text-center no-sort col4", "targets": 3 },
+                { className: "text-center no-sort col5", "targets": 4 },
+                { className: "text-center no-sort col5", "targets": 5 }
+            ]
+        });
+
+        yadcf.init(myTable,[
+                        { column_number : 2, filter_default_label: "Commentaire", filter_container_id: "filtr_comment", filter_type: "text",  }                                ]);
+        
+        $( document ).tooltip({
+            selector: "[attr-hover]",
+            trigger: "hover focus",
+            html: true,
+            placement: "auto right",
+            template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner" style="opacity:1;z-index:999"></div></div>',
+            title: function(){
+                if($(this).attr('attr-hover')!=""){
+                    var div = $("<div/>").css({
+                        'background-image': 'url(' +$(this).attr('attr-hover') + ')',
+                        'position':'relative',
+                        'width':90,
+                        'height':120
+                    });
+                    if($(this).attr("attr-haspack")=="0"){
+                        div.append($('<div/>').addClass("disabled_overlay"));
+                    }
+                    return div.prop('outerHTML');
+                }
+                return '';
+            }
+        });
+    });
+    </script>
+
+
+<div class="row row-17 flex-row">
+    <div class="col-xs-12">
+        <div class="box table-box">
+                            <p style="display:inline-block;" id="filtr_comment"><div id="yadcf-filter-wrapper--filtr_comment"><div id="yadcf-filter-wrapper--table_1-2" class="yadcf-filter-wrapper"><input type="text" onkeydown="yadcf.preventDefaultForEnter(event);" id="yadcf-filter--table_1-2" class="yadcf-filter " onmousedown="yadcf.stopPropagation(event);" onclick="yadcf.stopPropagation(event);" placeholder="Commentaire" filter_match_mode="contains" onkeyup="yadcf.textKeyUP(event,'-table_1', 2);"><button type="button" id="yadcf-filter--table_1-2-reset" onmousedown="yadcf.stopPropagation(event);" onclick="yadcf.stopPropagation(event);yadcf.textKeyUP(event,'-table_1', '2', 'clear'); return false;" class="yadcf-filter-reset-button">x</button></div></div></p>
+                        <h3 class="heading heading3">Commentaires</h3>
+            <div id="table_1_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="table_1_length"><label>Show <select name="table_1_length" aria-controls="table_1" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="table_1_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="table_1"></label></div><div id="table_1_processing" class="dataTables_processing" style="display: none;">Processing...</div><table id="table_1" class="data-table dataTable table-striped collapsed no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="table_1_info" style="width: 100%;">
+                <thead>
+                <tr role="row"><th style="width: 74px;" class="text-center no-sort col1 sorting_desc" tabindex="0" aria-controls="table_1" rowspan="1" colspan="1" aria-sort="descending" aria-label="ID #: activate to sort column ascending">ID #</th><th style="width: 162px;" class="text-center no-sort col2 sorting_disabled" rowspan="1" colspan="1" aria-label="Nom d'escorte">Nom d'escorte</th><th style="width: 162px;" class="text-center no-sort col3 sorting_disabled" rowspan="1" colspan="1" aria-label="Membre">Membre</th><th class="text-center no-sort col4 sorting_disabled" rowspan="1" colspan="1" aria-label="Commentaire" style="width: 272px;">Commentaire</th><th style="width: 107px;" class="text-center no-sort col5 sorting_disabled" rowspan="1" colspan="1" aria-label="Date">Date</th><th style="width: 107px;" class="text-center no-sort col5 sorting_disabled" rowspan="1" colspan="1" aria-label="Actions">Actions</th></tr>
+                </thead>
+            <tbody><tr class="odd"><td valign="top" colspan="6" class="dataTables_empty">No data available in table</td></tr></tbody></table><div class="dataTables_info" id="table_1_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div><div class="dataTables_paginate paging_simple_numbers" id="table_1_paginate"><a class="paginate_button previous disabled" aria-controls="table_1" data-dt-idx="0" tabindex="0" id="table_1_previous">Previous</a><span></span><a class="paginate_button next disabled" aria-controls="table_1" data-dt-idx="1" tabindex="0" id="table_1_next">Next</a></div></div>
+        </div>
+    </div>
+</div>
+</main>
+
+
+        <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <svg viewBox="0 0 64 64">
+                        <use xlink:href="#icon-real-photos"></use>
+                        </svg>
+                        <h4 class="line">Photo des Minettes réelles</h4>
+                    </div>
+                    <div class="col-xs-4">
+                        <svg viewBox="0 0 64 64">
+                        <use xlink:href="#icon-discretion-guaranteed"></use>
+                        </svg>
+                        <h4 class="line">Discretion assurée</h4>
+                    </div>
+                    <div>
+                        <div class="col-xs-4">
+                            <svg viewBox="0 0 64 64">
+                            <use xlink:href="#icon-trusted-website"></use>
+                            </svg>
+                            <h4 class="line">Minette girl Cameroun</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

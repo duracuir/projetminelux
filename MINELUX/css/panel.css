@@ -1,0 +1,888 @@
+/*GENERAL*/
+body
+{
+    font-family: 'Open sans' , sans-serif;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6, ul, p
+{
+    margin: 0;
+    font-family: inherit;
+    line-height: 1.1;
+    color: inherit;
+
+}
+p
+{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-start: 0px;
+}
+/*Header*/
+.navbar
+{
+    background: #171717;
+    font-size: 12px;
+    float: none;
+    font-size: 14px;
+    padding: 4px 0;
+
+}
+.top-nav
+{
+    background: #000;
+    color: #919191;
+    font-size: 14px;
+    padding: 14px 0;
+}
+.container
+{
+    position: relative;
+    width: 1200px;
+    max-height: none !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-right: auto;
+    padding-left: auto;
+}
+*
+{
+    box-sizing: border-box;
+}
+div
+{
+    display: block;
+}
+.pull-left
+{
+    float: left !important;
+}
+.pull-right
+{
+     float: right !important;
+}
+.top-nav .btn-primary
+{
+    background: #286092;
+}
+.top-nav .btn
+{
+    font-size: 11px;
+    padding: 8px 20px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    line-height: 16px;
+}
+.btn-tertiary
+{
+    background: #3275df;
+    color: #fff;
+}
+.btn-secondary
+{
+    background: #3a3a3a;
+    color: #fff;
+}
+
+.btn
+{
+    box-shadow: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    transition: all 200ms ease;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+}
+.container
+{
+    position: relative;
+    width: 1200px;
+    max-width: none !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.navbar-header
+{
+    float: left;
+}
+.navbar .logo img
+{
+    padding: 20px 0;
+    height: 100px;
+}
+.img-responsive
+{
+    display: block;
+    max-width: 100%;
+}
+img
+{
+    vertical-align: middle;
+    border: 0;
+}
+.navbar-nav> li
+{
+    float: left;
+}
+.nav>li 
+{
+    position: relative;
+    display: block;
+}
+.navbar .nav-item:not(:last-child) .nav-link
+{
+    margin-right: 15px !important;
+}
+.navbar .nav-item.active .nav-link
+{
+    background-color: transparent !important;
+    position: relative;
+}
+.navbar .nav-link
+{
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 400 !important;
+    padding: 0 !important;
+}
+#navbar
+{
+    float: right;
+    position: relative;
+    top: 65px;
+    left: -38px;
+}
+.navbar-default
+{
+    background-color: #2b2b2b;
+    border-color: #2b2b2b;
+    border-radius: 0;
+}
+
+/* escorte au cameroun*/
+.row
+{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-xs-4 
+{
+    width: 33.33333333%;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9,.col-xs-10, .col-xs-11, .col-xs-12
+{
+    padding: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+}
+.page-heading .page-title
+{
+    font-family: 'Montserrat';
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12.5px 0;
+    margin: 0;
+}
+.page-heading .date, .page-heading .views
+{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 0;
+    text-align: right;
+    font-weight: 400;
+}
+.page-heading
+{
+    background: #3275df;
+    position: relative;
+    top: -20px;
+    z-index: 1;
+}
+.page-heading .black 
+{
+    padding: 8px 17.5px;
+    font-size: 11px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+.btn-black
+{
+    background: #000;
+    color: #fff;
+    position: relative;
+    right: 800px;
+   top: 3.5px;
+    border-radius: 0;
+}
+
+/*creer un compte*/
+
+
+script
+{
+    display: none;
+}
+.col-xs-offset-3 
+{
+    margin-left: 25%;
+}
+.col-xs-6 
+{
+    width: 50%;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 
+{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+}
+#sign_up_in #sign-in, #sign_up_in #sign-up 
+{
+    padding: 70px 0;
+    margin-top: 44px;
+    margin-bottom: 52px;
+    background-color: #fff;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 21px 0 rgba(88, 88, 88, 0.1);
+    box-shadow: 0 0 21px 0 rgba(88, 88, 88, 0.1);
+}
+.col-xs-offset-1 
+{
+    margin-left: 8.33333333%;
+}
+.col-xs-10 
+{
+    width: 83.33333333%;
+}
+#sign_up_in #sign-in .title, #sign_up_in #sign-up .title 
+{
+    font-size: 24px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+}
+#sign_up_in #sign-in p.attention, #sign_up_in #sign-up p.attention 
+{
+    margin-bottom: 15px;
+}
+#sign_up_in #sign-in p, #sign_up_in #sign-up p 
+{
+    margin: 0;
+    font-size: 13px;
+}
+#sign_up_in #sign-in .input, #sign_up_in #sign-up .input 
+{
+    position: relative;
+}
+.inscription 
+{
+    margin-bottom: 15px;
+    position: relative;
+    bottom: 25px;
+}
+#sign_up_in #sign-in input:not([type="checkbox"]):not([type="submit"]), #sign_up_in #sign-in .bootstrap-select button, #sign_up_in #sign-up input:not([type="checkbox"]):not([type="submit"]), #sign_up_in #sign-up .bootstrap-select button 
+{
+    display: block;
+    border: 1px solid #acacac;
+    border-radius: 0;
+    color: #696969;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    text-transform: none;
+    height: 46px;
+    padding-left: 15px;
+    position: relative;
+    z-index: 8;
+    background: #fff;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+.custom-checkbox 
+{
+    position: relative;
+    font-size: 13px;
+    color: #505050;
+    line-height: 13px;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+input[type="radio"], input[type="checkbox"] 
+{
+    margin: 4px 0 0;
+    margin-top: 1px 9px;
+    line-height: normal;
+}
+input[type="checkbox"], input[type="radio"] 
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+input, button, select, textarea 
+{
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+input 
+{
+    line-height: normal;
+}
+button, input, optgroup, select, textarea 
+{
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+.custom-checkbox label 
+{
+    padding-left: 2px;
+    position: relative;
+    font-weight: 400;
+    cursor: pointer;
+}
+label 
+{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+label 
+{
+    cursor: default;
+}
+.custom-checkbox 
+{
+    position: relative;
+    font-size: 13px;
+    color: #505050;
+    line-height: 13px;
+    margin-right: 15px;
+    display: inline-block;
+}
+#sign_up_in 
+{
+    color: #696969;
+    font-size: 14px;
+}
+body 
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background: #f7f7f7;
+    text-rendering: geometricPrecision;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+body 
+{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+#sign_up_in #sign-in label a, #sign_up_in #sign-up label a 
+{
+    color: #0090c6;
+}
+a, a:hover, a:focus, a:active:focus, button, button:hover, button:focus, button:active:focus 
+{
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+#sign_up_in #sign-in .btn, #sign_up_in #sign-up .btn {
+    font-size: 14px;
+    padding: 14px 55px;
+    margin-top: 16px;
+    border-radius: 0;
+    }
+
+.radio
+{
+    
+}
+/*FOOTER*/
+
+.footer-top
+{
+    background-color: #3275df;
+    margin-bottom: 10px;
+    padding: 2px 0;
+    text-align: center;
+    vertical-align: middle;
+
+}
+.footer-top svg
+{
+    fill: #fff;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+
+}
+.line
+{
+    position: relative;
+    bottom: 15px;
+}
+footer
+{
+    background: #000;
+    margin-top: 93px;
+    color: #fff;
+    padd.110px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/*GENERAL*/
+body
+{
+    font-family: 'Open sans' , sans-serif;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6, ul, p
+{
+    margin: 0;
+    font-family: inherit;
+    line-height: 1.1;
+    color: inherit;
+
+}
+p
+{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-start: 0px;
+}
+/*Header*/
+.navbar
+{
+    background: #171717;
+    font-size: 12px;
+    float: none;
+    font-size: 14px;
+    padding: 4px 0;
+
+}
+.top-nav
+{
+    background: #000;
+    color: #919191;
+    font-size: 14px;
+    padding: 14px 0;
+}
+.container
+{
+    position: relative;
+    width: 1200px;
+    max-height: none !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-right: auto;
+    padding-left: auto;
+}
+*
+{
+    box-sizing: border-box;
+}
+div
+{
+    display: block;
+}
+.pull-left
+{
+    float: left !important;
+}
+.pull-right
+{
+     float: right !important;
+}
+.top-nav .btn-primary
+{
+    background: #286092;
+}
+.top-nav .btn
+{
+    font-size: 11px;
+    padding: 8px 20px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    line-height: 16px;
+}
+.btn-tertiary
+{
+    background: #3275df;
+    color: #fff;
+}
+.btn-secondary
+{
+    background: #3a3a3a;
+    color: #fff;
+}
+
+.btn
+{
+    box-shadow: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    transition: all 200ms ease;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+}
+.container
+{
+    position: relative;
+    width: 1200px;
+    max-width: none !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.navbar-header
+{
+    float: left;
+}
+.navbar .logo img
+{
+    padding: 20px 0;
+    height: 100px;
+}
+.img-responsive
+{
+    display: block;
+    max-width: 100%;
+}
+img
+{
+    vertical-align: middle;
+    border: 0;
+}
+.navbar-nav> li
+{
+    float: left;
+}
+.nav>li 
+{
+    position: relative;
+    display: block;
+}
+.navbar .nav-item:not(:last-child) .nav-link
+{
+    margin-right: 15px !important;
+}
+.navbar .nav-item.active .nav-link
+{
+    background-color: transparent !important;
+    position: relative;
+}
+.navbar .nav-link
+{
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 400 !important;
+    padding: 0 !important;
+}
+#navbar
+{
+    float: right;
+    position: relative;
+    top: 65px;
+    left: -38px;
+}
+.navbar-default
+{
+    background-color: #2b2b2b;
+    border-color: #2b2b2b;
+    border-radius: 0;
+}
+
+/* escorte au cameroun*/
+.row
+{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-xs-4 
+{
+    width: 33.33333333%;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9,.col-xs-10, .col-xs-11, .col-xs-12
+{
+    padding: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+}
+.page-heading .page-title
+{
+    font-family: 'Montserrat';
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12.5px 0;
+    margin: 0;
+}
+.page-heading .date, .page-heading .views
+{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 0;
+    text-align: right;
+    font-weight: 400;
+}
+.page-heading
+{
+    background: #3275df;
+    position: relative;
+    top: -20px;
+    z-index: 1;
+}
+.page-heading .black 
+{
+    padding: 8px 17.5px;
+    font-size: 11px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+.btn-black
+{
+    background: #000;
+    color: #fff;
+    position: relative;
+    right: 800px;
+   top: 3.5px;
+    border-radius: 0;
+}
+
+/*PANEL*/
+
+#admin .boxes .col-xs-12 {
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-bottom: 40px;
+}
+#admin .info-box {
+    background-color: #fff;
+    position: relative;
+    padding: 15px;
+    -webkit-box-shadow: 0 12px 56px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 12px 56px rgba(0, 0, 0, 0.03);
+}
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+a, a:hover, a:focus, a:active:focus, button, button:hover, button:focus, button:active:focus {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+#admin .info-box .btn {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    float: right;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+}
+.btn-secondary {
+    background: #3a3a3a;
+    color: #fff;
+}
+
+.btn {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    transition: all 200ms ease;
+    letter-spacing: 0.05em;
+    padding: 8px 16px;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+#admin .boxes .col-xs-12 {
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-bottom: 40px;
+}
+
+#admin .refact {
+    margin-bottom: 15px !important;
+    margin-top: -25px !important;
+}
+.col-xs-12 {
+    width: 100%;
+}
+#admin .nobottom {
+    margin-bottom: 0;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+#admin .boxes .col-xs-3 {
+    position: relative;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-bottom: 15px;
+}
+.col-xs-3 {
+    width: 25%;
+}
+#admin .box {
+    background-color: #fff;
+    position: relative;
+    padding: 30px 15px;
+    line-height: 0;
+    text-align: center;
+    -webkit-box-shadow: 0 12px 56px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 12px 56px rgba(0, 0, 0, 0.03);
+    -webkit-transition: -webkit-box-shadow .3s;
+    transition: box-shadow .3s;
+}
+/*FOOTER*/
+
+.footer-top
+{
+    background-color: #3275df;
+    margin-bottom: 10px;
+    padding: 2px 0;
+    text-align: center;
+    vertical-align: middle;
+
+}
+.footer-top svg
+{
+    fill: #fff;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+
+}
+.line
+{
+    position: relative;
+    bottom: 15px;
+}
+footer
+{
+    background: #000;
+    margin-top: 93px;
+    color: #fff;
+    padd.110px;
+    text-transform: uppercase;
+    font-weight: bold;
+}

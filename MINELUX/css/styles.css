@@ -1,0 +1,852 @@
+                           
+                            /*GENERAL*/
+body
+{
+    font-family: 'Open sans' , sans-serif;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, ul, p
+{
+    margin: 0;
+}
+
+p
+{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-start: 0px;
+}
+/*Header*/
+.navbar
+{
+    background: #171717;
+    font-size: 12px;
+    float: none;
+    font-size: 14px;
+    padding: 4px 0;
+
+}
+.top-nav
+{
+    background: #000;
+    color: #919191;
+    font-size: 14px;
+    padding: 14px 0;
+}
+.container
+{
+    position: relative;
+    width: 1200px;
+    max-height: none !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-right: auto;
+    padding-left: auto;
+}
+*
+{
+    box-sizing: border-box;
+}
+div
+{
+    display: block;
+}
+.pull-left
+{
+    float: left !important;
+}
+.pull-right
+{
+     float: right !important;
+}
+.top-nav .btn-primary
+{
+    background: #286092;
+}
+.top-nav .btn
+{
+    font-size: 11px;
+    padding: 8px 20px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    line-height: 16px;
+}
+.btn-tertiary
+{
+    background: #3275df;
+    color: #fff;
+}
+.btn-secondary
+{
+    background: #3a3a3a;
+    color: #fff;
+}
+
+.btn
+{
+    box-shadow: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    transition: all 200ms ease;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+}
+.container
+{
+    position: relative;
+    width: 1200px;
+    max-width: none !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.navbar-header
+{
+    float: left;
+}
+.navbar .logo img
+{
+    padding: 20px 0;
+    height: 100px;
+}
+.img-responsive
+{
+    display: block;
+    max-width: 100%;
+}
+img
+{
+    vertical-align: middle;
+    border: 0;
+}
+.navbar-nav> li
+{
+    float: left;
+}
+.nav>li 
+{
+    position: relative;
+    display: block;
+}
+.navbar .nav-item:not(:last-child) .nav-link
+{
+    margin-right: 15px !important;
+}
+.navbar .nav-item.active .nav-link
+{
+    background-color: transparent !important;
+    position: relative;
+}
+.navbar .nav-link
+{
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 400 !important;
+    padding: 0 !important;
+}
+#navbar
+{
+    float: right;
+    position: relative;
+    top: 65px;
+    left: -38px;
+}
+.navbar-default
+{
+    background-color: #2b2b2b;
+    border-color: #2b2b2b;
+    border-radius: 0;
+}
+
+/* escorte au cameroun*/
+.row
+{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-xs-4 
+{
+    width: 33.33333333%;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9,.col-xs-10, .col-xs-11, .col-xs-12
+{
+    padding: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+}
+.page-heading .page-title
+{
+    font-family: 'Montserrat';
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12.5px 0;
+    margin: 0;
+}
+.page-heading .date, .page-heading .views
+{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 0;
+    text-align: right;
+    font-weight: 400;
+}
+.page-heading
+{
+    background: #3275df;
+    position: relative;
+    top: -20px;
+    z-index: 1;
+}
+/*LISTE DES VILLES */
+
+#home .city-list
+{
+    padding: 26px 0 19px;
+    background: #e8e8e8;
+    position: relative;
+    top: -20px;
+    z-index: 2;
+}
+#home .city-list .city
+{
+    font-size: 13px;
+    color: #171717;
+    margin-bottom: 12px;
+}
+.one-6
+{
+    width: 16.66666666666667%;
+    float: left;
+    display: block;
+    padding: 0 15px;
+}
+.collapse
+{
+    display: none;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) 
+{
+    width: 220px;
+}
+.bootstrap-select.btn-group:not(.input-group-btn), .bootstrap-select.btn-group[class*=col-]
+{
+    float: none;
+    display: inline-block;
+    margin: 0;
+}
+#home .home-search .bootstrap-select button, #home_city_select .bootstrap-select button 
+{
+    font-size: 13px;
+    text-transform: none;
+    padding: 4.5px 8px;
+    padding-right: 22px;
+    color: #505050;
+    border: 1px solid #cacaca;
+    color: #505050;
+    font-weight: 400;
+    font-family: 'open sans' , sans-serif;
+    letter-spacing: -.35px;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option
+{
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+}
+.btn-group>.btn:first-child
+{
+    margin-left: 0;
+}
+.bootstrap-select>.dropdown-toggle
+{
+    width: 100%;
+    z-index: 1;
+}
+.btn-group>.btn, .btn-group-vertical>.btn
+{
+    position: relative;
+    float: left;
+}
+.btn
+{
+    border-radius: 0;
+    box-shadow: none;
+    outline: 0;
+    transition: all 200ms ease
+    display: inline-block;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+}
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+.btn .caret
+{
+    margin-left: 0;
+}
+.caret
+{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.bootstrap-select.btn-group .dropdown-menu
+{
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.dropdown-menu 
+{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+}
+.bootstrap-select.btn-group .dropdown-menu.inner 
+{
+    position: static;
+    float: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+.bootstrap-select>select 
+{
+    position: absolute !important;
+    bottom: 0;
+    left: 50%;
+    display: block!important;
+    width: .5px!important;
+    height: 100%!important;
+    padding: 0!important;
+    opacity: 0!important;
+    border: none;
+}
+.bs-actionsbox, .bs-donebutton, .bs-searchbox
+{
+    padding: 4px 8px;
+}
+.bs-searchbox .form-control
+{
+    margin-bottom: 0;
+    width: 100%;
+    float: none;
+}
+.form-control
+{
+    display: block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    transition: border-color ease-in-out .15s box-shadow ease-in-out .15s;
+}
+.bootstrap-select>select
+{
+    position: absolute !important;
+    bottom: 0;
+    left: 50%;
+    display: block !important;
+    width: .5px!important;
+    height: 100%!important;
+    padding: 0!important;
+    opacity: 0!important;
+    border: none;
+}
+
+/* Vous etes une minette de lux */
+
+.sidebar
+{
+    width: 20%;
+    float: left;
+    display: block;
+    padding: 0 7px;
+}
+.side
+{
+    position: relative;
+    top: -180px;
+    left: 55px;
+    text-transform: uppercase; 
+}
+.sb-widget:not(:last-child)
+{
+    margin-bottom: 14px;
+}
+.sb-widget-registre
+{
+    text-align: center;
+    padding: 30px 0 40px;
+    border: 1px solid #909090;
+}
+/* la Copine du mois */
+
+.sb-widget-gotm
+{
+    text-transform: uppercase;
+    color: #fff;
+}
+.sb-widget-gotm .title
+{
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    background: #000;
+    padding: 10.5px0;
+    margin: 0;
+}
+.sb-widget-gotm .img
+{
+    position: relative;
+}
+.img-full
+{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.sb-widget-gotm .img .text
+{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    text-align: right;
+    z-index: 2;
+
+}
+.sb-widget-gotm .name
+{
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+.sb-widget-gotm .city
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+/*recherche*/
+.content
+{
+    width: 80%;
+    float: left;
+    display: block;
+    padding: 0 7px;
+}
+#home .home-search .search-toggle
+{
+    border-bottom: 2px solid #3275df;
+    margin-bottom: 12px;
+}
+#home .row-3:not(:last-child)
+{
+    margin-bottom: 12px;
+}
+#home .row-3
+{
+    margin-left: -3px;
+    margin-right: -3px;
+}
+#home .home-search #advanced-search
+{
+    display: none;
+    padding-bottom: 16px;
+}
+#home .home-search a.clear-search
+{
+    height: 32px;
+}
+.clear-search
+{
+    color: #cacaca;
+    font-weight: bold;
+}
+.x-symbol
+{
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+#home .home-search .search-toggle .s-toggle.current
+{
+    background: #3275df;
+    color: #fff;
+    text-transform: none;
+    font-family: 'open Sans', sans-serif;
+    font-size: 16px;
+}
+#home .home-search .search-toggle .s-toggle
+{
+    color: #505050;
+    text-transform: none;
+    font-family: 'open Sans', sans-serif;
+    font-size: 16px;
+}
+/* Choisir les details sur la minette */
+
+.custom-1
+{
+    width: 24%;
+    float: left;
+    display: block;
+    padding: 0 3px;
+}
+.custom-2
+{
+    width: 24%;
+    float: left;
+    display: block;
+    padding: 0 3px;
+}
+.custom-3
+{
+    width: 24%;
+    float: left;
+    display: block;
+    padding: 0 3px;
+}
+#home .home-search .bootstrap-select 
+{
+    width: 100%;
+}
+.bootstrap-select.btn-group:not(.input-group-btn), .bootstrap-select.btn-group[class*=col-] {
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+    }
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+#home .home-search .bootstrap-select button, #home_city_select .bootstrap-select button {
+    font-size: 13px;
+    text-transform: none;
+    padding: 4.5px 8px;
+    padding-right: 22px;
+    border: 1px solid #cacaca;
+    color: #505050;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: -.35px;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+}
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+.btn .caret {
+    margin-left: 0;
+}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.bootstrap-select.btn-group .dropdown-menu {
+    min-width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+}
+.bootstrap-select.btn-group .dropdown-menu li a {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+/*Presentation des Minettes*/
+
+#home .row-sm
+{
+    margin: -7px;
+}
+#home .row-sm> [class*="col-"]
+{
+    padding: 10px;
+}
+.img-full
+{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.col-xs-4
+{
+    width: 33.33%;
+}
+#home .escort .img
+{
+    position: relative;
+    width: 302px;
+    height: 443px;
+    background: #fff;
+}
+#home .escort .img .badges
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+#home .escort .img .badges .top-left
+{
+    position: absolute;
+    top: -3px;
+    left: -3px;
+}
+.ribbon
+{
+    width: 132px;
+    height: 132px;
+}
+#home .escort .img .badges .top-right
+{
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+#home .escort .img .badges .top-right .badge-md
+{
+    display: block;
+    margin: 8px;
+    fill: #000;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+#home .escort .img .badges .bottom-left
+{
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+}
+#home .escort .img .badges .bottom-left .badge-md
+{
+    display: block;
+    margin-top: 8px;
+    fill: #000;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+#home .escort .img .overlay .name
+{
+    font-weight: 700;
+    font-size: 22px;
+}
+.listing_desc 
+{
+    height: 30px;
+    overflow: hidden;
+    color: #fff;
+    padding: 0 10px;
+    font-size: 10px;
+}
+#home .escort .img .overlay .city, #home .escort .img .overlay .name, #home .escort .img .overlay .age  {
+    color: #fff;
+    z-index: 4;
+    position: relative;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+}
+#home .escort .img .overlay .city, #home .escort .img .overlay .name, #home .escort .img .overlay .age
+ {
+    color: #fff;
+    z-index: 4;
+    position: relative;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+}
+#home .escort .img .overlay .git 
+{
+    z-index: 4;
+    position: relative;
+    border: 1px solid #fff;
+    margin-top: 25px;
+    color: #fff;
+}
+#home .escort .img .overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding-top: 145px;
+    cursor: pointer;
+    opacity: 
+    /*-webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;*/
+    transition: all 200ms ease;
+}
+.profile_a
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+}
+a, a:hover, a:focus, a:active:focus, button, button:hover, button:focus, button:active:focus {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+#home .escorts
+{
+    margin-bottom: 30px;
+}
+
+
+/*FOOTER*/
+
+.footer-top
+{
+    background-color: #3275df;
+    margin-bottom: 10px;
+    padding: 2px 0;
+    text-align: center;
+    vertical-align: middle;
+
+}
+.footer-top svg
+{
+    fill: #fff;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+
+}
+.line
+{
+    position: relative;
+    bottom: 15px;
+}
+footer
+{
+    background: #000;
+    margin-top: 93px;
+    color: #fff;
+    padd.110px;
+    text-transform: uppercase;
+    font-weight: bold;
+}

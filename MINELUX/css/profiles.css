@@ -1,0 +1,966 @@
+/*GENERAL*/
+body
+{
+    font-family: 'Open sans' , sans-serif;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6, ul, p
+{
+    margin: 0;
+    font-family: inherit;
+    line-height: 1.1;
+    color: inherit;
+
+}
+p
+{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-start: 0px;
+}
+/*Header*/
+.navbar
+{
+    background: #171717;
+    font-size: 12px;
+    float: none;
+    font-size: 14px;
+    padding: 4px 0;
+
+}
+.top-nav
+{
+    background: #000;
+    color: #919191;
+    font-size: 14px;
+    padding: 14px 0;
+}
+.container
+{
+    position: relative;
+    width: 1200px;
+    max-height: none !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-right: auto;
+    padding-left: auto;
+}
+*
+{
+    box-sizing: border-box;
+}
+div
+{
+    display: block;
+}
+.pull-left
+{
+    float: left !important;
+}
+.pull-right
+{
+     float: right !important;
+}
+.top-nav .btn-primary
+{
+    background: #286092;
+}
+.top-nav .btn
+{
+    font-size: 11px;
+    padding: 8px 20px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    line-height: 16px;
+}
+.btn-tertiary
+{
+    background: #3275df;
+    color: #fff;
+}
+.btn-secondary
+{
+    background: #3a3a3a;
+    color: #fff;
+}
+
+.btn
+{
+    box-shadow: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    transition: all 200ms ease;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+}
+.container
+{
+    position: relative;
+    width: 1200px;
+    max-width: none !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.navbar-header
+{
+    float: left;
+}
+.navbar .logo img
+{
+    padding: 20px 0;
+    height: 100px;
+}
+.img-responsive
+{
+    display: block;
+    max-width: 100%;
+}
+img
+{
+    vertical-align: middle;
+    border: 0;
+}
+.navbar-nav> li
+{
+    float: left;
+}
+.nav>li 
+{
+    position: relative;
+    display: block;
+}
+.navbar .nav-item:not(:last-child) .nav-link
+{
+    margin-right: 15px !important;
+}
+.navbar .nav-item.active .nav-link
+{
+    background-color: transparent !important;
+    position: relative;
+}
+.navbar .nav-link
+{
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 400 !important;
+    padding: 0 !important;
+}
+#navbar
+{
+    float: right;
+    position: relative;
+    top: 65px;
+    left: -38px;
+}
+.navbar-default
+{
+    background-color: #2b2b2b;
+    border-color: #2b2b2b;
+    border-radius: 0;
+}
+
+/* escorte au cameroun*/
+.row
+{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-xs-4 
+{
+    width: 33.33333333%;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9,.col-xs-10, .col-xs-11, .col-xs-12
+{
+    padding: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+}
+.page-heading .page-title
+{
+    font-family: 'Montserrat';
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12.5px 0;
+    margin: 0;
+}
+.page-heading .date, .page-heading .views
+{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 0;
+    text-align: right;
+    font-weight: 400;
+}
+.page-heading
+{
+    background: #3275df;
+    position: relative;
+    top: -20px;
+    z-index: 1;
+}
+.page-heading .black 
+{
+    padding: 8px 17.5px;
+    font-size: 11px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+.btn-black
+{
+    background: #000;
+    color: #fff;
+    position: relative;
+    right: 800px;
+   top: 3.5px;
+    border-radius: 0;
+}
+/*EDITE PROFILES !!! */
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+#edit-profile .steps {
+    list-style: none;
+    overflow: hidden;
+    font-size: 14px;
+    padding: 0;
+    display: inline-block;
+    border: 1px solid #fff;
+    margin-bottom: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+/*#edit-profile .steps li.active {
+    background: #3275df !important;
+    color: #fff !important;
+}*/
+#edit-profile .steps li:nth-child(1) {
+    width: 145.85px;
+    padding-left: 26px;
+}
+
+#edit-profile .steps li {
+    text-decoration: none;
+    position: relative;
+    padding: 10px 0 10px 46px;
+    color: #000;
+    float: left;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fff;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+a, a:hover, a:focus, a:active:focus, button, button:hover, button:focus, button:active:focus {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+#edit-profile .steps li:nth-child(1) {
+    width: 145.85px;
+    padding-left: 26px;
+}
+#edit-profile .steps li:nth-child(2) {
+    width: 162.85px;
+}
+#edit-profile .steps li:nth-child(3) {
+    width: 168px;
+}
+#edit-profile .steps li:nth-child(4) {
+    width: 191px;
+}
+#edit-profile .steps li:nth-child(5) {
+    width: 151px;
+}
+#edit-profile .steps li:nth-child(6) {
+    width: 145.85px;
+}
+#edit-profile .steps li:nth-child(7) {
+    width: 202.85px;
+    padding-right: 25.85px;
+}
+#edit-profile .steps li.active:before {
+    border-left-color: #3275df !important;
+}
+#edit-profile .steps li:before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #e2e2e2;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1;
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#edit-profile .steps li.active:after {
+    border-left-color: #3275df !important;
+}
+#edit-profile .steps li:after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2;
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.row.row-17 {
+    margin: -17px !important;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row.row-17> [class*="col-"] {
+    padding: 17px !important;
+}
+.col-xs-6 {
+    width: 50%;
+}
+.row.row-17 {
+    margin: -17px !important;
+}
+.row.row-17> [class*="col-"] {
+    padding: 17px !important;
+}
+.col-xs-12 {
+    width: 100%;
+}
+#edit-profile .box {
+    background: #fff;
+    padding: 42px 35px;
+}
+#edit-profile .box .heading {
+    background: #3275df;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    padding: 5.5px 20px;
+    text-transform: uppercase;
+    margin-bottom: 33px;
+    text-align: center;
+}
+#edit-profile .box .grp {
+    margin-bottom: 15px !important;
+}
+
+.col-xs-3 {
+    width: 25%;
+}
+.col-xs-5 {
+    width: 41.66666667%;
+}
+.col-xs-1 {
+    width: 8.33333333%;
+}
+.col-xs-3 {
+    width: 25%;
+}
+
+#edit-profile .box label {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    height: 33px;
+    vertical-align: middle;
+    line-height: 33px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#edit-profile .box input:not([type="radio"]):not([type="submit"]):not([type="checkbox"]):not(.yadcf-filter ), #edit-profile .box .bootstrap-select {
+    width: 100% !important;
+}
+#edit-profile .box input:not([type="radio"]):not([type="submit"]):not([type="checkbox"]), #edit-profile .box .bootstrap-select button {
+    height: 33px;
+    padding-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: none;
+    border: 1px solid #cacaca;
+    background: #fff !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #505050;
+}
+#edit-profile .box label {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    height: 33px;
+    vertical-align: middle;
+    line-height: 33px;
+}
+.slogan1{
+    position: relative;
+    right: 390px;
+    top: 30px;
+}
+.slogan2{
+    position: relative;
+    left: 140px;
+    bottom: 32px;
+}
+.slogan1{
+    position: relative;
+    right: 390px;
+    top: 30px;
+}
+#edit-profile .box small {
+    font-size: 12px;
+    color: #000;
+}
+small, .small {
+    font-size: 85%;
+}
+.slogan3{
+    position: relative;
+    left: 140px;
+    bottom: 32px;
+}
+.nation{
+    position: relative;
+    right: 420px;
+    top: 80px;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+/*EPILATION DU MAILLOT*/
+
+#edit-profile .box label {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    height: 33px;
+    vertical-align: middle;
+    line-height: 33px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    fon
+}
+.col-xs-5 {
+    width: 41.66666667%;
+}
+.col-xs-12 {
+    width: 100%;
+}
+.col-xs-3 {
+    width: 25%;
+}
+.col-xs-9 {
+    width: 75%;
+}
+
+
+
+#edit-profile .box input:not([type="radio"]):not([type="submit"]):not([type="checkbox"]):not(.yadcf-filter ), #edit-profile .box .bootstrap-select {
+    width: 100% !important;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 220px;
+}
+.bootstrap-select.btn-group:not(.input-group-btn), .bootstrap-select.btn-group[class*=col-] {
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+}
+#edit-profile .box .bootstrap-select button {
+    height: 33px;
+    padding-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: none;
+    border: 1px solid #cacaca;
+    background: #fff !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #505050;
+}
+.btn-group>.btn:first-child {
+    margin-left: 0;
+}
+.bootstrap-select>.dropdown-toggle {
+    width: 100%;
+    padding-right: 25px;
+    z-index: 1;
+}
+.btn-group>.btn, .btn-group-vertical>.btn {
+    position: relative;
+    float: left;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+}
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+.btn .caret {
+    margin-left: 0;
+}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.bootstrap-select.btn-group .dropdown-menu {
+    min-width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+}
+.bootstrap-select.btn-group .dropdown-menu.inner {
+    position: static;
+    float: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.bootstrap-select.btn-group .dropdown-menu li a {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+.bootstrap-select.btn-group .dropdown-menu li a span.text {
+    display: inline-block;
+}
+.bootstrap-select.btn-group .dropdown-menu li a span.check-mark {
+    display: none;
+}
+.bootstrap-select.btn-group .dropdown-menu li a {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.bootstrap-select.btn-group .dropdown-menu li a span.text {
+    display: inline-block;
+}
+.bootstrap-select.btn-group .dropdown-menu li a span.check-mark {
+    display: none;
+}
+.bootstrap-select>select {
+    position: absolute!important;
+    bottom: 0;
+    left: 50%;
+    display: block!important;
+    width: .5px!important;
+    height: 100%!important;
+    padding: 0!important;
+    opacity: 0!important;
+    border: none;
+}
+option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+
+/* Epilation du maillot*/
+
+#edit-profile .box label {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    height: 33px;
+    vertical-align: middle;
+    line-height: 33px;
+}
+.col-xs-5 {
+    width: 41.66666667%;
+}
+#edit-profile .box input:not([type="radio"]):not([type="submit"]):not([type="checkbox"]), #edit-profile .box .bootstrap-select button {
+    height: 33px;
+    padding-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: none;
+    border: 1px solid #cacaca;
+    background: #fff !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #505050;
+}
+.btn-group>.btn:first-child {
+    margin-left: 0;
+}
+.bootstrap-select>.dropdown-toggle {
+    width: 100%;
+    padding-right: 25px;
+    z-index: 1;
+}
+.btn-group>.btn, .btn-group-vertical>.btn {
+    position: relative;
+    float: left;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+}
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+.btn .caret {
+    margin-left: 0;
+}
+
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.bootstrap-select.btn-group .dropdown-menu {
+    min-width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+}
+.bootstrap-select>select {
+    position: absolute!important;
+    bottom: 0;
+    left: 50%;
+    display: block!important;
+    width: .5px!important;
+    height: 100%!important;
+    padding: 0!important;
+    opacity: 0!important;
+    border: none;
+}
+.col-xs-3 {
+    width: 25%;
+}
+.col-xs-9 {
+    width: 75%;
+}
+#edit-profile .box .radio {
+    margin: 0;
+    display: inline-block;
+    margin-right: 10px;
+}
+.radio, .checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#edit-profile .box .radio input {
+    top: 7px;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-top: 4px \9;
+    margin-left: -20px;
+}
+input[type="radio"], input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+input[type="checkbox"], input[type="radio"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+input {
+    line-height: normal;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+#edit-profile .box label {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    height: 33px;
+    vertical-align: middle;
+    line-height: 33px;
+}
+.radio label, .checkbox label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#edit-profile .box .radio input {
+    top: 7px;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-top: 4px \9;
+    margin-left: -20px;
+}
+input[type="radio"], input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+
+#edit-profile .save {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px 0;
+    margin: 26px auto 50px;
+    width: 283px;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+.btn-primary {
+    background: #3275df;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+.footer-top
+{
+    background-color: #3275df;
+    margin-bottom: 10px;
+    padding: 2px 0;
+    text-align: center;
+    vertical-align: middle;
+
+}
+.footer-top svg
+{
+    fill: #fff;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+
+}
+.line
+{
+    position: relative;
+    bottom: 15px;
+}
+footer
+{
+    background: #000;
+    margin-top: 93px;
+    color: #fff;
+    padd.110px;
+    text-transform: uppercase;
+    font-weight: bold;
+}

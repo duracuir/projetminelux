@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <tilte></tilte>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/photos.css">
+        <script src="js/script.js"></script>
+</head>
+    <body id="edit-profile">
+        <header>
+            
+                <div class="top-nav">
+                <div class="container clearfix">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#top recherche">Top Recherché</a></li>
+                        <li><a href="#top favorites">Top Favorites</a></li>
+                        <li><a href="#nouvelles">Nouvelles</a></li>
+                    </ul>
+
+                    <div class="pull-left"></div>
+                    <div class="pull-right">
+                        <a class="btn btn-primary" href="login.html">S'identifier</a>
+                        <a class="btn btn-tertiary" href="signup.html">S'inscrire</a>
+                        <a class="btn btn-secondary" href="contact.html">Nous Contater</a>
+                    </div>
+            
+                </div>
+
+                </div>
+                </div>
+                <div class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="logo" href=""><img src="logo/main-logo.png" class="img-responsive" alt="Cameroun Escortes"></a>
+                    </div>
+                    <div id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="/index.html/">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/new/">Nouvelle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/girls/">Filles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/homme/">Hommes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/vip/">VIP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/escorts/tours/">Tournées de Ville</a></li>
+                    
+            </div>
+                </div>
+                
+            </div>
+<div class="page-heading">
+            <div class="container">
+            <div class="row">
+                <div class="col-xs-4 back"></div>
+                <a href="/" class="btn btn-black">Retour</a>
+                <div class="col-xs-4">
+                    <h1 class="page-title">organiser les photos</h1>
+                </div>
+            </div>
+            </div>
+            </div>
+        </header>
+           <main class="container">
+            <script>
+                var pendingList = [];
+                var jcrop_api = { };
+                var fload = [];
+                var sload = [];
+            </script>
+            <style>
+                .dropzone {
+                    border: 2px solid #ffffff;
+                    background: #3a3a3a;
+                    min-height: 218px;
+                }
+
+                .upload-msg {
+                    color: #fff;
+                    margin: 40px auto;
+                    text-align: center;
+                    cursor: pointer;
+                }
+
+                .upload-msg i {
+                    font-size: 58px;
+                    margin-bottom: 10px;
+                }
+
+                .dropzone .dz-preview {
+                    margin: 15px;
+                }
+
+                .upload-msg .btn {
+                    margin-top: 14px;
+                }
+
+                .dz-message {
+                    margin-top: 39px;
+                }
+
+                .dropzone .dz-preview.dz-image-preview {
+                    background: inherit!important;
+                }
+            </style>
+            <script type="text/javascript">
+    $(document).ready(function(){
+        $('.cropimg').cropbox({
+            width: 150,
+            height: 205,
+            showControls: 'never',
+            result: { cropX:0, cropY:0, cropW:150, cropH:205 },
+            controls: ''
+        }, function(){
+            var id = $(this.$image).attr('data-id');
+            var pos_x = parseInt($(this.$image).attr('data-pos_x'));
+            var pos_y = parseInt($(this.$image).attr('data-pos_y'));
+            if(typeof fload[id]=='undefined'){
+                this.setCrop({ cropX:pos_x, cropY:pos_y, cropW:150, cropH:205 });
+            }
+            fload[id] = 0;
+            jcrop_api[id] = this;
+        }).on('cropbox', function( event, results, img ) {
+            var id = $(this).attr('data-id');
+            if( typeof fload[id]!='undefined' || typeof sload[id]!='undefined' ) {
+                $.get( '/panel/photos/refresh_photos/9024/'+id+'/'+results.cropX+'/'+results.cropY ).done(function(){
+                    delete sload[id];
+                });
+            }
+        });
+
+        $('body').on('click', '.rotate_dir', function(e) {
+            e.preventDefault();
+            var direction = $(this).attr('data-dir');
+            var image = $(this).closest('.sortable').find('.cropimg');
+            var id = image.attr('data-id');
+            $.get('/panel/photos/rotate_photo/9024/'+id+'/'+direction)
+                .done(function( data ) {
+                    image.attr('src', image.attr('src').split("?")[0]+'?refresh=1&rand='+Math.random());
+                    sload[id] = 1;
+                    jcrop_api[id].updateOptions({
+                        width: 150,
+                        height: 205,
+                        result: { cropX: 0, cropY: 0, cropW: 150, cropH: 205 }
+                    });
+                });
+        });
+
+        $( ".public-photos" ).sortable({
+            handle: ".sortablebtn",
+            cancel: '',
+            stop : function(event, ui) {
+                var aa = { };
+                $.each($('.frame img.cropimg'), function(index, event) {
+                    var thisId = parseInt($(this).attr('data-id'));
+                    aa[thisId] = parseInt(index, 10)+1;
+                });
+
+                $.ajax({
+                    type: "POST",
+                    url: "/panel/photos/save_order/9024",
+                    data: aa,
+                    async: false
+                });
+            }
+        });
+
+        $('body').on('click', '.set-as-profile', function(e){
+            e.preventDefault();
+            var $this = $(this);
+            if(!$this.attr('disabled')){
+                var status =  $this.closest('.sortable').find('.cropimg').attr('data-approved');
+                if(status!=1){
+                    alert("You can't set as main a photo in pending!");
+                }else{
+                    $.get( '/panel/photos/set_main/9024/'+$this.attr('data-id') )
+                        .done(function( data ) {
+                            $this.closest('.public-photos').find('.set-as-profile').attr('disabled', false);
+                            $this.closest('.public-photos').find('.badge-profile-photo').remove();
+                            $this.closest('.img').find('.frame').prepend('<h4 class="badge-profile-photo">Main</h4>');
+                            $this.attr('disabled', true);
+                        });
+                }
+            }
+        });
+
+        $('body').on('click', '.delete_pic', function(e){
+            e.preventDefault();
+            var $this = $(this);
+            if(!$this.attr('disabled')){
+                if(confirm('Vous êtes sure?')){
+                    $.get( '/panel/photos/delete/9024/'+$this.attr('data-id') )
+                        .done(function( data ) {
+                            var imgdiv = $this.closest('.sortable');
+                            var is_main = imgdiv.find('.badge-profile-photo').length;
+                            if(is_main>0){
+                                $this.closest('.public-photos').find('.frame:eq(1)').prepend('<h4 class="badge-profile-photo">Main</h4>');
+                            }
+                            $this.closest('.sortable').unbind().removeData().remove();
+                        });
+                }
+            }
+        });
+    });
+</script>
+                    <div class="row row-17 flex-row">
+    <div class="col-xs-6">
+        <div class="box">
+            <h3 class="heading heading2">RÈGLES DE PHOTO PUBLIC</h3>
+            <p class="photosCtc">Les photos téléchargées doivent être acceptées par l'équipe de support et jusqu'à ce que l'approbation ne soit pas affichée sur le site. Nous suggérons donc de ne pas supprimer toutes les photos jusqu'à ce que les nouvelles soient approuvées. Aussi, nous aimerions nous rappeler:</p>
+<p class="photosCtc"></p><li>Il n'est PAS PERMIS de télécharger des photos HARD ou PORNO;</li><p></p>
+<p class="photosCtc"></p><li>Il n'est PAS PERMIS d'ajouter (tout type de texte) sur les photos;</li><p></p>
+<p class="photosCtc red"></p><li>Attention, nouvelles dimensions minimales pour photos: Portrait 400x600, Paysage 500x375.</li><p></p>
+<p class="photosCtc"></p><li>Si vous téléchargez une photo fausse, votre profil sera défini dans SUSPICIOUS et seule la procédure de vérification à 100% peut être réactivée à nouveau;</li><p></p>
+<p class="photosCtc">Si vous ne respectez pas ces règles, le profil sera bloqué.</p>        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="box">
+            <h3 class="heading">Télécharger Photos</h3>
+                            <div class="alert alert-danger">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    Vous devez avoir au moins 3 photos approuvées pour que  votre profile soit activer!
+                </div>
+                        <div class="col-md-12 col-sm-12">
+                <form action="/panel/photos/upload/9024" class="dropzone dz-clickable" id="pictures">
+                    <div class="upload-msg"><i class="fa fa-image"></i><br> Déposez des photos ici<br><a class="btn btn-success">Telecharger</a></div>
+                <div class="dz-default dz-message"><span></span></div></form>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="box">
+            <h3 class="heading">Photos public de ?????????????????</h3>
+            <div class="row row-5 public-photos ui-sortable">
+                            </div>
+        </div>
+    </div>
+</div>
+
+        <script>
+    $('.upload-msg').on('click', function() {
+        $('.dropzone').click();
+    });
+
+    Dropzone.options.pictures = {
+        paramName: "files",
+        dictDefaultMessage: '',
+        accept: function (file, done) {
+            if (file.type !== "image/jpeg" && file.type !== "image/png") {
+                return done('Invalid file type.');
+            }
+
+            done();
+        },
+        success: function (e, data) {
+            var that = this;
+
+            $.each(data.files, function (index, file) {
+                if (file.url) {
+                    $.get('/panel/photos/render_photo/9024/' + file.photo_id + '/').done(function(data) {
+                            $('.public-photos').append(data);
+                            $('img[data-id="' + file.photo_id + '"]').cropbox({
+                                width: 150,
+                                height: 205,
+                                showControls: 'never',
+                                result: {cropX: 0, cropY: 0, cropW: 150, cropH: 205},
+                                controls: ''
+                            }, function () {
+                                var id = $(this.$image).attr('data-id');
+                                var pos_x = parseInt($(this.$image).attr('data-pos_x'));
+                                var pos_y = parseInt($(this.$image).attr('data-pos_y'));
+                                if (typeof fload[id] == 'undefined') {
+                                    this.setCrop({cropX: pos_x, cropY: pos_y, cropW: 150, cropH: 205});
+                                }
+                                fload[id] = 0;
+                                jcrop_api[id] = this;
+                            }).on('cropbox', function (event, results, img) {
+                                var id = $(this).attr('data-id');
+                                if (typeof fload[id] != 'undefined' || typeof sload[id] != 'undefined') {
+                                    $.get('/panel/photos/refresh_photos/9024/' + id + '/' + results.cropX + '/' + results.cropY).done(function () {
+                                        delete sload[id];
+                                    });
+                                }
+                            });
+
+                            $('html, body').animate({
+                                scrollTop: $('.img.sortable').last().offset().top
+                            }, 2000);
+                        });
+
+                } else if (file.error) {
+
+                }
+            });
+        }
+    };
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main>
+        <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <svg viewBox="0 0 64 64">
+                        <use xlink:href="#icon-real-photos"></use>
+                        </svg>
+                        <h4 class="line">Photo des Minettes réelles</h4>
+                    </div>
+                    <div class="col-xs-4">
+                        <svg viewBox="0 0 64 64">
+                        <use xlink:href="#icon-discretion-guaranteed"></use>
+                        </svg>
+                        <h4 class="line">Discretion assurée</h4>
+                    </div>
+                    <div>
+                        <div class="col-xs-4">
+                            <svg viewBox="0 0 64 64">
+                            <use xlink:href="#icon-trusted-website"></use>
+                            </svg>
+                            <h4 class="line">Minette girl Cameroun</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
