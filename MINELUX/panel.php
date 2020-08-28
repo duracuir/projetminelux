@@ -13,7 +13,7 @@ if(!isset($_SESSION['username'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<tilte>panel</tilte>
+    <tilte></tilte>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -25,7 +25,7 @@ if(!isset($_SESSION['username'])){
 </head>
     <body id="admin">
         <header>
-        	
+            
                 <div class="top-nav">
                 <div class="container clearfix">
                     <ul class="nav navbar-nav">
@@ -88,7 +88,7 @@ if(!isset($_SESSION['username'])){
             </div>
             </div>
             </div>
-		</header>
+        </header>
             <main class="container boxes">
 
     <script type="text/javascript">
@@ -141,9 +141,9 @@ if(!isset($_SESSION['username'])){
             
             <div class="col-xs-3">
             <div class="box">
-                <a href="/panel/profile/biography/9024/"></a>
+                <a href="biographie.php?username=<?php echo $_SESSION['username']?>">
                 <img src="fond/profile.png" style="margin-bottom:15px;">
-                <h5>Mon profil</h5>
+                <h5>Mon profil</h5></a>
             </div>
         </div>
             <div class="col-xs-3">

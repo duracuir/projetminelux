@@ -1,33 +1,9 @@
-<?php
-require('connexionBD.php');
-//Create new Users
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-  $username = $_POST["username"];
-  $password = $_POST["password"];
-   $phone = $_POST["phone"];
-  $email = $_POST["email"];
- 
-
-  
-  try{
-  $statement = $pdo -> prepare( "INSERT INTO `membres` (username, password, phone, email)
-        VALUES ('$username', '$password', '$phone', '$email')");
-  $statement->execute(['username'=> $username, 'password' => $password, 'phone'=> $phone, 'email'=> $email]);
-     // echo "Insert user: {username}";
-    // $id = $pdo->lastInsertId();
-     // echo "<script>location.href='clients.php?show=one&id={$id}' </script>";
-  } catch (PDOException $e) {
-      echo "<h4 style='color: red;'>".$e->getMessage(). "</h4>";
-  }
-
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
-	<tilte></tilte>
+    <tilte></tilte>
         <meta charset="utf-8"/>
-        <meta name="viwport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -38,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 </head>
     <body id="sign_up_in">
         <header>
-        	
+            
                 <div class="top-nav">
                 <div class="container clearfix">
                     <ul class="nav navbar-nav">
@@ -87,24 +63,81 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             </div>
             </div>
             </div>
-		</header>
+        </header>
         <main class="container">
             <!--<script async="" defer="" src="//www.google.com/recaptcha/api.js"></script>-->
             <!--<script funtion onsubmit(token){ document.getElementById("sign-up").submit();}></script>-->
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-3">
-                    <form action id="sign-up" class="clearfix" method="post" action="" id="form">
+                    <form action id="sign-up" class="clearfix" method="post" action="login2.php" id="form">
                         <div class="col-xs-10 col-xs-offset-1">
                         <h4 class="title">Inscrivez-vous gratuitement</h4><br>
+<?php
+include('connexionBD.php');
+
+if(isset($_POST['forminscription'])) {
+  $username = htmlspecialchars((trim($_POST['username'])));
+  $password = htmlspecialchars((trim($_POST['password'])));
+  $password_confirm = htmlspecialchars((trim($_POST['password_confirm'])));
+  $phone = htmlspecialchars((trim($_POST['phone'])));
+  $email = htmlspecialchars((trim($_POST['email'])));
+  $email_confirm = htmlspecialchars((trim($_POST['email_confirm'])));
+    try {
+  $sql = 'SELECT * FROM membres WHERE username LIKE ' . $pdo->quote($username);
+  $result = $pdo->query($sql);
+  $row = $result -> fetch();
+        $errorInfo = $pdo->errorInfo();
+        if (isset($errorInfo[2])) {
+            $error = $errorInfo[2];
+        }
+    } catch (Exception $e) {
+        $error = $e->getMessage();
+    }
+  if (isset($error)) {
+    echo "<p>$error</p>";
+} elseif (!$row) {
+
+    if($username && $password && $password_confirm) {
+        if(strlen($username)>4){
+            if(strlen($password)>=6){
+                if($password == $password_confirm) {
+                    if ($email == $email_confirm) {
+                       $statement = $pdo -> prepare( "INSERT INTO `membres` (username, password, phone, email)
+                             VALUES ('$username', '$password', '$phone', '$email')");
+                        $statement->execute(['username'=> $username, 'password' => $password, 'phone'=> $phone, 'email'=> $email]);
+                    } else {
+                      echo "<h2 style='color: red;'>Les adresses mails ne correspondent pas</h2>";
+                    }
+                } else {
+                  echo "<h2 style='color: red;'>Les mots de passe ne correspondent pas</h2>";
+                }
+            } else {
+              echo "<h2 style='color: red;'>Le mot de passe est trop court. 6 caracteres minimum</h2>";
+            }
+        } else {
+          echo "<h2 style='color: red;'>Le nom d'utilisateur est trop court! minimum requis 5 caracteres</h2>";
+          
+
+        }
+    } else {
+      echo "<h2 style='color: red;'>Veuillez remplir tous les champs!</h2>";
+    }
+  } else {
+      echo "<h2 style='color: red;'>Ce compte existe deja</h2>";
+} 
+}
+
+?>
+
                         <p class="attention">Veuillez remplir le formulaire suivant et cliquez "S'enregistrer"</p>
-							<div class="INSCRIPTION">
+                            <div class="INSCRIPTION">
                             <input type="hidden" id="user_type" name="user_type" value="2" placeholder="type de compte">
                             <input type="text" id="username" name="username" placeholder="Nom utilisateur" /><br>
                             <input type="password" id="password" name="password" placeholder="Mot de passe"><br>
                             <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirmer le mot de passe"><br>
                             <input type="tel" id="phone" name="phone" min="9" max="12"  placeholder="Numero Telephone"><br>
                             <input type="text" id="email" name="email" placeholder="Courrier*"/><br>
-                            <input type="text" id="email" name="email2"  placeholder="Confirmer*">
+                            <input type="text" id="email" name="email_confirm"  placeholder="Confirmer*">
                         </div><br>
                         <div class="custom-checkbox">
                             <input type="checkbox" id="checkterm" name="terms" value="1">
