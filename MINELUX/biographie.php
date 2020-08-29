@@ -1,45 +1,25 @@
 <?php
 session_start();
-  require('connexionBD.php');
+  // require('connexionBD.php');
+$connection = mysqli_connect("localhost", "root", "");
+$db = mysqli_select_db($connection, 'myminette');
+if(isset($_POST['Save'])) {
+    $name = $_GET["username"];
+ 
+ $query = "UPDATE `membres` SET datenais = '$_POST[datenais]', slogan = '$_POST[slogan]', region = '$_POST[region]', nationality = '$_POST[nationality]', epilation = '$_POST[epilation]', piercing = '$_POST[piercing]', tattoo = '$_POST[tattoo]' WHERE username = '$_GET[username]' ";
+  $query_run = mysqli_query($connection, $query);
+  if($query_run) {
+    echo '<script type="text/javascript"> alert("Vos données ont été enregistrées avec succès") </script>';
+  } else {
+    echo '<script type="text/javascript"> alert("Echecs enregistrement de vos donnees") </script>';
+  }
+}
 
 if(!isset($_SESSION['username'])) {
     header('location:connexion.php');
     exit;
-   
-if (isset($_PUT['submit'])) {
-
-    $name = $_GET['username'];
-    $datenais = $_POST['datenais'];
-    $slogan = $_POST['slogan'];
-    $region = $_POST['region'];
-    $nationality = $_POST['nationality'];
-    $epilation = $_POST['epilation'];
-    $tattoo = $_POST['tattoo'];
-    $piercing = $_POST['piercing'];
-
-    try {
-      $sql = 'UPDATE membres SET datenais = :datenais, slogan = :slogan, region = :region, nationality = :nationality, epilation = :epilation, tattoo = :tattoo, piercing = :piercing WHERE username = :username';
-      $stmt = $pdo->prepare($sql);
-      $stmt->execute(["username" => $name, "datenais" => $datenais, "slogan" => $slogan, "region" => $region, "nationality" => $nationality, "epilation" => $epilation, "tattoo" => $tattoo, "piercing" => $piercing]);;
-      echo "Data updated";
-    } catch (PDOException $e) {
-      echo "<h4 style='color: red;'>".$e->getMessage(). "</h4>";
-    }
-  }
 }
 
-if (isset($_GET["username"])) {
-  $name = $_GET["username"];
-  try {
-    $statement = $pdo->prepare(
-      'SELECT * FROM membres WHERE username = :username;'
-    );
-    $statement->execute(["username" => $username]);
-    $results = $statement->fetchAll(PDO::FETCH_OBJ);
-  } catch (PDOException $e) {
-      echo "<h4 style='color: red;'>".$e->getMessage(). "</h4>";
-  }
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,7 +35,7 @@ if (isset($_GET["username"])) {
         <script src="js/script.js"></script>
 </head>
     <body id="edit-profile">
-       <!--  <header>
+         <header>
             
                 <div class="top-nav">
                 <div class="container clearfix">
@@ -119,12 +99,12 @@ if (isset($_GET["username"])) {
             </div>
             </div>
             </div>
-        </header> -->
+        </header>
            <main class="container">
-        <form id="bio_submit" class="submit_profile" action="biographie.php?username=<?php echo $results[0]->username;?>" method="post">
+        <form id="bio_submit" class="submit_profile" action="biographie.php?username=<?php echo $_GET['username'];?>" method="post">
             <ul class="steps">
                             <li class="active"><a href="/panel/profile/biography/9024/">Step 1:<br> Biographie</a></li>
-                            <li class=""><a href="/panel/profile/about_me/9024/">Step 2:<br>A propos de moi</a></li>
+                            <li class=""><a href="aproposdemoi.php">Step 2:<br>A propos de moi</a></li>
                             <li class=""><a href="/panel/profile/languages/9024/">Step 3:<br>Langues</a></li>
                             <li class=""><a href="/panel/profile/working_cities/9024/">Step 4:<br>Villes de travail</a></li>
                             <li class=""><a href="/panel/profile/services/9024/">Step 5:<br>Service</a></li>
@@ -149,7 +129,7 @@ if (isset($_GET["username"])) {
                             <label for="start">Né(e) le:</label>
                         </div>
                             <div class="col-xs-5 grp">
-                            <input class="zone" id="date" id="start" name="datenais" type="date" value="" min="1999-01-01" max="2080-01-01" placeholder="date de naissance"> 
+                            <input class="zone" id="date" name="datenais" type="date" value="" min="1999-01-01" max="2080-01-01" placeholder="date de naissance"> 
                             </div>
                             <div class="col-xs-3 grp">
                             <label for="slogan">Slogan:</label>
@@ -165,10 +145,10 @@ if (isset($_GET["username"])) {
                                   <div class="select">
                                     <select name="region">
                                       <option>De quelle Region est vous? </option>
-                                      <option value="0">Centre</option>
-                                      <option value="1">Nord</option>
-                                      <option value="2">Ouest</option>
-                                      <option value="3">Sud-Ouest</option>
+                                      <option value="Centre">Centre</option>
+                                      <option value="Nord">Nord</option>
+                                      <option value="Ouest">Ouest</option>
+                                      <option value="Sud-Ouest">Sud-Ouest</option>
                                       <option value="4">Autre a préciser</option>
                                     </select>
                                   </div>
@@ -183,27 +163,17 @@ if (isset($_GET["username"])) {
                             <div class="bloc">
                                   <div class="select">
                                     <select name="nationality">
-                                      <option value="active">Camerounais(e)</option>
-                                      <option value="0">Gabonais(e)</option>
-                                      <option value="1">Tchadien(ne)</option>
-                                      <option value="2">Nigerien(ne)</option>
-                                      <option value="3">Congolais(e)</option>
+                                      <option value="Camerounais(e)">Camerounais(e)</option>
+                                      <option value="Gabonais(e)">Gabonais(e)</option>
+                                      <option value="Tchadien(ne)">Tchadien(ne)</option>
+                                      <option value="Nigerien(ne)">Nigerien(ne)</option>
+                                      <option value="Congolais(e)">Congolais(e)</option>
                                       <option value="4">Autre a préciser</option>
                                     </select>
                                   </div>
                                 </div>
                             </div>
                          </div>
-
-
-
-
-
-
-
-
-
-
                        </div>
                    </div>
                </div>
@@ -218,10 +188,10 @@ if (isset($_GET["username"])) {
                             <div class="bloc">
                                   <div class="select">
                                     <select name="epilation">
-                                      <option value="active">Entierement Naturel</option>
-                                      <option value="0">Entierement rasés</option>
-                                      <option value="1">Pariellement rasée</option>
-                                      <option value="2">Entretenu</option>
+                                      <option value="Entierement Naturel">Entierement Naturel</option>
+                                      <option value="Entierement rasés">Entierement rasés</option>
+                                      <option value="Partiellement rasée">Partiellement rasée</option>
+                                      <option value="Entretenu">Entretenu</option>
                                     </select>
                                   </div>
                                 </div>
@@ -233,16 +203,16 @@ if (isset($_GET["username"])) {
                 </div>
                         <div class="col-xs-9 grp"><div class="radio">
                         <label>
-                        <input type="radio" id="tatoo" name="tattoo" value="1">Oui</label>
+                        <input type="radio" id="tatoo" name="tattoo" value="Oui">Oui</label>
                     </div>
-                    <div class="radio"><label><input type="radio" id="tatoo" name="tattoo" value="2" checked="checked">Non</label>
+                    <div class="radio"><label><input type="radio" id="tatoo" name="tattoo" value="Non" checked="checked">Non</label>
                     </div>
                     </div><div class="col-xs-3 grp"><label for="piercing">Piercings:</label>
                 </div><div class="col-xs-9 grp"><div class="radio">
                         <label>
-                        <input type="radio" id="piercing" name="piercing" value="1">Oui</label>
+                        <input type="radio" id="piercing" name="piercing" value="Oui">Oui</label>
                     </div><div class="radio"><label>
-                    <input type="radio" id="piercing" name="piercing" value="2" checked="checked">Non</label>
+                    <input type="radio" id="piercing" name="piercing" value="Non" checked="checked">Non</label>
                     </div>
                     </div>
 
@@ -257,7 +227,7 @@ if (isset($_GET["username"])) {
         <div class="col-xs-12">
                      <div class="nextandbackBtns">
                      <!--  <a href="javascript:void(0);" onclick="doSave();" name="submit" class="btn btn-primary save">Enregistrer</a> -->
-                     <button name="submit" class="btn btn-primary save">Enregistrer</button>
+                     <button type="Submit" name="Save" class="btn btn-primary save">Enregistrer</button>
                      </div>
                     </div>
             </div>

@@ -69,7 +69,7 @@
             <!--<script funtion onsubmit(token){ document.getElementById("sign-up").submit();}></script>-->
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-3">
-                    <form action id="sign-up" class="clearfix" method="post" action="login2.php" id="form">
+                    <form id="sign-up" class="clearfix" method="post" action="login2.php" id="form">
                         <div class="col-xs-10 col-xs-offset-1">
                         <h4 class="title">Inscrivez-vous gratuitement</h4><br>
 <?php
@@ -105,25 +105,26 @@ if(isset($_POST['forminscription'])) {
                        $statement = $pdo -> prepare( "INSERT INTO `membres` (username, password, phone, email)
                              VALUES ('$username', '$password', '$phone', '$email')");
                         $statement->execute(['username'=> $username, 'password' => $password, 'phone'=> $phone, 'email'=> $email]);
+                        echo "<p style='color: green;'>Votre compte a été créé avec succès, veuillez vous connecter</p>";
                     } else {
-                      echo "<h2 style='color: red;'>Les adresses mails ne correspondent pas</h2>";
+                      echo "<p style='color: red;'>Les adresses mails ne correspondent pas</p>";
                     }
                 } else {
-                  echo "<h2 style='color: red;'>Les mots de passe ne correspondent pas</h2>";
+                  echo "<p style='color: red;'>Les mots de passe ne correspondent pas</p>";
                 }
             } else {
-              echo "<h2 style='color: red;'>Le mot de passe est trop court. 6 caracteres minimum</h2>";
+              echo "<p style='color: red;'>Le mot de passe est trop court. 6 caracteres minimum</p>";
             }
         } else {
-          echo "<h2 style='color: red;'>Le nom d'utilisateur est trop court! minimum requis 5 caracteres</h2>";
+          echo "<p style='color: red;'>Le nom d'utilisateur est trop court! minimum requis 5 caracteres</p>";
           
 
         }
     } else {
-      echo "<h2 style='color: red;'>Veuillez remplir tous les champs!</h2>";
+      echo "<p style='color: red;'>Veuillez remplir tous les champs!</p>";
     }
   } else {
-      echo "<h2 style='color: red;'>Ce compte existe deja</h2>";
+      echo "<p style='color: red;'>Ce compte existe deja</p>";
 } 
 }
 

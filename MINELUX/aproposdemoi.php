@@ -1,8 +1,28 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('location:connexion.php');
+    exit;
+}
+$connection = mysqli_connect("localhost", "root", "");
+$db = mysqli_select_db($connection, 'myminette');
+if (isset($_POST['Save'])) {
+    // $username = $_GET['username'];
+ 
+ $query = "UPDATE `membres` SET apropos = '$_POST[about_fr]', aboutme = '$_POST[about_en]', fumeur = '$_POST[is_smoking]', caractx = '$_POST[characteristics]', alcool = '$_POST[is_drinking]' WHERE username = '$_SESSION[username]' ";
+  $query_run = mysqli_query($connection, $query);
+  if($query_run) {
+    echo '<script type="text/javascript"> alert("Vos données ont été enregistrées avec succès") </script>';
+  } else {
+    echo '<script type="text/javascript"> alert("Echecs enregistrement de vos donnees") </script>';
+  }
+}
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<tilte>panel</tilte>
+	<tilte></tilte>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -25,9 +45,23 @@
 
                     <div class="pull-left"></div>
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="login.html">S'identifier</a>
-                        <a class="btn btn-tertiary" href="signup.html">S'inscrire</a>
-                        <a class="btn btn-secondary" href="contact.html">Nous Contater</a>
+                         <div><p>Bienvenu:
+                        <a class="btn btn-primary" href="login.html">
+                             <?php 
+                       
+                                if(!isset($_SESSION['username'])){
+                                   echo "Vous n'êtes pas connecté!";
+                                }else{
+                                    echo $_SESSION['username'];
+                                
+                                }
+                     ?>
+                        </a>
+
+                                </p>
+                            </div>
+                        <a class="btn btn-secondary" href="contact.html">Nous Contacter</a>
+                        <a class="btn btn-secondary" href="deconnexion.php">Deconnexion</a>
                     </div>
             
                 </div>
@@ -65,7 +99,7 @@
             </div>
 		</header>
            <main class="container">
-        <form action id="bio_submit" class="submit_profile" method="post">
+        <form action="aproposdemoi.php" id="bio_submit" class="submit_profile" method="post">
             <ul class="steps">
                             <li class="active"><a href="/panel/profile/biography/9024/">Step 1:<br> Biographie</a></li>
                             <li class=""><a href="/panel/profile/about_me/9024/">Step 2:<br>A propos de moi</a></li>
@@ -75,12 +109,13 @@
                             <li class=""><a href="/panel/profile/rates/9024/">Step 6:<br>Mon Cadeau</a></li>
                             <li class=""><a href="/panel/profile/contact/9024/">Step 7:<br>Coordonnées</a></li>
             </ul>
+            <!-- <input type="text" id="nom" name="username" value="<?php echo $_SESSION['username'] ?>" placeholder="Nom"> -->
             <div class="row row-17 flex-row">
                 <div class="col-xs-6">
                     <div class="box">
                         <h3 class="heading heading2"><img width="18" src="logo/fr32.png"> A propos de moi <span class="pull-right">Ici que de texte en Francais</span></h3>
                         <div class="mceu">
-                       <textarea id="about_fr" name="about_fr" class="tinymce" rows="5" cols="33" placeholder="Remplissez uniquement les informations nécessaires grâce au formulaire pratique étape par étape. Toutes les informations peuvent être modifiées à tout moment."></textarea>
+                       <textarea id="about_fr" name="about_fr" class="tinymce" rows="5" cols="1000" placeholder="Remplissez uniquement les informations nécessaires grâce au formulaire pratique étape par étape. Toutes les informations peuvent être modifiées à tout moment."></textarea>
                    </div>
                     </div>
                 </div>
@@ -88,7 +123,7 @@
                    <div class="box">
                       <h3 class="heading heading2"><img width="18" src="logo/en32.png"> About me <span class="pull-right">Here only English text</span></h3>
                       <div class="mceu">
-                      <textarea id="about_en" name="about_en" class="tinymce" rows="5" cols="33" placeholder="Fill in only the information you need using the practical step-by-step form. All information can be changed at any time."></textarea>
+                      <textarea id="about_en" name="about_en" class="tinymce" rows="5" cols="1000" placeholder="Fill in only the information you need using the practical step-by-step form. All information can be changed at any time."></textarea>
                       </div>
                   </div>
                    </div>
@@ -101,26 +136,26 @@
                         </div>
                         <div class="col-xs-9 grp">
                             <div class="radio">
-                            <label><input type="radio" id="is_smoking" name="is_smoking" value="1"> Oui</label>
+                            <label><input type="radio" id="is_smoking" name="is_smoking" value="Oui"> Oui</label>
                         </div>
                         <div class="radio">
-                            <label><input type="radio" id="is_smoking" name="is_smoking" value="2" checked="checked">Non</label>
+                            <label><input type="radio" id="is_smoking" name="is_smoking" value="Non" checked="checked">Non</label>
                         </div>
                         <div class="radio">
-                            <label><input type="radio" id="is_smoking" name="is_smoking" value="3">Occasionnel</label>
+                            <label><input type="radio" id="is_smoking" name="is_smoking" value="Occasionnel">Occasionnel</label>
                             </div>
                         </div>
                             <div class="col-xs-3 grp">
                     <label for="drinking">Boit de l'alcool:</label>
                 </div>
                      <div class="col-xs-9 grp"><div class="radio">
-                            <label><input type="radio" id="is_drinking" name="is_drinking" value="1">Oui</label>
+                            <label><input type="radio" id="is_drinking" name="is_drinking" value="Oui">Oui</label>
                         </div>
                         <div class="radio"><label>
-                        <input type="radio" id="is_drinking" name="is_drinking" value="2">Non</label></div>
+                        <input type="radio" id="is_drinking" name="is_drinking" value="Non">Non</label></div>
                         <div class="radio">
                             <label>
-                                <input type="radio" id="is_drinking" name="is_drinking" value="3" checked="checked">Occasionnel</label>
+                                <input type="radio" id="is_drinking" name="is_drinking" value="Occasionnel" checked="checked">Occasionnel</label>
                         </div>
                         </div>   
                         </div>
@@ -136,7 +171,8 @@
                 </div>
                 <div class="col-xs-12">
                      <div class="nextandbackBtns">
-                      <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save">Enregistrer</a>
+                      <!-- <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save">Enregistrer</a> -->
+                      <button type="submit" name="Save" class="btn btn-primary save">Enregistrer</button>
                      </div>
                     </div>
             </div>
