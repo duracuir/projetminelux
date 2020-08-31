@@ -552,47 +552,6 @@ label {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
-.btn-primar
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*FOOTER*/
 
@@ -605,25 +564,42 @@ label {
     vertical-align: middle;
 
 }
-.footer-top svg
-{
-    fill: #fff;
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
 
-}
 .line
 {
     position: relative;
     bottom: 15px;
 }
-footer
-{
+footer {
     background: #000;
     margin-top: 93px;
+    color: #7a7a7a;
+    padding-bottom: 10px;
+}
+.copy
+{
+    text-align: center;
+    font-size: 100;
     color: #fff;
-    padd.110px;
+
+}
+/*icon svg*/
+.footer-top svg {
+    fill: #fff;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+.footer-top h4 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
     text-transform: uppercase;
-    font-weight: bold;
+    vertical-align: text-bottom;
+    display: inline-block;
+    position: relative;
+    top: 3px;
 }

@@ -1,0 +1,836 @@
+/*GENERAL*/
+body
+{
+    font-family: 'Open sans' , sans-serif;
+    font-size: 16px;
+    /*color: #333;*/
+
+}
+
+h1, h2, h3, h4, h5, h6, ul, p
+{
+    margin: 0;
+    font-family: inherit;
+    line-height: 1.1;
+    color: inherit;
+    margin-bottom: 15px;
+
+}
+p
+{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-start: 0px;
+}
+/*Header*/
+.navbar
+{
+    background: #171717;
+    font-size: 12px;
+    float: none;
+    font-size: 14px;
+    padding: 4px 0;
+
+}
+.top-nav
+{
+    background: #000;
+    color: #919191;
+    font-size: 14px;
+    padding: 14px 0;
+}
+.container
+{
+    position: relative;
+    width: 1200px;
+    max-height: none !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-right: auto;
+    padding-left: auto;
+}
+*
+{
+    box-sizing: border-box;
+}
+div
+{
+    display: block;
+}
+.pull-left
+{
+    float: left !important;
+}
+.pull-right
+{
+     float: right !important;
+}
+.top-nav .btn-primary
+{
+    background: #286092;
+}
+.top-nav .btn
+{
+    font-size: 11px;
+    padding: 8px 20px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    line-height: 16px;
+}
+.btn-tertiary
+{
+    background: #3275df;
+    color: #fff;
+}
+.btn-secondary
+{
+    background: #3a3a3a;
+    color: #fff;
+}
+
+.btn
+{
+    box-shadow: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    transition: all 200ms ease;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+}
+.container
+{
+    position: relative;
+    width: 1200px;
+    max-width: none !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.navbar-header
+{
+    float: left;
+}
+.navbar .logo img
+{
+    padding: 20px 0;
+    height: 100px;
+}
+.img-responsive
+{
+    display: block;
+    max-width: 100%;
+}
+img
+{
+    vertical-align: middle;
+    border: 0;
+}
+.navbar-nav> li
+{
+    float: left;
+}
+.nav>li 
+{
+    position: relative;
+    display: block;
+}
+.navbar .nav-item:not(:last-child) .nav-link
+{
+    margin-right: 15px !important;
+}
+.navbar .nav-item.active .nav-link
+{
+    background-color: transparent !important;
+    position: relative;
+}
+.navbar .nav-link
+{
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 400 !important;
+    padding: 0 !important;
+}
+#navbar
+{
+    float: right;
+    position: relative;
+    top: 65px;
+    left: -38px;
+}
+.navbar-default
+{
+    background-color: #2b2b2b;
+    border-color: #2b2b2b;
+    border-radius: 0;
+}
+
+/* escorte au cameroun*/
+.row
+{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-xs-4 
+{
+    width: 33.33333333%;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9,.col-xs-10, .col-xs-11, .col-xs-12
+{
+    padding: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+}
+.page-heading .page-title
+{
+    font-family: 'Montserrat';
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12.5px 0;
+    margin: 0;
+}
+.page-heading .date, .page-heading .views
+{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 0;
+    text-align: right;
+    font-weight: 400;
+}
+.page-heading
+{
+    background: #3275df;
+    position: relative;
+    top: -20px;
+    z-index: 1;
+}
+.page-heading .black 
+{
+    padding: 8px 17.5px;
+    font-size: 11px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+.btn-black
+{
+    background: #000;
+    color: #fff;
+    position: relative;
+    right: 800px;
+   top: 3.5px;
+    border-radius: 0;
+}
+
+/* MESSAGER DE MODIFICATION DE PROFILE*/
+
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+/*PROFILESMINETTE !!! */
+
+#profile
+{
+    background: #ebebeb;
+}
+.container{
+    width: 1200px;
+    max-width: none !important;
+}
+main{
+    padding-top: 20px;
+}
+.breadcrumb {
+    margin: 0;
+    list-style: none;
+    list-style-type: none;
+    display: block;
+    font-size: 14px;
+    padding: 0;
+}
+.breadcrumb-item {
+    display: inline-block;
+}
+.breadcrumb-item.active {
+    color: #000;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 8px;
+    padding-left: 8px;
+    content: ">";
+}
+/*cote gauche*/
+
+.content.full {
+    width: 100%;
+}
+.content {
+    /*width: 80%;*/
+    float: left;
+    display: block;
+    padding: 0 7px;
+}
+#profile .content .row {
+    margin: -10px;
+}
+#profile .content .row> [class*="col-"] {
+    padding: 10px;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+#profile .slogan {
+    font-size: 14px;
+    text-align: center;
+    background: #fff;
+    padding: 8.5px 0;
+    margin-bottom: 4px;
+}
+#profile .slogan strong {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+}
+b, strong {
+    font-weight: bold;
+}
+#profile .pictures:not(:last-child), #profile .buttons:not(:last-child), #profile .available_chat:not(:last-child), #profile .city-tours:not(:last-child), #profile .box:not(:last-child) {
+    margin-bottom: 20px;
+}
+#profile .content .row-sm {
+    margin: -4px;
+}
+#profile .content .row {
+    margin: -10px;
+}
+#profile .row-sm {
+    margin: -4px;
+}
+#profile .content .row-sm> [class*="col-"], #profile .content .row-sm> .one-6, #profile .content .row-sm> .one-7, #profile .content .row-sm> .five-6 {
+    padding: 4px;
+}
+#profile .content .row> [class*="col-"] {
+    padding: 10px;
+}
+#profile .row-sm> [class*="col-"], #profile .row-sm> .one-6, #profile .row-sm> .one-7, #profile .row-sm> .five-6 {
+    padding: 4px;
+}
+.col-xs-12 {
+    width: 100%;
+}
+#profile .profile-picture .img {
+    position: relative;
+}
+a, a:hover, a:focus, a:active:focus, button, button:hover, button:focus, button:active:focus {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+#profile .content .row-sm> [class*="col-"], #profile .content .row-sm> .one-6, #profile .content .row-sm> .one-7, #profile .content .row-sm> .five-6 {
+    padding: 4px;
+}
+#profile .content .row-sm> [class*="col-"], #profile .content .row-sm> .one-6, #profile .content .row-sm> .one-7, #profile .content .row-sm> .five-6 {
+    padding: 4px;
+}
+.img-full {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #fff;
+}
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+#profile .profile-picture .img .badges {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+#profile .profile-picture .img .badges .top-left {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+}
+#profile .profile-picture .img .badges .top-right {
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+/* Pour afficher le logo VIP*/
+
+/*#profile .profile-picture .img .badges .top-right .badge-md {
+    display: block;
+    margin-top: 8px;
+    fill: #000;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}*/
+
+/* Boutton pour signaler une annonce*/
+
+#profile .content .row-sm {
+    margin: -4px;
+}
+#profile .content .row-sm> [class*="col-"]{
+    padding: 4px;
+}
+#profile .buttons .btn {
+    font-size: 12px;
+}
+.btn-black {
+    background: #000;
+    color: #fff;
+}
+.btn {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    transition: all 200ms ease;
+    letter-spacing: 0.05em;
+    padding: 8px 16px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+/*INFORMATION DETAILLES SUR LA MINETTE*/
+
+#profile .content .row> [class*="col-"] {
+    padding: 10px;
+}
+.col-xs-8 {
+    width: 66.66666667%;
+}
+#profile .box:not(:last-child) {
+    margin-bottom: 20px;
+}
+#profile .city-tours, #profile .info, #profile .box {
+    font-size: 15px;
+    color: #454545;
+}
+#profile .box {
+    padding: 36px 37px;
+    background: #fff;
+}
+#profile .content .row {
+    margin: -10px;
+}
+#profile .info .person {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    line-height: 25px;
+}
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, ul:last-child, p:last-child {
+    margin-bottom: 0;
+}
+#profile .info .person .city {
+    color: #3275df;
+}
+#profile .info .person .age {
+    font-size: 18px;
+    font-weight: 600;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+#profile .info .cta {
+    float: right;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+}
+.btn-primary {
+    background: #3275df;
+    color: #fff;
+}
+.col-xs-12 {
+    width: 100%;
+}
+#profile .box-title {
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    background: #3275df;
+    padding: 5.5px 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.col-xs-6 {
+    width: 50%;
+}
+#profile .info .list {
+    padding: 0 20px;
+}
+#profile .info .list> .row, #profile .contact-info, #profile .prices> .row, #profile .contact-info> .row {
+    display: -webkit-box;
+    /*display: -ms-flexbox;*/
+    display: flex;
+    -webkit-box-align: start;
+    /*-ms-flex-align: start;*/
+    align-items: flex-start;
+    /*-ms-flex-wrap: wrap;*/
+    flex-wrap: wrap;
+}
+#profile .city-tours .label-ct, #profile .info .label-ct, #profile .box .label-ct {
+    color: #000;
+    font-weight: 600;
+    clear: left;
+}
+
+#profile .city-tours, #profile .info, #profile .box {
+    font-size: 15px;
+    color: #454545;
+}
+ /* BOX A PROPOS DE MOI, MON CADEAU*/
+
+
+ #profile .box:not(:last-child) {
+    margin-bottom: 20px;
+}
+#profile .about {
+    color: #454545;
+    word-break: break-word;
+}
+#profile .city-tours, #profile .info, #profile .box {
+    font-size: 15px;
+    color: #454545;
+}
+#profile .box {
+    padding: 36px 37px;
+    background: #fff;
+}
+#profile .box-title {
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    background: #3275df;
+    padding: 5.5px 20px;
+    text-transform: uppercase;
+}
+#profile .contact-info, #profile .prices {
+    min-height: 392px;
+}
+.col-xs-5 {
+    width: 41.66666667%;
+}
+/* COORDONNEES */
+
+#profile .info .list> .row, #profile .contact-info, #profile .prices> .row, #profile .contact-info> .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.phone_btn_small {
+    height: 17px;
+    line-height: 14px;
+    padding: 0 5px;
+}
+.phone_btn {
+    display: inline-block;
+    background: red;
+    /*height: 20px;
+    line-height: 20px;
+    padding: 0 20px;*/
+    text-align: center;
+    color: #fff;
+   -webkit-box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+a, a:hover, a:focus, a:active:focus, button, button:hover, button:focus, button:active:focus {
+   /*color: inherit;*/
+    text-decoration: none;
+    outline: none;
+}
+.phone_btn_small a {
+    font-size: 12px;
+}
+
+
+/* SERVICES OFFERTES*/
+
+
+#profile .box-title.half
+{
+    width: 50%;
+}
+#profile .service-offered ul {
+    padding-left: 30px !important;
+    
+}
+#profile .box-title.half {
+    width: 50%;
+}
+#profile .box-title {
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    background: #3275df;
+    padding: 5.5px 20px;
+    text-transform: uppercase;
+}
+#profile .content .row{
+    margin: -10px;
+}
+#profile .content .row> [class*="col-"] {
+    padding: 10px;
+}
+#profile .service-offered ul {
+    padding-left: 30px !important;
+    list-style-image: url(../fond/checkmark-blue.png);
+}
+
+.col-xs-4 {
+    width: 33.33333333%;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, ul:last-child, p:last-child {
+    margin-bottom: 0;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+
+/* BOX COMMENTAIRES */
+
+#profile .comments .comments-title {
+    font-size: 22px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0;
+    padding: 8px 0;
+    margin-bottom: 40px;
+}
+#profile .comments .comm-num {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 7px;
+    background: #3275df;
+}
+ 
+ /* NUMERO FAVORIT*/
+
+#profile .fixed-ph-no {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 10;
+}
+.col-xs-6{
+    width: 50%;
+}
+#profile .fixed-ph-no .phone {
+    font-size: 15px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    padding: 5.5px 0;
+    
+
+}
+.phone_btn {
+    display: inline-block;
+    background: red;
+
+
+    height: 20px;
+    line-height: 20px;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    -webkit-box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+.phone_btn a {
+    color: #fff;
+     
+}
+#profile .fixed-ph-no .right {
+    text-align: right;
+    vertical-align: middle;
+    padding: 7px 0;
+}
+#profile .fixed-ph-no .favorite {
+    font-size: 11px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+#profile .fixed-ph-no .favorite svg {
+    height: 26px;
+    stroke: #fff;
+    stroke-width: 3px;
+    vertical-align: middle;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+.footer-top
+{
+    background-color: #3275df;
+    margin-bottom: 10px;
+    padding: 2px 0;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.line
+{
+    position: relative;
+    bottom: 15px;
+}
+footer {
+    background: #000;
+    margin-top: 93px;
+    color: #7a7a7a;
+    padding-bottom: 10px;
+}
+.copy
+{
+    text-align: center;
+    font-size: 100;
+    color: #fff;
+
+}
+/*icon svg*/
+.footer-top svg {
+    fill: #fff;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+.footer-top h4 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    vertical-align: text-bottom;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}

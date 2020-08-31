@@ -1,0 +1,235 @@
+/*GENERAL*/
+body
+{
+    font-family: 'Open sans' , sans-serif;
+    font-size: 16px;
+    background: #333;
+    background: #f7f7f7;
+    min-width: 1200px;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6, ul, p
+{
+    margin: 15px;
+    font-family: inherit;
+    line-height: 1.1;
+    color: inherit;
+
+}
+p
+{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-start: 0px;
+}
+/*STRAT*/
+
+
+.noscroll
+{
+    overflow: hidden !important;
+    height: 100%;
+    max-height: 100%;
+}
+.conditions-cookie
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999999;
+    background-color: #f7f7f7;
+}
+.conditions-cookie .conditions
+{
+    width: 100%;
+    max-width: 1200px !important;
+}
+.container
+{
+    position: relative;
+    padding-right: 15px;
+    padding-left:  15px;
+    padding-right: auto;
+    padding-left: auto;
+}
+.conditions-cookie .conditions-box
+{
+    background-color: #fff;
+    position: relative;
+    padding-right: 80px;
+    font-size: 14px;
+    box-shadow: 0px 0px 21px 0px rgba(88, 88, 88, 0.1);
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.conditions-cookie .conditions-box
+{
+    font-size: 14px;
+}
+.conditions-cookie .conditions-title
+{
+    font-size: 24px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 35px;
+    padding-left: 35px;
+}
+.conditions-cookie .conditions-title
+{
+    position: relative;
+    top: 0;
+}
+.conditions-cookie .conditions-box .frame
+{
+    width: 683px;
+    height: 350px;
+    background: #f7f7f7;
+    position: relative;
+    padding: 40px;
+    overflow: auto;
+}
+.conditions-cookie .conditions-box .frame .slidee
+{
+    margin: 0;
+}
+.conditions-cookie .conditions-box .condition-title
+{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #000;
+    font-size: 14px;
+}
+
+
+.conditions-cookie .conditions-buttons
+{
+    padding: 20px 0 38px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.conditions-cookie .conditions-buttons .link
+{
+    font-size: 16px;
+    text-decoration: underline;
+    color: #000;
+}
+.conditions-cookie .conditions-buttons .btn
+{
+    min-width: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-left: 20px;
+}
+.conditions-cookie .conditions-buttons .link
+{
+    font-size: 16px;
+    text-decoration: underline;
+    columns: #000;
+}
+a{background: transparent;}
+
+.btn-primary
+{
+    background: #3275df;
+    color: #fff;
+}
+
+.btn
+{
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    border-radius: 0;
+    box-shadow: none;
+    outline: 0;
+    border: 0;
+    transition: all 200ms ease;
+    padding: 8px 16px;
+}
+.conditions-cookie .conditions-image
+{
+    position: relative;
+    right: 360px;
+    bottom: 400px;
+    flex-grow: 1;
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat; 
+}
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+.footer-top
+{
+    background-color: #3275df;
+    margin-bottom: 10px;
+    padding: 2px 0;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.line
+{
+    position: relative;
+    bottom: 15px;
+}
+footer {
+    background: #000;
+    margin-top: 93px;
+    color: #7a7a7a;
+    padding-bottom: 10px;
+}
+.copy
+{
+    text-align: center;
+    font-size: 100;
+    color: #fff;
+
+}
+/*icon svg*/
+.footer-top svg {
+    fill: #fff;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+.footer-top h4 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    vertical-align: text-bottom;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
