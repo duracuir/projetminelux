@@ -6,7 +6,7 @@ $db = mysqli_select_db($connection, 'myminette');
 if(isset($_POST['Save'])) {
     $name = $_GET["username"];
  
- $query = "UPDATE `membres` SET datenais = '$_POST[datenais]', slogan = '$_POST[slogan]', region = '$_POST[region]', nationality = '$_POST[nationality]', epilation = '$_POST[epilation]', piercing = '$_POST[piercing]', tattoo = '$_POST[tattoo]' WHERE username = '$_GET[username]' ";
+ $query = "UPDATE `membres` SET datenaiss = '$_POST[datenais]', slogan = '$_POST[slogan]', region = '$_POST[region]', nationality = '$_POST[nationality]', epilation = '$_POST[epilation]', piercing = '$_POST[piercing]', tattoo = '$_POST[tattoo]' WHERE username = '$_GET[username]' ";
   $query_run = mysqli_query($connection, $query);
   if($query_run) {
     echo '<script type="text/javascript"> alert("Vos données ont été enregistrées avec succès") </script>';
@@ -129,7 +129,7 @@ if(!isset($_SESSION['username'])) {
                             <label for="start">Né(e) le:</label>
                         </div>
                             <div class="col-xs-5 grp">
-                            <input class="zone" id="date" name="datenais" type="date" value="" min="1999-01-01" max="2080-01-01" placeholder="date de naissance"> 
+                            <input class="zone" id="date" name="datenais" type="date" value=""  placeholder="date de naissance"> 
                             </div>
                             <div class="col-xs-3 grp">
                             <label for="slogan">Slogan:</label>

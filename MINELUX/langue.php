@@ -67,12 +67,12 @@
            <main class="container">
             <form action id="bio_submit" class="submit_profile" method="post">
                  <ul class="steps">
-                            <li class="active"><a href="/panel/profile/biography/9024/">Step 1:<br> Biographie</a></li>
-                            <li class=""><a href="/panel/profile/about_me/9024/">Step 2:<br>A propos de moi</a></li>
-                            <li class=""><a href="/panel/profile/languages/9024/">Step 3:<br>Langues</a></li>
+                            <li class="active"><a href="biographie.php">Step 1:<br> Biographie</a></li>
+                            <li class=""><a href="aproposedemoi.php/">Step 2:<br>A propos de moi</a></li>
+                            <li class=""><a href="#">Step 3:<br>Langues</a></li>
                             <li class=""><a href="/panel/profile/working_cities/9024/">Step 4:<br>Villes de travail</a></li>
                             <li class=""><a href="/panel/profile/services/9024/">Step 5:<br>Service</a></li>
-                            <li class=""><a href="/panel/profile/rates/9024/">Step 6:<br>Mon Cadeau</a></li>
+                            <li class=""><a href="mon-cadeau.php">Step 6:<br>Mon Cadeau</a></li>
                             <li class=""><a href="/panel/profile/contact/9024/">Step 7:<br>Coordonnées</a></li>
             </ul>
                 <div class="row row-17 flex-row">
@@ -84,22 +84,22 @@
                             <div class="btn dropdown-toggle btn-default">
                                   <div class="select">
                                     <select>
-                                      <option value="0">Francais </option>
-                                      <option value="1">Anglais  </option>
+                                      <option value="Francais">Francais </option>
+                                      <option value="Anglais">Anglais  </option>
                                     </select>
                                   </div>
                                 </div>
                             </div>
                             <div class="col-xs-5 addon grp"><div class="radio">
                                     <label>
-                                <input type="radio" name="languages[2]" value="1">Basique</label>
+                                <input type="radio" name="languages[2]" value="Basique">Basique</label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="languages[2]" value="2">Moyenne</label>
+                                        <input type="radio" name="languages[2]" value="Moyenne">Moyenne</label>
                                 </div>
                                 <div class="radio"><label>
-                                        <input type="radio" name="languages[2]" value="3" checked="checked">Bonne</label>
+                                        <input type="radio" name="languages[2]" value="Bonne" checked="checked">Bonne</label>
                                 </div>
                                 <div class="radio">
                                     <label>
@@ -114,16 +114,10 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
                 <div class="col-xs-12">
                      <div class="nextandbackBtns">
-                      <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save">Enregistrer</a>
+                      <!-- <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save">Enregistrer</a> -->
+                      <button type="submit" name="Save" class="btn btn-primary save">Enregistrer</button>
                      </div>
                     </div>
             </div>
