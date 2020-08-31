@@ -13,7 +13,7 @@ if(!isset($_SESSION['username'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<tilte>panel</tilte>
+	<tilte></tilte>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -167,77 +167,79 @@ if(!isset($_SESSION['username'])){
                         <div class="col-xs-12 refact">
                 <div class="alert alert-danger nobottom">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                                            Vous n'avez pas suffisamment de photos pour activer votre profil. <a href="/panel/photos/index/9024">Cliquez ici</a> to add photos.                                    </div>
+                         Vous n'avez pas suffisamment de photos pour activer votre profil. 
+                         <a href="/panel/photos/index/9024">Cliquez ici to add photos.</a>                               
+                 </div>
             </div>
             
             <div class="col-xs-3">
             <div class="box">
-                <a href="/panel/profile/biography/9024/"></a>
+                <a href="biographie.php">
                 <img src="fond/profile.png" style="margin-bottom:15px;">
-                <h5>Mon profil</h5>
+                <h5>Mon profil</h5></a>
             </div>
         </div>
             <div class="col-xs-3">
             <div class="box">
-                <a href="/panel/photos/index/9024"></a>
+                <a href="/panel/photos/index/9024">
                 <img src="fond/Photo.png" style="margin-bottom:15px;">
-                <h5>Organiser les photos</h5>
+                <h5>Organiser les photos</h5></a>
             </div>
         </div>
             <div class="col-xs-3">
             <div class="box">
-                <a href="/panel/photos/video/9024"></a>
+                <a href="/panel/photos/video/9024">
                 <img src="fond/video.png" style="margin-bottom:15px;">
-                <h5>Video</h5>
+                <h5>Video</h5></a>
             </div>
         </div>
             <div class="col-xs-3">
             <div class="box">
-                <a href="/panel/tours/"></a>
+                <a href="/panel/tours/">
                 <img src="fond/calenda.png" style="margin-bottom:15px;">
-                <h5>Tourné de ville</h5>
+                <h5>Tourné de ville</h5></a>
             </div>
         </div>
             <div class="col-xs-3">
             <div class="box">
-                <a href="/panel/comments/"></a>
+                <a href="/panel/comments/">
                 <img src="fond/msg.png" style="margin-bottom:15px;">
-                <h5>Mes commentaires</h5>
+                <h5>Mes commentaires</h5></a>
             </div>
         </div>
             <div class="col-xs-3">
             <div class="box">
-                <a href="/panel/settings/"></a>
+                <a href="/panel/settings/">
                 <img src="fond/reglages.png" style="margin-bottom:15px;">
-                <h5>Paramètres</h5>
+                <h5>Paramètres</h5></a>
             </div>
         </div>
             <div class="col-xs-3">
             <div class="box">
-                <a href="/panel/support/"></a>
+                <a href="/panel/support/">
                 <img src="fond/support.png" style="margin-bottom:15px;">
-                <h5>Support</h5>
+                <h5>Support</h5></a>
             </div>
         </div>
             <div class="col-xs-3">
             <div class="box">
-                <a href="/panel/statistics/"></a>
+                <a href="/panel/statistics/">
                 <img src="fond/stats.png" style="margin-bottom:15px;">
-                <h5>Vue d'ensemble</h5>
+                <h5>Vue d'ensemble</h5></a>
             </div>
         </div>
             <div class="col-xs-3">
             <div class="box">
-                <a href="/panel/pm/"></a>
+                <a href="/panel/pm/">
                 <img src="fond/msgpv.png" style="margin-bottom:15px;">
-                <h5>Private Messages</h5>
+                <h5>Private Messages</h5></a>
             </div>
         </div>
             <div class="col-xs-3">
             <div class="box">
-                <a href="/auth/logout/"></a>
+                <a href="/auth/logout/">
                 <img src="fond/exit.png" style="margin-bottom:15px;">
-                <h5>Déconnexion</h5>
+                <h5>Déconnexion</h5></a>
             </div>
         </div>
     </div>

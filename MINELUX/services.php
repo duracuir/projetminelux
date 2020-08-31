@@ -275,53 +275,53 @@
                             <label for="services_30">Massage de la prostate</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_32" name="services_offered[]" value="32" class="checkboxx">                                <label for="services_32">Lécher l'anus</label>
+                            <input type="checkbox" id="services_32" name="services_offered[]" value="Lécher l'anus" class="checkboxx">                                <label for="services_32">Lécher l'anus</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_34" name="services_offered[]" value="34" class="checkboxx">                                
+                            <input type="checkbox" id="services_34" name="services_offered[]" value="Striptease/Lapdance" class="checkboxx">                                
                             <label for="services_34">Striptease/Lapdance</label>
                             </div><br>       
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_42" name="services_offered[]" value="42" class="checkboxx">                                
+                            <input type="checkbox" id="services_42" name="services_offered[]" value="Douche dorée" class="checkboxx">                                
                             <label for="services_42">Douche dorée</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_44" name="services_offered[]" value="44" class="checkboxx">                                
+                            <input type="checkbox" id="services_44" name="services_offered[]" value="Maîtresse" class="checkboxx">                                
                             <label for="services_44">Maîtresse</label>
                             </div><br>       
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_49" name="services_offered[]" value="49" class="checkboxx">                                
+                            <input type="checkbox" id="services_49" name="services_offered[]" value="Gode-ceinture" class="checkboxx">                                
                             <label for="services_49">Gode-ceinture</label>
                         </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_50" name="services_offered[]" value="50" class="checkboxx">                                
+                            <input type="checkbox" id="services_50" name="services_offered[]" value="Soumission/esclave (hard)" class="checkboxx">                                
                             <label for="services_50">Soumission/esclave (hard)</label>
                         </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_51" name="services_offered[]" value="51" class="checkboxx">                                
+                            <input type="checkbox" id="services_51" name="services_offered[]" value="Soumission/esclave (soft)" class="checkboxx">                                
                             <label for="services_51">Soumission/esclave (soft)</label>
                         </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_63" name="services_offered[]" value="63" class="checkboxx">                                
+                            <input type="checkbox" id="services_63" name="services_offered[]" value="Caviar (actif)" class="checkboxx">                                
                             <label for="services_63">Caviar (actif)</label>
                         </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_64" name="services_offered[]" value="64" class="checkboxx">                                
+                            <input type="checkbox" id="services_64" name="services_offered[]" value="Caviar (passif)" class="checkboxx">                                
                             <label for="services_64">Caviar (passif)</label>
                         </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_65" name="services_offered[]" value="65" class="checkboxx">                                
+                            <input type="checkbox" id="services_65" name="services_offered[]" value="Ejaculation féminine" class="checkboxx">                                
                             <label for="services_65">Ejaculation féminine</label>
                         </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_58" name="services_offered[]" value="58" class="checkboxx">                                
+                            <input type="checkbox" id="services_58" name="services_offered[]" value="Massage anal (actif)" class="checkboxx">                                
                             <label for="services_58">Massage anal (actif)</label>
                         </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_59" name="services_offered[]" value="59" class="checkboxx">                                <label for="services_59">Massage anal (passif)</label>
+                            <input type="checkbox" id="services_59" name="services_offered[]" value="Massage anal (passif)" class="checkboxx">                                <label for="services_59">Massage anal (passif)</label>
                         </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_60" name="services_offered[]" value="60" class="checkboxx">                                
+                            <input type="checkbox" id="services_60" name="services_offered[]" value="Service douche" class="checkboxx">                                
                             <label for="services_60">Service douche</label>
                             </div><br>
                         </div>
@@ -329,14 +329,6 @@
                 </div>
             </div>
           </div>
-                       
-
-
-
-
-            
-                        
-
                 <div class="col-xs-12">
                      <div class="nextandbackBtns">
                       <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save">Enregistrer</a>
