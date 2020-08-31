@@ -113,7 +113,7 @@
                     <label for="sex_availability_4">Couples</label>
                 </div>    
                         <div class="custom-checkbox">
-                    <input type="checkbox" id="sex_availability_32" name="sex_availability[]" value="32">
+                    <input type="checkbox" id="sex_availability_32" name="sex_availability[]" value="2+">
                     <label for="sex_availability_32">2+</label>
                 </div>
                     </div>
@@ -124,154 +124,154 @@
             <div class="row">
                     <div class="col-xs-4">
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_1" name="services_offered[]" value="1" class="checkboxx">                                
+                            <input type="checkbox" id="services_1" name="services_offered[]" value="69" class="checkboxx">                                
                             <label for="services_1">69</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_2" name="services_offered[]" value="2" class="checkboxx">                                
+                            <input type="checkbox" id="services_2" name="services_offered[]" value="Sexe anal" class="checkboxx">                                
                             <label for="services_2">Sexe anal</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_3" name="services_offered[]" value="3" class="checkboxx">                                
+                            <input type="checkbox" id="services_3" name="services_offered[]" value="Ejaculation dans la bouche" class="checkboxx">                                
                             <label for="services_3">Ejaculation dans la bouche</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_4" name="services_offered[]" value="4" class="checkboxx">                                
+                            <input type="checkbox" id="services_4" name="services_offered[]" value="Ejaculation faciale" class="checkboxx">                                
                             <label for="services_4">Ejaculation faciale</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_5" name="services_offered[]" value="5" class="checkboxx">                                
+                            <input type="checkbox" id="services_5" name="services_offered[]" value="Jeux avec gode/sextoys" class="checkboxx">                                
                             <label for="services_5">Jeux avec gode/sextoys</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_6" name="services_offered[]" value="6" class="checkboxx">                                
+                            <input type="checkbox" id="services_6" name="services_offered[]" value="Embrasser avec la langue" class="checkboxx">                                
                             <label for="services_6">Embrasser avec la langue</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_7" name="services_offered[]" value="7" class="checkboxx">                                
+                            <input type="checkbox" id="services_7" name="services_offered[]" value="Expérience avec la copine" class="checkboxx">                                
                             <label for="services_7">Expérience avec la copine</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_8" name="services_offered[]" value="8" class="checkboxx">                                
+                            <input type="checkbox" id="services_8" name="services_offered[]" value="Embrasser" class="checkboxx">                                
                             <label for="services_8">Embrasser</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_9" name="services_offered[]" value="9" class="checkboxx">                                
+                            <input type="checkbox" id="services_9" name="services_offered[]" value="Sucer avec capote" class="checkboxx">                                
                             <label for="services_9">Sucer avec capote</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_10" name="services_offered[]" value="10" class="checkboxx">                                
+                            <input type="checkbox" id="services_10" name="services_offered[]" value="Sucer sans capote" class="checkboxx">                                
                             <label for="services_10">Sucer sans capote</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_11" name="services_offered[]" value="11" class="checkboxx">                                
+                            <input type="checkbox" id="services_11" name="services_offered[]" value="Sucer sans capote et jouir" class="checkboxx">                                
                             <label for="services_11">Sucer sans capote et jouir</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_12" name="services_offered[]" value="12" class="checkboxx">                                
+                            <input type="checkbox" id="services_12" name="services_offered[]" value="Sexe dans différentes positions" class="checkboxx">                                
                             <label for="services_12">Sexe dans différentes positions</label>
                         </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_52" name="services_offered[]" value="52" class="checkboxx">                                
+                            <input type="checkbox" id="services_52" name="services_offered[]" value="Ejaculation sur le corps" class="checkboxx">                                
                             <label for="services_52">Ejaculation sur le corps</label>
                         </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_53" name="services_offered[]" value="53" class="checkboxx">                                
+                            <input type="checkbox" id="services_53" name="services_offered[]" value="Massage érotique" class="checkboxx">                                
                             <label for="services_53">Massage érotique</label>
                         </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_54" name="services_offered[]" value="54" class="checkboxx">                                
+                            <input type="checkbox" id="services_54" name="services_offered[]" value="Branlette" class="checkboxx">                                
                             <label for="services_54">Branlette</label>
                         </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_55" name="services_offered[]" value="55" class="checkboxx">                                
+                            <input type="checkbox" id="services_55" name="services_offered[]" value="Embrasse selon symathie" class="checkboxx">                                
                             <label for="services_55">Embrasse selon symathie</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_68" name="services_offered[]" value="68" class="checkboxx">                                <label for="services_68">Handjob</label>
+                            <input type="checkbox" id="services_68" name="services_offered[]" value="Handjob" class="checkboxx">                                <label for="services_68">Handjob</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_61" name="services_offered[]" value="61" class="checkboxx">                                <label for="services_61">Bain à bulles</label>
+                            <input type="checkbox" id="services_61" name="services_offered[]" value="Bain à bulles" class="checkboxx">                                <label for="services_61">Bain à bulles</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_62" name="services_offered[]" value="62" class="checkboxx">                                
+                            <input type="checkbox" id="services_62" name="services_offered[]" value="Epilation intime" class="checkboxx">                                
                             <label for="services_62">Epilation intime</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_69" name="services_offered[]" value="69" class="checkboxx">                                
+                            <input type="checkbox" id="services_69" name="services_offered[]" value="DUO" class="checkboxx">                                
                             <label for="services_69">DUO</label>
                             </div><br>
                          <div class="custom-checkbox">
-                            <input type="checkbox" id="services_56" name="services_offered[]" value="56" class="checkboxx">                                
+                            <input type="checkbox" id="services_56" name="services_offered[]" value="Bodymassage avec mousse" class="checkboxx">                                
                             <label for="services_56">Bodymassage avec mousse</label>
                             </div><br>
                             </div>
                     <div class="col-xs-4">
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_13" name="services_offered[]" value="13" class="checkboxx">                                
+                            <input type="checkbox" id="services_13" name="services_offered[]" value="Lécher et sucer les testicules" class="checkboxx">                                
                             <label for="services_13">Lécher et sucer les testicules</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_14" name="services_offered[]" value="14" class="checkboxx">                              
+                            <input type="checkbox" id="services_14" name="services_offered[]" value="Gorge profonde" class="checkboxx">                              
                             <label for="services_14">Gorge profonde</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_15" name="services_offered[]" value="15" class="checkboxx">                                
+                            <input type="checkbox" id="services_15" name="services_offered[]" value="Paroles cochonnes" class="checkboxx">                                
                             <label for="services_15">Paroles cochonnes</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_16" name="services_offered[]" value="16" class="checkboxx">                                <label for="services_16">Double pénétration</label>
+                            <input type="checkbox" id="services_16" name="services_offered[]" value="Double pénétration" class="checkboxx">                                <label for="services_16">Double pénétration</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_17" name="services_offered[]" value="17" class="checkboxx">                                
+                            <input type="checkbox" id="services_17" name="services_offered[]" value="Plusieurs éjaculations" class="checkboxx">                                
                             <label for="services_17">Plusieurs éjaculations</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_18" name="services_offered[]" value="18" class="checkboxx">                                
+                            <input type="checkbox" id="services_18" name="services_offered[]" value="S'asseoir sur le visage" class="checkboxx">                                
                             <label for="services_18">S'asseoir sur le visage</label>
                             </div><br>
                         <div class="custom-checkbox">
-                                <input type="checkbox" id="services_20" name="services_offered[]" value="20" class="checkboxx">                                
+                                <input type="checkbox" id="services_20" name="services_offered[]" value="Massage sensuel intégral" class="checkboxx">                                
                                 <label for="services_20">Massage sensuel intégral</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_22" name="services_offered[]" value="22" class="checkboxx">                                
+                            <input type="checkbox" id="services_22" name="services_offered[]" value="Kamasutra" class="checkboxx">                                
                             <label for="services_22">Kamasutra</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_23" name="services_offered[]" value="23" class="checkboxx">                                
+                            <input type="checkbox" id="services_23" name="services_offered[]" value="Jeux sexuels lesbiens" class="checkboxx">                                
                             <label for="services_23">Jeux sexuels lesbiens</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_24" name="services_offered[]" value="24" class="checkboxx">                                
+                            <input type="checkbox" id="services_24" name="services_offered[]" value="Lingerie" class="checkboxx">                                
                             <label for="services_24">Lingerie</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_25" name="services_offered[]" value="25" class="checkboxx">                                
+                            <input type="checkbox" id="services_25" name="services_offered[]" value="Masturbation" class="checkboxx">                                
                             <label for="services_25">Masturbation</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_26" name="services_offered[]" value="26" class="checkboxx">                                
-                            <label for="services_26">Sucer sans préservativ </label>
+                            <input type="checkbox" id="services_26" name="services_offered[]" value="Sucer sans préservatif" class="checkboxx">                                
+                            <label for="services_26">Sucer sans préservatif </label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_27" name="services_offered[]" value="27" class="checkboxx">                                
+                            <input type="checkbox" id="services_27" name="services_offered[]" value="Sexe à l'extérieur" class="checkboxx">                                
                             <label for="services_27">Sexe à l'extérieur</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_28" name="services_offered[]" value="28" class="checkboxx">                                
+                            <input type="checkbox" id="services_28" name="services_offered[]" value="Expérience de star du porno (PSE)" class="checkboxx">                                
                             <label for="services_28">Expérience de star du porno (PSE)</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_29" name="services_offered[]" value="29" class="checkboxx">                                
+                            <input type="checkbox" id="services_29" name="services_offered[]" value="Photos privées" class="checkboxx">                                
                             <label for="services_29">Photos privées</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_66" name="services_offered[]" value="66" class="checkboxx">                                
+                            <input type="checkbox" id="services_66" name="services_offered[]" value="Private Videos" class="checkboxx">                                
                             <label for="services_66">Private Videos</label>
                             </div><br>
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="services_30" name="services_offered[]" value="30" class="checkboxx">                                
+                            <input type="checkbox" id="services_30" name="services_offered[]" value="Massage de la prostate" class="checkboxx">                                
                             <label for="services_30">Massage de la prostate</label>
                             </div><br>
                         <div class="custom-checkbox">
