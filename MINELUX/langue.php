@@ -1,3 +1,26 @@
+<?php
+session_start();
+  // require('connexionBD.php');
+$connection = mysqli_connect("localhost", "root", "");
+$db = mysqli_select_db($connection, 'myminette');
+if(isset($_POST['Save'])) {
+    // $name = $_GET["username"];
+ 
+ $query = "UPDATE `membres` SET langue = '$_POST[langues]', niveaulangue = '$_POST[languages2]' WHERE username = '$_SESSION[username]' ";
+  $query_run = mysqli_query($connection, $query);
+  if($query_run) {
+    echo '<script type="text/javascript"> alert("Vos données ont été enregistrées avec succès") </script>';
+  } else {
+    echo '<script type="text/javascript"> alert("Echecs enregistrement de vos donnees") </script>';
+  }
+}
+
+if(!isset($_SESSION['username'])) {
+    header('location:connexion.php');
+    exit;
+}
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -25,9 +48,23 @@
 
                     <div class="pull-left"></div>
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="login.html">S'identifier</a>
-                        <a class="btn btn-tertiary" href="signup.html">S'inscrire</a>
-                        <a class="btn btn-secondary" href="contact.html">Nous Contater</a>
+                       <div><p>Bienvenu:
+                        <a class="btn btn-primary" href="login.html">
+                             <?php 
+                       
+                                if(!isset($_SESSION['username'])){
+                                   echo "Vous n'êtes pas connecté!";
+                                }else{
+                                    echo $_SESSION['username'];
+                                
+                                }
+                     ?>
+                        </a>
+
+                                </p>
+                            </div>
+                        <a class="btn btn-secondary" href="contact.html">Nous Contacter</a>
+                        <a class="btn btn-secondary" href="deconnexion.php">Deconnexion</a>
                     </div>
             
                 </div>
@@ -71,7 +108,7 @@
                             <li class=""><a href="aproposedemoi.php/">Step 2:<br>A propos de moi</a></li>
                             <li class=""><a href="#">Step 3:<br>Langues</a></li>
                             <li class=""><a href="/panel/profile/working_cities/9024/">Step 4:<br>Villes de travail</a></li>
-                            <li class=""><a href="/panel/profile/services/9024/">Step 5:<br>Service</a></li>
+                            <li class=""><a href="services.php">Step 5:<br>Service</a></li>
                             <li class=""><a href="mon-cadeau.php">Step 6:<br>Mon Cadeau</a></li>
                             <li class=""><a href="/panel/profile/contact/9024/">Step 7:<br>Coordonnées</a></li>
             </ul>
@@ -83,7 +120,7 @@
                                 <div class="btn-group bootstrap-select langselect">
                             <div class="btn dropdown-toggle btn-default">
                                   <div class="select">
-                                    <select>
+                                    <select name="langues">
                                       <option value="Francais">Francais </option>
                                       <option value="Anglais">Anglais  </option>
                                     </select>
@@ -92,18 +129,18 @@
                             </div>
                             <div class="col-xs-5 addon grp"><div class="radio">
                                     <label>
-                                <input type="radio" name="languages[2]" value="Basique">Basique</label>
+                                <input type="radio" name="languages2" value="Basique">Basique</label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="languages[2]" value="Moyenne">Moyenne</label>
+                                        <input type="radio" name="languages2" value="Moyenne">Moyenne</label>
                                 </div>
                                 <div class="radio"><label>
-                                        <input type="radio" name="languages[2]" value="Bonne" checked="checked">Bonne</label>
+                                        <input type="radio" name="languages2" value="Bonne" checked="checked">Bonne</label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                <input type="radio" name="languages[2]" value="4">Excellent / Native</label>
+                                <input type="radio" name="languages2" value="4">Excellent / Native</label>
                                 </div>
                             </div>
                          </div>

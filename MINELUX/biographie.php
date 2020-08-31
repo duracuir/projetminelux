@@ -103,13 +103,13 @@ if(!isset($_SESSION['username'])) {
            <main class="container">
         <form id="bio_submit" class="submit_profile" action="biographie.php?username=<?php echo $_GET['username'];?>" method="post">
             <ul class="steps">
-                            <li class="active"><a href="/panel/profile/biography/9024/">Step 1:<br> Biographie</a></li>
+                            <li class="active"><a href="#">Step 1:<br> Biographie</a></li>
                             <li class=""><a href="aproposdemoi.php">Step 2:<br>A propos de moi</a></li>
-                            <li class=""><a href="/panel/profile/languages/9024/">Step 3:<br>Langues</a></li>
-                            <li class=""><a href="/panel/profile/working_cities/9024/">Step 4:<br>Villes de travail</a></li>
-                            <li class=""><a href="/panel/profile/services/9024/">Step 5:<br>Service</a></li>
-                            <li class=""><a href="/panel/profile/rates/9024/">Step 6:<br>Mon Cadeau</a></li>
-                            <li class=""><a href="/panel/profile/contact/9024/">Step 7:<br>Coordonnées</a></li>
+                            <li class=""><a href="langue.php">Step 3:<br>Langues</a></li>
+                            <li class=""><a href="#">Step 4:<br>Villes de travail</a></li>
+                            <li class=""><a href="services.php">Step 5:<br>Service</a></li>
+                            <li class=""><a href="mon-cadeau.php">Step 6:<br>Mon Cadeau</a></li>
+                            <li class=""><a href="#">Step 7:<br>Coordonnées</a></li>
             </ul>
         
         <div class="row rows-17">
