@@ -632,25 +632,48 @@ input, button, select, textarea {
     vertical-align: middle;
     line-height: 33px;
 }
+label {
+    display: inline-block;
+    max-width: 100%;
+    /*margin-bottom: 5px;
+    font-weight: bold;*/
+}
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: checkbox;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
 .custom-checkbox label {
     padding-left: 20px;
     position: relative;
     font-weight: 400;
     cursor: pointer;
 }
-
-label {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 5px;
-    font-weight: bold;
+#edit-profile .services-for .custom-checkbox {
+    font-weight: 400;
 }
 .custom-checkbox input[type=checkbox] {
     visibility: hidden;
     width: 0;
     height: 0;
 }
-
+#edit-profile .box .custom-checkbox {
+    font-size: 15px;
+    color: #000;
+    font-weight: bold;
+}
+.custom-checkbox {
+    position: relative;
+    font-size: 13px;
+    color: #505050;
+    line-height: 13px;
+    margin-right: 15px;
+    display: inline-block;
+}
 input[type="radio"], input[type="checkbox"] {
     margin: 4px 0 0;
     margin-top: 1px \9;
@@ -661,6 +684,9 @@ input[type="checkbox"], input[type="radio"] {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0;
+}
+.custom-checkbox input[type=checkbox]:checked + label:after {
+    background-image: url(../fond/checkmark-blue.png);
 }
 .custom-checkbox label:after {
     content: '';
@@ -680,6 +706,10 @@ input[type="checkbox"], input[type="radio"] {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
+
+
 
 
 
