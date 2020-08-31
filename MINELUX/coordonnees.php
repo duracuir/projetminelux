@@ -56,9 +56,23 @@
 
                     <div class="pull-left"></div>
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="login.html">S'identifier</a>
-                        <a class="btn btn-tertiary" href="signup.html">S'inscrire</a>
-                        <a class="btn btn-secondary" href="contact.html">Nous Contater</a>
+                       <div><p>Bienvenu:
+                        <a class="btn btn-primary" href="login.html">
+                             <?php 
+                       
+                                if(!isset($_SESSION['username'])){
+                                   echo "Vous n'êtes pas connecté!";
+                                }else{
+                                    echo $_SESSION['username'];
+                                
+                                }
+                     ?>
+                        </a>
+
+                                </p>
+                            </div>
+                        <a class="btn btn-secondary" href="contact.html">Nous Contacter</a>
+                        <a class="btn btn-secondary" href="deconnexion.php">Deconnexion</a>
                     </div>
             
                 </div>
@@ -72,7 +86,7 @@
                     </div>
                     <div id="navbar">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="/index.html/">Accueil</a></li>
+                   <li class="nav-item active"><a class="nav-link" href="/index.html/">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="/escorts/new/">Nouvelle</a></li>
                     <li class="nav-item"><a class="nav-link" href="/escorts/girls/">Filles</a></li>
                     <li class="nav-item"><a class="nav-link" href="/escorts/homme/">Hommes</a></li>
@@ -105,13 +119,13 @@
             </div>
             <form action id="bio_submit" class="submit_profile" method="post">
              <ul class="steps">
-                            <li class="active"><a href="/panel/profile/biography/9024/">Step 1:<br> Biographie</a></li>
-                            <li class=""><a href="/panel/profile/about_me/9024/">Step 2:<br>A propos de moi</a></li>
-                            <li class=""><a href="/panel/profile/languages/9024/">Step 3:<br>Langues</a></li>
-                            <li class=""><a href="/panel/profile/working_cities/9024/">Step 4:<br>Villes de travail</a></li>
-                            <li class=""><a href="/panel/profile/services/9024/">Step 5:<br>Service</a></li>
-                            <li class=""><a href="/panel/profile/rates/9024/">Step 6:<br>Mon Cadeau</a></li>
-                            <li class=""><a href="/panel/profile/contact/9024/">Step 7:<br>Coordonnées</a></li>
+                             <li class="active"><a href="biographie.php">Step 1:<br> Biographie</a></li>
+                            <li class=""><a href="aproposedemoi.php/">Step 2:<br>A propos de moi</a></li>
+                            <li class=""><a href="services.php">Step 3:<br>Langues</a></li>
+                            <li class=""><a href="ville-de-travail.php">Step 4:<br>Villes de travail</a></li>
+                            <li class=""><a href="services.php">Step 5:<br>Service</a></li>
+                            <li class=""><a href="mon-cadeau.php">Step 6:<br>Mon Cadeau</a></li>
+                            <li class=""><a href="#">Step 7:<br>Coordonnées</a></li>
                     </ul>
 				<div class="row row-17 flex-row">
     <div class="col-xs-6">

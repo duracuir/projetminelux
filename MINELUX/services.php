@@ -25,9 +25,23 @@
 
                     <div class="pull-left"></div>
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="login.html">S'identifier</a>
-                        <a class="btn btn-tertiary" href="signup.html">S'inscrire</a>
-                        <a class="btn btn-secondary" href="contact.html">Nous Contater</a>
+                         <div><p>Bienvenu:
+                        <a class="btn btn-primary" href="login.html">
+                             <?php 
+                       
+                                if(!isset($_SESSION['username'])){
+                                   echo "Vous n'êtes pas connecté!";
+                                }else{
+                                    echo $_SESSION['username'];
+                                
+                                }
+                     ?>
+                        </a>
+
+                                </p>
+                            </div>
+                        <a class="btn btn-secondary" href="contact.html">Nous Contacter</a>
+                        <a class="btn btn-secondary" href="deconnexion.php">Deconnexion</a>
                     </div>
             
                 </div>

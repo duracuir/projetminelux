@@ -107,10 +107,10 @@ if(!isset($_SESSION['username'])) {
                             <li class="active"><a href="biographie.php">Step 1:<br> Biographie</a></li>
                             <li class=""><a href="aproposedemoi.php/">Step 2:<br>A propos de moi</a></li>
                             <li class=""><a href="#">Step 3:<br>Langues</a></li>
-                            <li class=""><a href="/panel/profile/working_cities/9024/">Step 4:<br>Villes de travail</a></li>
+                            <li class=""><a href="ville-de-travail.php">Step 4:<br>Villes de travail</a></li>
                             <li class=""><a href="services.php">Step 5:<br>Service</a></li>
                             <li class=""><a href="mon-cadeau.php">Step 6:<br>Mon Cadeau</a></li>
-                            <li class=""><a href="/panel/profile/contact/9024/">Step 7:<br>Coordonnées</a></li>
+                            <li class=""><a href="coordonnees.php">Step 7:<br>Coordonnées</a></li>
             </ul>
                 <div class="row row-17 flex-row">
                     <div class="col-xs-12">
