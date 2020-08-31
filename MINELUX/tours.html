@@ -9,41 +9,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/commentaire.css">
+        <link rel="stylesheet" href="css/tours.css">
         <script src="js/script.js"></script>
 </head>
     <body id="edit-profile">
-        <svg id="svg-source" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-        <filter id="filter-shadow" x="0" y="0" width="100%" height="100%">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur>
-            <feOffset dx="1" dy="1"></feOffset>
-            <feComponentTransfer>
-                <feFuncA type="linear" slope="0.3"></feFuncA>
-            </feComponentTransfer>
-            <feMerge>
-                <feMergeNode></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-        </filter>
-    </defs>
-    
-    
-    
-    
-    <g id="icon-real-photos">
-        <polygon points="16.67,4 13.85,20 16.89,20 19.1,7.48 56.52,14.07 52.18,38.69 48,37.96 48,50.14 53.05,51.03 60,11.64"></polygon>
-        <path d="M4,20v40h44V20H4z M45,48H7V23h38V48z M41,45H11l5-7l5,4l5-7l5,5l5-8L41,45z M15,28c-1.66,0-3,1.34-3,3c0,1.66,1.34,3,3,3 c1.66,0,3-1.34,3-3C18,29.34,16.66,28,15,28z"></path>
-    </g>
-    <g id="icon-discretion-guaranteed">
-        <path d="M50,28v-6c0-9.93-8.08-18-18-18c-9.93,0-18,8.07-18,18v6H8v32h48V28H50z M34,42.45V51c0,1.1-0.9,2-2,2s-2-0.9-2-2v-8.55 c-1.19-0.69-2-1.97-2-3.45c0-2.21,1.79-4,4-4s4,1.79,4,4C36,40.48,35.19,41.75,34,42.45z M18,28v-6c0-7.72,6.28-14,14-14 s14,6.28,14,14v6H18z"></path>
-    </g>
-    <g id="icon-trusted-website">
-        <path d="M49.97,19.19L49.32,14l-4.17-3.15L42,6.68l-5.19-0.65L32,4l-4.81,2.03L22,6.68l-3.15,4.17L14.68,14l-0.65,5.19L12,24 l2.03,4.81L14.68,34l4.17,3.16L22,41.32l5.19,0.65L32,44l4.81-2.03L42,41.32l3.15-4.17L49.32,34l0.65-5.19L52,24L49.97,19.19z M34.5,32.54h-4v-11.5l-3,1.5v-4l4-2h3V32.54z"></path>
-        <path d="M56,54l-7.7-1.33L45.61,60l-8.58-14.86l0.57-0.24l4.77-0.6l1.25-0.16l0.76-1.01l2.9-3.83l0.15-0.11L56,54z M26.4,44.89 l-4.77-0.6l-1.26-0.16l-0.76-1.01l-2.9-3.83l-0.15-0.11L8,54l7.7-1.33l2.7,7.33l8.58-14.86L26.4,44.89z"></path>
-    </g>
-    
-</svg>
         <header>
             
                 <div class="top-nav">
@@ -89,7 +58,7 @@
                 <div class="col-xs-4 back"></div>
                 <a href="/" class="btn btn-black">Retour</a>
                 <div class="col-xs-4">
-                    <h1 class="page-title">commentaires</h1>
+                    <h1 class="page-title">tournées de ville</h1>
                 </div>
             </div>
             </div>
@@ -98,7 +67,7 @@
           <main class="container">
 
     <script type="text/javascript" language="javascript">
-    var view_comment_url = '/panel/comments/';
+    var view_comment_url = '/biographie/tours/';
 
     $(document).ready(function() {
         myTable = $('#table_1').DataTable({
@@ -106,7 +75,7 @@
             "serverSide": true,
             "order": [[ 0, "desc" ]],
             "ajax": {
-                url :"/panel/comments/",
+                url :"/biographie/tours/",
                 type: "post"
             },
             "columnDefs": [
@@ -152,13 +121,13 @@
 <div class="row row-17 flex-row">
     <div class="col-xs-12">
         <div class="box table-box">
-                            <p style="display:inline-block;" id="filtr_comment"><div id="yadcf-filter-wrapper--filtr_comment"><div id="yadcf-filter-wrapper--table_1-2" class="yadcf-filter-wrapper"><input type="text" onkeydown="yadcf.preventDefaultForEnter(event);" id="yadcf-filter--table_1-2" class="yadcf-filter " onmousedown="yadcf.stopPropagation(event);" onclick="yadcf.stopPropagation(event);" placeholder="Commentaire" filter_match_mode="contains" onkeyup="yadcf.textKeyUP(event,'-table_1', 2);"><button type="button" id="yadcf-filter--table_1-2-reset" onmousedown="yadcf.stopPropagation(event);" onclick="yadcf.stopPropagation(event);yadcf.textKeyUP(event,'-table_1', '2', 'clear'); return false;" class="yadcf-filter-reset-button">x</button></div></div></p>
-                        <h3 class="heading heading3">Commentaires</h3>
-            <div id="table_1_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="table_1_length"><label>Show <select name="table_1_length" aria-controls="table_1" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="table_1_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="table_1"></label></div><div id="table_1_processing" class="dataTables_processing" style="display: none;">Processing...</div><table id="table_1" class="data-table dataTable table-striped collapsed no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="table_1_info" style="width: 100%;">
+                            <p style="display:inline-block;" id="filtr_status"><div id="yadcf-filter-wrapper--filtr_status"><div id="yadcf-filter-wrapper--table_1-2" class="yadcf-filter-wrapper"><select id="yadcf-filter--table_1-2" class="yadcf-filter select2-hidden-accessible" onchange="yadcf.doFilter(this, '-table_1', 2, 'contains');" onkeydown="yadcf.preventDefaultForEnter(event);" onmousedown="yadcf.stopPropagation(event);" onclick="yadcf.stopPropagation(event);" tabindex="-1" aria-hidden="true"><option value="-1">Status</option><option value="0">Tournées actives</option><option value="1">Past tours</option></select><span class="select2 select2-container select2-container--default" dir="ltr" onclick="yadcf.stopPropagation(event);" onmousedown="yadcf.stopPropagation(event);" style="width: 158px;"><span class="selection"><span class="select2-selection select2-selection--single " role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-yadcf-filter--table_1-2-container"><span class="select2-selection__rendered" id="select2-yadcf-filter--table_1-2-container" title="Status">Status</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span><button type="button" id="yadcf-filter--table_1-2-reset" onmousedown="yadcf.stopPropagation(event);" onclick="yadcf.stopPropagation(event);yadcf.doFilter('clear', '-table_1', 2); return false;" class="yadcf-filter-reset-button">x</button></div></div></p>
+                        <h3 class="heading heading3">Trournees de ville</h3>
+            <div id="table_1_wrapper" class="dataTables_wrapper no-footer"><div class="toolbar"><a href="#" class="btn btn-primary heading-cta add_tour" data-toggle="modal">+ Ajouter une tournée</a></div><div id="table_1_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="table_1"></label></div><div id="table_1_processing" class="dataTables_processing" style="display: none;">Processing...</div><table id="table_1" class="data-table dataTable table-striped collapsed no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="table_1_info" style="width: 100%;">
                 <thead>
-                <tr role="row"><th style="width: 74px;" class="text-center no-sort col1 sorting_desc" tabindex="0" aria-controls="table_1" rowspan="1" colspan="1" aria-sort="descending" aria-label="ID #: activate to sort column ascending">ID #</th><th style="width: 162px;" class="text-center no-sort col2 sorting_disabled" rowspan="1" colspan="1" aria-label="Nom d'escorte">Nom d'escorte</th><th style="width: 162px;" class="text-center no-sort col3 sorting_disabled" rowspan="1" colspan="1" aria-label="Membre">Membre</th><th class="text-center no-sort col4 sorting_disabled" rowspan="1" colspan="1" aria-label="Commentaire" style="width: 272px;">Commentaire</th><th style="width: 107px;" class="text-center no-sort col5 sorting_disabled" rowspan="1" colspan="1" aria-label="Date">Date</th><th style="width: 107px;" class="text-center no-sort col5 sorting_disabled" rowspan="1" colspan="1" aria-label="Actions">Actions</th></tr>
+                <tr role="row"><th style="width: 41px;" class="text-left no-sort sorting" tabindex="0" aria-controls="table_1" rowspan="1" colspan="1" aria-label="ID: activate to sort column ascending">ID</th><th class="text-left no-sort sorting" tabindex="0" aria-controls="table_1" rowspan="1" colspan="1" aria-label="Nom d'escorte: activate to sort column ascending" style="width: 212px;">Nom d'escorte</th><th class="text-left no-sort sorting" tabindex="0" aria-controls="table_1" rowspan="1" colspan="1" aria-label="Date de: activate to sort column ascending" style="width: 128px;">Date de</th><th class="text-left no-sort sorting_desc" tabindex="0" aria-controls="table_1" rowspan="1" colspan="1" aria-sort="descending" aria-label="Date à: activate to sort column ascending" style="width: 113px;">Date à</th><th class="text-left no-sort sorting" tabindex="0" aria-controls="table_1" rowspan="1" colspan="1" aria-label="Téléphone: activate to sort column ascending" style="width: 164px;">Téléphone</th><th class="text-left no-sort sorting" tabindex="0" aria-controls="table_1" rowspan="1" colspan="1" aria-label="Ville: activate to sort column ascending" style="width: 83px;">Ville</th><th style="width: 107px;" class="text-left no-sort col8 sorting_disabled" rowspan="1" colspan="1" aria-label="Actions">Actions</th></tr>
                 </thead>
-            <tbody><tr class="odd"><td valign="top" colspan="6" class="dataTables_empty">No data available in table</td></tr></tbody></table><div class="dataTables_info" id="table_1_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div><div class="dataTables_paginate paging_simple_numbers" id="table_1_paginate"><a class="paginate_button previous disabled" aria-controls="table_1" data-dt-idx="0" tabindex="0" id="table_1_previous">Previous</a><span></span><a class="paginate_button next disabled" aria-controls="table_1" data-dt-idx="1" tabindex="0" id="table_1_next">Next</a></div></div>
+            <tbody><tr class="odd"><td valign="top" colspan="7" class="dataTables_empty">No data available in table</td></tr></tbody></table><div class="dataTables_info" id="table_1_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div><div class="dataTables_paginate paging_simple_numbers" id="table_1_paginate"><a class="paginate_button previous disabled" aria-controls="table_1" data-dt-idx="0" tabindex="0" id="table_1_previous">Previous</a><span></span><a class="paginate_button next disabled" aria-controls="table_1" data-dt-idx="1" tabindex="0" id="table_1_next">Next</a></div></div>
         </div>
     </div>
 </div>
@@ -192,7 +161,6 @@
                 </div>
             </div>
         </div>
-        <div class="copy"><small>© MINELUX 2020 Copyrigth All rigths reserved. V1.0 </small></div>
     </footer>
 </body>
 </html>

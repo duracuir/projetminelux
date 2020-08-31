@@ -1,17 +1,18 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<tilte>INSCRIPTION</tilte>
+	<tilte></tilte>
         <meta charset="utf-8"/>
-        <meta name="viwport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/inscrip.css">
+        <link rel="stylesheet" href="css/coordonnees.css">
         <script src="js/script.js"></script>
 </head>
-    <body id="users">
+    <body id="edit-profile">
         <svg id="svg-source" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <filter id="filter-shadow" x="0" y="0" width="100%" height="100%">
@@ -55,8 +56,8 @@
 
                     <div class="pull-left"></div>
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="connexion.php">S'identifier</a>
-                        <a class="btn btn-tertiary" href="login2.php">S'inscrire</a>
+                        <a class="btn btn-primary" href="login.html">S'identifier</a>
+                        <a class="btn btn-tertiary" href="signup.html">S'inscrire</a>
                         <a class="btn btn-secondary" href="contact.html">Nous Contater</a>
                     </div>
             
@@ -86,99 +87,120 @@
             <div class="container">
             <div class="row">
                 <div class="col-xs-4 back"></div>
-                <a href="index.html" class="btn btn-black">Retour</a>
+                <a href="/" class="btn btn-black">Retour</a>
                 <div class="col-xs-4">
-                    <h1 class="page-title">enregistrez-vous</h1>
+                    <h1 class="page-title">éditer profil de minette</h1>
                 </div>
             </div>
             </div>
             </div>
 		</header>
-        <main class="content">
-            <div class="container users">
-                <div class="users-row">
-                    <div class="user-box" data-word="or">
-                        <div class="user">
-							<div class="user-heading">
-                            <h2 class="user-title">JE SUIS<span> ESCORT INPENDANTE</span></h2>
-                            <h3 class="user-subtitle">Essai gratuit de 30 jours</h3>
-                            <p class="user-intro">Idéal pour une seule Minette.</p>
+           <main class="container">
+            <div class="alert alert-success">
+
+                <!-- Theo mets une cmd php ici pour afficher ce msg seulement que le profile est enregistre ou enregistre apres modification-->
+
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                Votre profil a été enregistré avec succès!            
+            </div>
+            <form action id="bio_submit" class="submit_profile" method="post">
+             <ul class="steps">
+                            <li class="active"><a href="/panel/profile/biography/9024/">Step 1:<br> Biographie</a></li>
+                            <li class=""><a href="/panel/profile/about_me/9024/">Step 2:<br>A propos de moi</a></li>
+                            <li class=""><a href="/panel/profile/languages/9024/">Step 3:<br>Langues</a></li>
+                            <li class=""><a href="/panel/profile/working_cities/9024/">Step 4:<br>Villes de travail</a></li>
+                            <li class=""><a href="/panel/profile/services/9024/">Step 5:<br>Service</a></li>
+                            <li class=""><a href="/panel/profile/rates/9024/">Step 6:<br>Mon Cadeau</a></li>
+                            <li class=""><a href="/panel/profile/contact/9024/">Step 7:<br>Coordonnées</a></li>
+                    </ul>
+				<div class="row row-17 flex-row">
+    <div class="col-xs-6">
+        <div class="box contact-info">
+            <h3 class="heading">Coordonnées</h3>
+            <div class="row">
+                <!-- HELPER -->
+                <div class="col-xs-12"></div>
+
+                <div class="col-xs-4 grp p-r-0">
+                    <label for="phonenum">Téléphone*:</label>
+                </div>
+                <div class="col-xs-5 grp">
+                    <input type="text" id="phone_number" name="phone_number" value="" placeholder="Téléphone">                
+                </div>
+
+                <div class="col-xs-4 grp p-r-0">
+                    <label for="defaultcity">Apps Available:</label>
+                </div>
+                <div class="col-xs-8 grp addon">
+                                            <div class="custom-checkbox">
+                            <input type="checkbox" id="viber" name="viber" value="1">                           
+                            <label for="viber">Viber</label>
                         </div>
-                        <div class="user-wrap">
-                            <div class="user-info">
-                                <ul class="user-list">
-                                    <li>Plus de 1.000.000 visites mensuelles.</li>
-                                    <li>Photos illimitées.</li>
-                                    <li>Statistiques d'annonces</li>
-                                    <li>Liste noire</li>
-                                    <li>Inscription gratuite!</li>
-                                </ul>
-                                <a href="login2.php" class="btn btn-primary">S'INSCRIRE</a>
-                            </div>
-                            <div class="user-image">
-                                <img src="inscription/minette-03.png">
-                            </div>
-							</div>
+                                            <div class="custom-checkbox">
+                            <input type="checkbox" id="whatsapp" name="whatsapp" value="1">                           
+                            <label for="whatsapp">Whatsapp</label>
                         </div>
                     </div>
+
+                <!-- HELPER -->
+                <div class="col-xs-12"></div>
+
+                <div class="col-xs-4 grp p-r-0">
+                    <label for="defaultcity">Consignes pour le téléphone*:</label>
                 </div>
-            </div>
-			<div class="container users">
-                <div class="users-row">
-                    <div class="user-box" data-word="or">
-                        <div class="user">
-							<div class="user-heading">
-                            <h2 class="user-title">nous sommes<span> copines minettes</span></h2>
-                            <h3 class="user-subtitle">Vous prouvez créer jusqu'à 10 comptes de Minette</h3>
-                            <p class="user-intro">Idéal pour plusieurs Minettes.</p>
+                <div class="col-xs-8">
+                            <div class="radio">
+                            <label>
+                                <input type="radio" id="phone_instr" name="phone_instr" value="1">SMS et appel
+                            </label>
                         </div>
-                        <div class="user-wrap">
-                            <div class="user-info">
-                                <ul class="user-list">
-                                    <li>Plus de 1.000.000 visites mensuelles.</li>
-                                    <li>Photos illimitées.</li>
-                                    <li>Statistiques sur les visites et telephones</li>
-                                    <li>soutien 24/7</li>
-                                    <li>Forfait personnalisés</li>
-                                </ul>
-                                <a href="login2.php" class="btn btn-primary">S'INSCRIRE</a>
-                            </div>
-                            <div class="user-image">
-                                <img src="inscription/minette-04.png">
-                            </div>
-							</div>
+                            <div class="radio">
+                            <label>
+                                <input type="radio" id="phone_instr" name="phone_instr" value="2" checked="checked">Uniquement SMS                            
+                            </label>
+                        </div>
+                            <div class="radio">
+                            <label>
+                                <input type="radio" id="phone_instr" name="phone_instr" value="3">pas de SMS  
+                            </label>
                         </div>
                     </div>
-                </div>
-            </div>
-			<div class="container users">
-                <div class="users-row">
-                    <div class="user-box" data-word="or">
-                        <div class="user">
-							<div class="user-heading">
-                            <h2 class="user-title">JE SUIS<span> MEMBRE</span></h2>
-                            <h3 class="user-subtitle">Interagir avec les Minettes dans un Groupe Whatsapp reservé</h3>
-                            <p class="user-intro">Idéal pour les hommes qui sont seuls.</p>
-                        </div>
-                        <div class="user-wrap">
-                            <div class="user-info">
-                                <ul class="user-list">
-                                    <li>Contater par messagerie privée ou organiser un rendez-vous</li>
-                                    <li>Poster des commentaires sur les profiles</li>
-                                    <li>Votez la fille du mois </li>
-                                    <li>Groupe Whatsapp</li>
-                                    <li>Accés à plus de 1 000 profiles de Minettes</li>
-                                </ul>
-                                <a href="login2.php" class="btn btn-primary">S'INSCRIRE</a>
-                            </div>
-                            <div class="user-image">
-                                <img src="inscription/minette-05.png">
-                            </div>
-							</div>
-                        </div>
+
+                <div class="col-xs-8 col-xs-offset-4">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" id="phone_instr_no_withheld" name="phone_instr_no_withheld" value="1">                        <label for="phone_instr_no_withheld">Aucun numéro cache</label>
                     </div>
                 </div>
+
             </div>
+        </div>
+    </div>
+
+    <div class="col-xs-6">
+        <div class="box">
+            <h3 class="heading">Web</h3>
+            <div class="row">
+                <div class="col-xs-4 grp p-r-0">
+                    <label for="website">Site web / URL:</label>
+                </div>
+                <div class="col-xs-7 grp">
+                    <input type="text" id="website" name="website" value="" placeholder="Site web / URL">
+                </div>
+                <div class="col-xs-8 col-xs-offset-4">
+                    <small>Votre site web sera visible si vous avez un <b><a target="_blank" href="/banners">bannière d'ici</a></b> ajouté dans votre site web.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="csrf" name="csrf" value="dDZqdnY2MzRFK3gzYkgrNnljMHVQUT09">    <div class="col-xs-12">
+        <div class="nextandbackBtns">
+            <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save">Enregistrer</a>
+        </div>
+    </div>
+
+</div>       
+        </form>
         </main>
         <footer>
         <div class="footer-top">
