@@ -1,4 +1,13 @@
+<?php
+session_start();
+require ('connexionBD.php');
+if (!isset($_SESSION['username'])) {
+    header('location:connexion.php');
+    exit;
+}
 
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -101,7 +110,7 @@
             <div class="container">
             <div class="row">
                 <div class="col-xs-4 back"></div>
-                <a href="/" class="btn btn-black">Retour</a>
+                <a href="index.html" class="btn btn-black">Retour</a>
                 <div class="col-xs-4">
                     <h1 class="page-title">éditer profil de minette</h1>
                 </div>
@@ -113,9 +122,31 @@
             <div class="alert alert-success">
 
                 <!-- Theo mets une cmd php ici pour afficher ce msg seulement que le profile est enregistre ou enregistre apres modification-->
+                <?php
+                    if (isset($_POST['Submitte'])) {
+                        $username = $_SESSION['username'];
+                        $phone = $_POST['phone_number'];
+                        $whatsapp = $_POST['whatsapp'];
+                        $consig = $_POST['consig'];
+                        $url = $_POST['url'];
 
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                Votre profil a été enregistré avec succès!            
+
+                        if ($phone) {
+                                $statement = $pdo -> prepare( "INSERT INTO `coordonnees` (username, apps, consigne, url, phonec)
+                                                 VALUES ('$username', '$whatsapp', '$consig', '$url', '$phone')");
+                             $statement->execute(['username'=> $username, 'apps' => $whatsapp, 'consigne'=> $consig, 'url'=> $url, 'phonec' => $phone]);
+                            echo "<p style='color: green; background-color: lightgreen;'>Vos données ont été enregistrées avec succès</p>";
+
+                        } else {
+                            echo "<p style='color: red;background-color: pink;'> Veuillez renseigner les champs vides </p>";
+                        }
+                       
+                         
+             }
+
+            ?>
+               <!--  <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                Votre profil a été enregistré avec succès!  -->           
             </div>
             <form action id="bio_submit" class="submit_profile" method="post">
              <ul class="steps">
@@ -146,12 +177,12 @@
                     <label for="defaultcity">Apps Available:</label>
                 </div>
                 <div class="col-xs-8 grp addon">
-                                            <div class="custom-checkbox">
+                               <!--              <div class="custom-checkbox">
                             <input type="checkbox" id="viber" name="viber" value="1">                           
                             <label for="viber">Viber</label>
-                        </div>
+                        </div> -->
                                             <div class="custom-checkbox">
-                            <input type="checkbox" id="whatsapp" name="whatsapp" value="1">                           
+                            <input type="checkbox" id="whatsapp" name="whatsapp" value="whatsapp">                           
                             <label for="whatsapp">Whatsapp</label>
                         </div>
                     </div>
@@ -165,24 +196,25 @@
                 <div class="col-xs-8">
                             <div class="radio">
                             <label>
-                                <input type="radio" id="phone_instr" name="phone_instr" value="1">SMS et appel
+                                <input type="radio" id="phone_instr" value="SMS et appel" name="consig">SMS et appel
                             </label>
                         </div>
                             <div class="radio">
                             <label>
-                                <input type="radio" id="phone_instr" name="phone_instr" value="2" checked="checked">Uniquement SMS                            
+                                <input type="radio" id="phone_instr" value="Uniquement SMS " checked="checked" name="consig">Uniquement SMS                            
                             </label>
                         </div>
                             <div class="radio">
                             <label>
-                                <input type="radio" id="phone_instr" name="phone_instr" value="3">pas de SMS  
+                                <input type="radio" id="phone_instr"  value="pas de SMS" name="consig">pas de SMS  
                             </label>
                         </div>
                     </div>
 
                 <div class="col-xs-8 col-xs-offset-4">
                     <div class="custom-checkbox">
-                        <input type="checkbox" id="phone_instr_no_withheld" name="phone_instr_no_withheld" value="1">                        <label for="phone_instr_no_withheld">Aucun numéro cache</label>
+                        <input type="checkbox" id="phone_instr_no_withheld"  value="Aucun numéro caché" name="consig">    
+                        <label for="phone_instr_no_withheld">Aucun numéro caché</label>
                     </div>
                 </div>
 
@@ -198,7 +230,7 @@
                     <label for="website">Site web / URL:</label>
                 </div>
                 <div class="col-xs-7 grp">
-                    <input type="text" id="website" name="website" value="" placeholder="Site web / URL">
+                    <input type="text" id="website" name="url" value="" placeholder="Site web / URL">
                 </div>
                 <div class="col-xs-8 col-xs-offset-4">
                     <small>Votre site web sera visible si vous avez un <b><a target="_blank" href="/banners">bannière d'ici</a></b> ajouté dans votre site web.
@@ -209,7 +241,8 @@
     </div>
     <input type="hidden" id="csrf" name="csrf" value="dDZqdnY2MzRFK3gzYkgrNnljMHVQUT09">    <div class="col-xs-12">
         <div class="nextandbackBtns">
-            <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save">Enregistrer</a>
+            <button class="btn btn-primary save" name="Submitte">Enregistrer</button>
+            <!-- <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save">Enregistrer</a> -->
         </div>
     </div>
 

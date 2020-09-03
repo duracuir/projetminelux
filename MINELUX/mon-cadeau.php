@@ -1,4 +1,13 @@
+<?php
+session_start();
+require ('connexionBD.php');
+if (!isset($_SESSION['username'])) {
+    header('location:connexion.php');
+    exit;
+}
 
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,9 +65,23 @@
 
                     <div class="pull-left"></div>
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="login.html">S'identifier</a>
-                        <a class="btn btn-tertiary" href="signup.html">S'inscrire</a>
-                        <a class="btn btn-secondary" href="contact.html">Nous Contater</a>
+                       <div><p>Bienvenu:
+                        <a class="btn btn-primary" href="login.html">
+                             <?php 
+                       
+                                if(!isset($_SESSION['username'])){
+                                   echo "Vous n'êtes pas connecté!";
+                                }else{
+                                    echo $_SESSION['username'];
+                                
+                                }
+                     ?>
+                        </a>
+
+                                </p>
+                            </div>
+                        <a class="btn btn-secondary" href="contact.html">Nous Contacter</a>
+                        <a class="btn btn-secondary" href="deconnexion.php">Deconnexion</a>
                     </div>
             
                 </div>
@@ -87,7 +110,7 @@
             <div class="container">
             <div class="row">
                 <div class="col-xs-4 back"></div>
-                <a href="/" class="btn btn-black">Retour</a>
+                <a href="index.html" class="btn btn-black">Retour</a>
                 <div class="col-xs-4">
                     <h1 class="page-title">éditer profil de minette</h1>
                 </div>
@@ -96,24 +119,75 @@
             </div>
 		</header>
            <main class="container">
-            <div class="alert alert-success">
+            <div >
 
                 <!-- Theo mets une cmd php ici pour afficher ce msg seulement que le profile est enregistre ou enregistre apres modification-->
+                           <?php
 
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                Votre profil a été enregistré avec succès!            
+                    if (isset($_POST['Submitted'])) {
+                        $username = $_SESSION['username'];
+                        $timer = $_POST['timer'];
+                        $unite = $_POST['uniter'];
+                        $amount = $_POST['amount'];
+
+                        if ($timer && $unite && $amount) {
+                                $statement = $pdo -> prepare( "INSERT INTO `reception` (username, heurerecep, uniterecep, montant)
+                                                 VALUES ('$username', '$timer', '$unite', '$amount')");
+                             $statement->execute(['username'=> $username, 'heurerecep' => $timer, 'uniterecep'=> $unite, 'montant'=> $amount]);
+                            echo "<p style='color: green; background-color: lightgreen;'>Vos données ont été enregistrées avec succès</p>";
+
+                        } else {
+                            echo "<p style='color: red;background-color: pink;'> Veuillez renseigner les champs vides </p>";
+                        }
+                       
+                         
+             }
+
+            ?>    
+              <?php
+
+                    if (isset($_POST['Saved'])) {
+                        $usernamed = $_SESSION['username'];
+                        $timerd = $_POST['timerd'];
+                        $united = $_POST['united'];
+                        $amountd = $_POST['amountd'];
+                        $taxi = $_POST['taxi'];
+
+                        if ($timerd && $united && $amountd) {
+                                $statement = $pdo -> prepare( "INSERT INTO `deplacement` (usernamed, heuredep, unitedep, montantdep, taxi)
+                                                 VALUES ('$usernamed', '$timerd', '$united', '$amountd', $taxi)");
+                             $statement->execute(['usernamed'=> $usernamed, 'heuredep' => $timerd, 'unitedep'=> $united, 'montantdep'=> $amountd, 'taxi' => $taxi]);
+                            echo "<p style='color: green; background-color: lightgreen;'>Vos données ont été enregistrées avec succès</p>";
+
+                        } else {
+                            echo "<p style='color: red;background-color: pink;'> Veuillez renseigner les champs vides </p>";
+                        }
+                        // $sql = "SELECT heuredep, unitedep, montantdep FROM deplacement WHERE usernamed = :usernamed";
+                        // // $sql->execute(["username"=> $username]);
+                        // $stmt = $pdo->prepare($sql);
+                        // $stmt->bindValue(':usernamed', $_SESSION['username']);
+                        //  $stmt->execute();
+                        // $stmt->bindColumn('heuredep', $timerd);
+                        // $stmt->bindColumn('unitedep', $united);
+                        // $stmt->bindColumn('montantdep', $amountd);
+                        // $stmt->bindColumn('taxi', $taxi);
+                         
+             }
+
+            ?>     
+                <!-- Votre profil a été enregistré avec succès!             -->
             </div>
             <form action id="bio_submit" class="submit_profile" method="post">
              <ul class="steps">
-                            <li class="active"><a href="/panel/profile/biography/9024/">Step 1:<br> Biographie</a></li>
-                            <li class=""><a href="/panel/profile/about_me/9024/">Step 2:<br>A propos de moi</a></li>
-                            <li class=""><a href="/panel/profile/languages/9024/">Step 3:<br>Langues</a></li>
-                            <li class=""><a href="/panel/profile/working_cities/9024/">Step 4:<br>Villes de travail</a></li>
-                            <li class=""><a href="/panel/profile/services/9024/">Step 5:<br>Service</a></li>
-                            <li class=""><a href="/panel/profile/rates/9024/">Step 6:<br>Mon Cadeau</a></li>
-                            <li class=""><a href="/panel/profile/contact/9024/">Step 7:<br>Coordonnées</a></li>
+                            <li class="active"><a href="biographie.php">Step 1:<br> Biographie</a></li>
+                            <li class=""><a href="aproposdemoi.php">Step 2:<br>A propos de moi</a></li>
+                            <li class=""><a href="langue.php">Step 3:<br>Langues</a></li>
+                            <li class=""><a href="ville-de-travail.php">Step 4:<br>Villes de travail</a></li>
+                            <li class=""><a href="services.php">Step 5:<br>Service</a></li>
+                            <li class=""><a href="#">Step 6:<br>Mon Cadeau</a></li>
+                            <li class=""><a href="coordonnees.php">Step 7:<br>Coordonnées</a></li>
                     </ul>
-				<script type="text/javascript">
+<!-- 				<script type="text/javascript">
     $(document).ready(function(){
         $('body').on('click', '.gift .delete-gift', function(e){
             e.preventDefault();
@@ -174,7 +248,8 @@
             }
         });
     })
-</script>
+</script> -->
+
      <div class="row row-17 flex-row">
     <div class="col-xs-6">
         <div class="box" id="incall-gifts">
@@ -187,10 +262,24 @@
                     <div class="col-xs-2"><span>Devise</span></div>
                 </div>
             </div>
+    <?php
+        $allmsg = $pdo -> query("SELECT username, heurerecep, uniterecep, montant FROM reception WHERE username = '$_SESSION[username]'");
+        while($msg = $allmsg -> fetch())
+            {
+    ?>
+    
+     <div class="col-xs-13"><?php echo $msg['heurerecep'];?> </div>
+        <div class="col-xs-25"><?php echo $msg['uniterecep'];?></div>
+        <div class="col-xs-2"><?php echo $msg['montant'];?></div>
+        <div class="col-xs-2">FCFA</div><br>
+    <?php
+            }
+    ?>
+    
             <div class="gifts">
                 <div class="row row-5 gift pricetable" id="gift_100">
                     <div class="col-xs-13 time">
-                        <input type="text" id="qty">
+                        <input type="text" id="qty" name="timer">
                     </div>
                     <div class="col-xs-25 unit">
                         <div class="btn-group bootstrap-select">
@@ -202,25 +291,27 @@
                                     <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">jours</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
                                 </ul>
                             </div>
-                        <select id="unit" class="selectpicker" tabindex="-98">
+                        <select id="unit" class="selectpicker" tabindex="-98" name="uniter">
                             <option value="" selected="" disabled="">-----</option>
-                            <option value="1">minutes</option>
-                            <option value="2">heures</option>
-                            <option value="3">jours</option>
+                            <option value="minutes">minutes</option>
+                            <option value="heures">heures</option>
+                            <option value="jours">jours</option>
                         </select>
                     </div>
                     </div>
                     <div class="col-xs-2 amount">
-                        <input type="text" id="amt">
+                        <input type="text" id="amt" name="amount">
                     </div>
                     <div class="col-xs-2 addon currency">
                         <span>FCFA</span>
                     </div>
                     <div class="col-xs-123"></div>
                     <div class="col-xs-2 cta">
-                        <a href="#" class="btn btn-primary btn-block add-gift" id="add_incall">Ajouter</a>
+                    <button class="btn btn-primary btn-block add-gift" id="add_incall" name="Submitted">Ajouter</button>
+          
                     </div>
-                </div>
+
+                 </div>
             </div>
         </div>
     </div>
@@ -236,10 +327,24 @@
                     <div class="col-xs-2"><span>+Taxi</span></div>
                 </div>
             </div>
+            <?php
+        $allmsgd = $pdo -> query("SELECT usernamed, heuredep, unitedep, montantdep, taxi FROM deplacement WHERE usernamed = '$_SESSION[username]'");
+        while($msgd = $allmsgd -> fetch())
+            {
+    ?>
+    
+     <div class="col-xs-13"><?php echo $msgd['heuredep'];?> </div>
+        <div class="col-xs-25"><?php echo $msgd['unitedep'];?></div>
+        <div class="col-xs-2"><?php echo $msgd['montantdep'];?></div>
+        <div class="col-xs-2">FCFA</div>
+         <div class="col-xs-2"><?php echo $msgd['taxi'];?></div><br>
+    <?php
+            }
+    ?>
             <div class="gifts">
                 <div class="row row-5 gift pricetable" id="gift_100">
                     <div class="col-xs-13 time">
-                        <input type="text" id="qty">
+                        <input type="text" id="qty" name="timerd">
                     </div>
                     <div class="col-xs-25 unit">
                         <div class="btn-group bootstrap-select">
@@ -251,16 +356,16 @@
                                     <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">jours</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
                                 </ul>
                             </div>
-                        <select id="unit" class="selectpicker" tabindex="-98">
-                            <option value="" selected="" disabled="">-----</option>
-                            <option value="1">minutes</option>
-                            <option value="2">heures</option>
-                            <option value="3">jours</option>
+                        <select id="unit" class="selectpicker" tabindex="-98" name="united">
+                            <option value="" selected="" disabled="" >-----</option>
+                            <option value="minutes">minutes</option>
+                            <option value="heures">heures</option>
+                            <option value="jours">jours</option>
                         </select>
                     </div>
                     </div>
                     <div class="col-xs-2 amount">
-                        <input type="text" id="amt">
+                        <input type="text" id="amt" name="amountd">
                     </div>
                     <div class="col-xs-2 addon currency">
                         <span>FCFA</span>
@@ -268,12 +373,12 @@
                     <div class="col-xs-123">
                         
                         <div class="custom-checkbox">
-                            <input type="checkbox" id="taxi">
+                            <input type="checkbox" id="taxi" value="1" name="taxi">
                             <label for="taxi"></label>
                         </div>
                     </div>
                     <div class="col-xs-2 cta">
-                        <a href="#" class="btn btn-primary btn-block add-gift" id="add_incall">Ajouter</a>
+                        <button class="btn btn-primary btn-block add-gift" id="add_incall" name="Saved">Ajouter</button>
                     </div>
                 </div>
             </div>
@@ -281,7 +386,7 @@
     </div>
     <input type="hidden" id="csrf" name="csrf" value="dDZqdnY2MzRFK3gzYkgrNnljMHVQUT09">    <div class="col-xs-12">
         <div class="nextandbackBtns">
-            <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save">Enregistrer</a>
+            <!-- <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save">Enregistrer</a> -->
         </div>
     </div>
 

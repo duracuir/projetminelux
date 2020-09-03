@@ -125,7 +125,7 @@ if(!isset($_SESSION['username'])) {
             <div class="container">
             <div class="row">
                 <div class="col-xs-4 back"></div>
-                <a href="/" class="btn btn-black">Retour</a>
+                <a href="index.html" class="btn btn-black">Retour</a>
                 <div class="col-xs-4">
                     <h1 class="page-title">éditer profil de minette</h1>
                 </div>
@@ -175,7 +175,7 @@ if(!isset($_SESSION['username'])) {
                         </div>
                         <div class="col-xs-5 grp">
                             <div class="bloc">
-                                  <div class="select">
+                                  <div class="select" name="region">
                                     <select>
                                       <option>De quelle Region est vous? </option>
                                       <option value="0">Centre</option>
@@ -195,7 +195,7 @@ if(!isset($_SESSION['username'])) {
                         <div class="col-xs-5 grp">
                             <div class="bloc">
                                   <div class="select">
-                                    <select>
+                                    <select name="nationality">
                                       <option value="active">Camerounais(e)</option>
                                       <option value="0">Gabonais(e)</option>
                                       <option value="1">Tchadien(ne)</option>
@@ -223,11 +223,11 @@ if(!isset($_SESSION['username'])) {
                         <div class="col-xs-5 grp">
                             <div class="bloc">
                                   <div class="select">
-                                    <select>
-                                      <option value="active">Entierement Naturel</option>
-                                      <option value="0">Entierement rasés</option>
-                                      <option value="1">Pariellement rasée</option>
-                                      <option value="2">Entretenu</option>
+                                    <select name="epilation">
+                                      <option value="Entierement Naturel">Entierement Naturel</option>
+                                      <option value="Entierement rasés">Entierement rasés</option>
+                                      <option value="Partiellement rasés">Partiellement rasés</option>
+                                      <option value="Entretenu">Entretenu</option>
                                     </select>
                                   </div>
                                 </div>
@@ -241,10 +241,10 @@ if(!isset($_SESSION['username'])) {
                 </div>
                         <div class="col-xs-9 grp"><div class="radio">
                         <label>
-                        <input type="radio" id="tatoo" name="tatoo" value="1">Oui</label>
+                        <input type="radio" id="tatoo" name="tattoo" value="Oui">Oui</label>
                     </div>
                     <div class="radio"><label>
-                        <input type="radio" id="tatoo" name="tatoo" value="2" checked="checked">Non</label>
+                        <input type="radio" id="tatoo" name="tattoo" value="Non" checked="checked">Non</label>
                     </div>
                     </div>
 						 <div class="box">
@@ -254,10 +254,10 @@ if(!isset($_SESSION['username'])) {
                     <div class="col-xs-9 grp">
                         <div class="radio">
                         <label>
-                        <input type="radio" id="piercing" name="piercing" value="1">Oui</label>
+                        <input type="radio" id="piercing" name="piercing" value="Oui">Oui</label>
                     </div>
 						<div class="radio"><label>
-                        <input type="radio" id="piercing" name="piercing" value="2" checked="checked">Non</label>
+                        <input type="radio" id="piercing" name="piercing" value="Oui" checked="checked">Non</label>
                     </div>
                     </div>
 						 </div>
@@ -267,7 +267,7 @@ if(!isset($_SESSION['username'])) {
 		    
         <div class="col-xs-12">
                      <div class="nextandbackBtns">
-                      <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save">Enregistrer</a>
+                      <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save" name="Save">Enregistrer</a>
                      </div>
                     </div>
             

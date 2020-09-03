@@ -90,7 +90,7 @@ if (isset($_POST['Save'])) {
             <div class="container">
             <div class="row">
                 <div class="col-xs-4 back"></div>
-                <a href="/" class="btn btn-black">Retour</a>
+                <a href="index.html" class="btn btn-black">Retour</a>
                 <div class="col-xs-4">
                     <h1 class="page-title">éditer profil de minette</h1>
                 </div>
@@ -101,13 +101,13 @@ if (isset($_POST['Save'])) {
            <main class="container">
         <form action="aproposdemoi.php" id="bio_submit" class="submit_profile" method="post">
             <ul class="steps">
-                            <li class="active"><a href="/panel/profile/biography/9024/">Step 1:<br> Biographie</a></li>
-                            <li class=""><a href="/panel/profile/about_me/9024/">Step 2:<br>A propos de moi</a></li>
-                            <li class=""><a href="/panel/profile/languages/9024/">Step 3:<br>Langues</a></li>
-                            <li class=""><a href="/panel/profile/working_cities/9024/">Step 4:<br>Villes de travail</a></li>
-                            <li class=""><a href="/panel/profile/services/9024/">Step 5:<br>Service</a></li>
-                            <li class=""><a href="/panel/profile/rates/9024/">Step 6:<br>Mon Cadeau</a></li>
-                            <li class=""><a href="/panel/profile/contact/9024/">Step 7:<br>Coordonnées</a></li>
+                            <li class="active"><a href="biographie.php">Step 1:<br> Biographie</a></li>
+                            <li class=""><a href="aproposdemoi.php">Step 2:<br>A propos de moi</a></li>
+                            <li class=""><a href="langue.php">Step 3:<br>Langues</a></li>
+                            <li class=""><a href="ville-de-travail.php">Step 4:<br>Villes de travail</a></li>
+                            <li class=""><a href="services.php">Step 5:<br>Service</a></li>
+                            <li class=""><a href="mon-cadeau.php">Step 6:<br>Mon Cadeau</a></li>
+                            <li class=""><a href="coordonnees.php">Step 7:<br>Coordonnées</a></li>
             </ul>
             <!-- <input type="text" id="nom" name="username" value="<?php echo $_SESSION['username'] ?>" placeholder="Nom"> -->
             <div class="row row-17 flex-row">
