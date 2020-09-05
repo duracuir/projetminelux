@@ -82,7 +82,7 @@ if (isset($_POST['username'])){
 
                     <div class="pull-left"></div>
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="login.html">S'identifier</a>
+                        <!-- <a class="btn btn-primary" href="login.html">S'identifier</a> -->
                         <a class="btn btn-tertiary" href="login2.php">S'inscrire</a>
                         <a class="btn btn-secondary" href="contact.html">Nous Contacter</a>
                     </div>

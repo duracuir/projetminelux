@@ -97,7 +97,7 @@ if(!isset($_SESSION['username'])){
                     </div>
                     <div id="navbar">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="/index.html/">Accueil</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="/escorts/new/">Nouvelle</a></li>
                     <li class="nav-item"><a class="nav-link" href="/escorts/girls/">Filles</a></li>
                     <li class="nav-item"><a class="nav-link" href="/escorts/homme/">Hommes</a></li>
@@ -168,7 +168,7 @@ if(!isset($_SESSION['username'])){
                 <div class="alert alert-danger nobottom">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
                          Vous n'avez pas suffisamment de photos pour activer votre profil. 
-                         <a href="/panel/photos/index/9024">Cliquez ici to add photos.</a>                               
+                         <a href="gallery.php">Cliquez ici pour ajouter vos photos.</a>                               
                  </div>
             </div>
             
@@ -181,7 +181,7 @@ if(!isset($_SESSION['username'])){
         </div>
             <div class="col-xs-3">
             <div class="box">
-                <a href="/panel/photos/index/9024">
+                <a href="gallery.php">
                 <img src="fond/Photo.png" style="margin-bottom:15px;">
                 <h5>Organiser les photos</h5></a>
             </div>
