@@ -42,10 +42,10 @@ if (isset($_POST['btn_upload']))
 	<small class="error">Charger uniquement les JPG ou PNG.</small>
 	</div>
 	<div class="title-field">
-	<input type="text" name="img_title" placeholder="Image title" required>
+	<input type="text" name="img_title" placeholder="Titre de l'image" required>
 	<small class="error">Le titre de l'image est obligatoire.</small>
 	</div>
-	<input type="submit" value="Upload Image" name="btn_upload" class="button">
+	<input type="submit" value="Charger Image" name="btn_upload" class="button">
 	</form>
 </body>
 <a class="close-reveal-modal">&#215;</a>
