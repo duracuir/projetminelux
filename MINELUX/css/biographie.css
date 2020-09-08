@@ -232,6 +232,166 @@ img
    top: 3.5px;
     border-radius: 0;
 }
+/* CONNEXION*/
+
+.top-nav .usermessage
+{
+  margin-right: 15px;
+}
+.username
+{
+  color: #39e70d;
+}
+a
+{
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+}
+
+/* ville*/ 
+#edit-profile .box .grp {
+    margin-bottom: 15px !important;
+}
+.col-xs-1 {
+    width: 8.33333333%;
+}
+#edit-profile .box label {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    height: 33px;
+    vertical-align: middle;
+    line-height: 33px;
+}
+.bootstrap-select.btn-group:not(.input-group-btn), .bootstrap-select.btn-group[class*=col-] {
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+}
+#edit-profile .box input:not([type="radio"]):not([type="submit"]):not([type="checkbox"]):not(.yadcf-filter ), #edit-profile .box .bootstrap-select {
+    width: 100% !important;
+}
+#edit-profile .box input:not([type="radio"]):not([type="submit"]):not([type="checkbox"]), #edit-profile .box .bootstrap-select button {
+    height: 33px;
+    padding-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: none;
+    border: 1px solid #cacaca;
+    background: #fff !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #505050;
+}
+.btn-group>.btn:first-child {
+    margin-left: 0;
+}
+.bootstrap-select>.dropdown-toggle {
+    width: 100%;
+    padding-right: 25px;
+    z-index: 1;
+}
+.btn-group>.btn, .btn-group-vertical>.btn {
+    position: relative;
+    float: left;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+}
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+.btn .caret {
+    margin-left: 0;
+}
+element.style {
+    max-height: 187px;
+    overflow: hidden;
+    min-height: 92px;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+}
+
+element.style {
+    max-height: 175px;
+    overflow-y: auto;
+    min-height: 80px;
+}
+.bootstrap-select.btn-group .dropdown-menu.inner {
+    position: static;
+    float: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    /*-webkit-box-shadow: none;*/
+    box-shadow: none;
+}
+.bootstrap-select.btn-group .dropdown-menu li {
+    position: relative;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+.bootstrap-select.btn-group .dropdown-menu li a span.text {
+    display: inline-block;
+}
+.bootstrap-select.btn-group .dropdown-menu li a span.check-mark {
+    display: none;
+}
+.bootstrap-select.btn-group .dropdown-menu li {
+    position: relative;
+}
+.bootstrap-select>select {
+    position: absolute!important;
+    bottom: 0;
+    left: 50%;
+    display: block!important;
+    width: .5px!important;
+    height: 100%!important;
+    padding: 0!important;
+    opacity: 0!important;
+    border: none;
+}
 /*BIOGRAPHIE !!! */
 
 #edit-profile
@@ -435,6 +595,101 @@ a {
 .col-xs-12 {
     width: 100%;
 }
+/* TATTO & PIERCINGS*/
+#edit-profile .box label {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    height: 33px;
+    vertical-align: middle;
+    line-height: 33px;
+}
+#edit-profile .box .grp {
+    margin-bottom: 15px !important;
+}
+.col-xs-9 {
+    width: 75%;
+}
+#edit-profile .box .radio {
+    margin: 0;
+    display: inline-block;
+    margin-right: 10px;
+}
+#edit-profile .box .radio input {
+    top: 7px;
+}
+#edit-profile .box .grp {
+    margin-bottom: 15px !important;
+}
+.col-xs-3 {
+    width: 25%;
+}
+
+/* Photo de profile*/
+
+.row.row-17> [class*="col-"] {
+    padding: 17px !important;
+}
+.col-xs-12 {
+    width: 100%;
+}
+#edit-profile .box {
+    background: #fff;
+    padding: 42px 35px;
+}
+#edit-profile .box .heading.countries {
+    margin-bottom: 10px;
+}
+#edit-profile .box .heading3 {
+    background: #000;
+}
+#edit-profile .box .heading {
+   /*background: #d82c2e;*/
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    padding: 5.5px 20px;
+    text-transform: uppercase;
+    margin-bottom: 33px;
+}
+#edit-profile .box .heading + small {
+    margin-bottom: 33px;
+    display: block;
+}
+#edit-profile .box small {
+    font-size: 12px;
+    color: #000;
+}
+#edit-profile .box .grp {
+    margin-bottom: 15px !important;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+
+
+/*photo*/
+.dropzone.dz-clickable {
+    cursor: pointer;
+}
+.dropzone {
+    border: 2px solid #ffffff;
+    background: #3a3a3a;
+    min-height: 218px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 #edit-profile .box {
     background: #fff;
     padding: 52px 39px;

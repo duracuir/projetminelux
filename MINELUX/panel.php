@@ -112,7 +112,7 @@ if(!isset($_SESSION['username'])){
             <div class="container">
             <div class="row">
                 <div class="col-xs-4 back"></div>
-                <a href="index.php" class="btn btn-black">Retour</a>
+                <a href="/" class="btn btn-black">Retour</a>
                 <div class="col-xs-4">
                     <h1 class="page-title">espace privé</h1>
                 </div>

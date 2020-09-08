@@ -51,9 +51,6 @@ if(!isset($_SESSION['username'])) {
         </filter>
     </defs>
     
-    
-    
-    
     <g id="icon-real-photos">
         <polygon points="16.67,4 13.85,20 16.89,20 19.1,7.48 56.52,14.07 52.18,38.69 48,37.96 48,50.14 53.05,51.03 60,11.64"></polygon>
         <path d="M4,20v40h44V20H4z M45,48H7V23h38V48z M41,45H11l5-7l5,4l5-7l5,5l5-8L41,45z M15,28c-1.66,0-3,1.34-3,3c0,1.66,1.34,3,3,3 c1.66,0,3-1.34,3-3C18,29.34,16.66,28,15,28z"></path>
@@ -79,8 +76,9 @@ if(!isset($_SESSION['username'])) {
 
                     <div class="pull-left"></div>
                     <div class="pull-right">
-                         <div><p>Bienvenu:
-                        <a class="btn btn-primary" href="login.html">
+                        <span class="usermessage">
+                         Bienvenue:
+                        <a class="username" href="login.html">
                              <?php 
                        
                                 if(!isset($_SESSION['username'])){
@@ -90,10 +88,9 @@ if(!isset($_SESSION['username'])) {
                                 
                                 }
                      ?>
+                     
                         </a>
-
-                                </p>
-                            </div>
+                        </span>   
                         <a class="btn btn-secondary" href="contact.html">Nous Contacter</a>
                         <a class="btn btn-secondary" href="deconnexion.php">Deconnexion</a>
                     </div>
@@ -111,11 +108,11 @@ if(!isset($_SESSION['username'])) {
                     <div id="navbar">
                 <ul class="nav navbar-nav">
                     <li class="nav-item active"><a class="nav-link" href="/index.html/">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/escorts/new/">Nouvelle</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/escorts/girls/">Filles</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/escorts/homme/">Hommes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/escorts/vip/">VIP</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/escorts/tours/">Tournées de Ville</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/minette/new/">Nouvelle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/minette/girls/">Filles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/minette/homme/">Hommes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/minette/vip/">VIP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/minette/tours/">Tournées de Ville</a></li>
                     
             </div>
                 </div>
@@ -153,11 +150,74 @@ if(!isset($_SESSION['username'])) {
 					   <h3 class="heading"> presentation </h3>
 					   <div class="row">
                                <div class="col-xs-3 grp">
-                            <label for="nom">Nom*:</label>
-                        </div>
+                                    <label for="nom">Nom*:</label>
+                                </div>
                             <div class="col-xs-5 grp">
                             <input type="text" id="nom" name="nom" value="" placeholder="Nom">
                             </div>
+                            <div class="col-xs-1 grp">
+                                <label for="ville">Ville*</label>
+                                
+                            </div>
+                            <div class="col-xs-3 grp">
+                            <div class="btn-group bootstrap-select">
+                                <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-id="birth_date" title="18" aria-expanded="false">
+                                    <span class="filter-option pull-left">Ville</span>&nbsp;<span class="bs-caret"><span class="caret">
+                                    </span></span>
+                                </button>
+                                <div class="dropdown-menu open" style="max-height: 123px; overflow: hidden; min-height: 92px;">
+                                    <ul class="dropdown-menu inner" role="menu" style="max-height: 111px; overflow-y: auto; min-height: 80px;">
+                                        <li data-original-index="0"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Yaoundé</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="1" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Douala</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Bamenda</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Nkongsamba</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Bafouassam</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Buea</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="6"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Limbé</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="7"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Kribi</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="8"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Edéa</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="9"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Dschang</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="10"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Ebolowa</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="11"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Ngaoundéré</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="12"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Bertoua</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="13"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Loum</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="14"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Kumba</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="15"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Foumban</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="16"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Mbouda</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="17"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Tiko</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="18"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Bafang</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="19"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Sangmélima</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="20"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Mbanga</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="21"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Mélong</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>                                       
+                                    </ul>
+                                </div>
+                            <select id="birth_date" name="birth_date" class="selectpicker" placeholder="Âge" tabindex="-98">
+                                    <option value="0">Ville</option>
+                                            <option selected="selected" value="18">Yaoundé</option>
+                                            <option value="Yaoundé">Yaoundé</option>
+                                            <option value="Douala">Douala</option>
+                                            <option value="Bamenda">Bamenda</option>
+                                            <option value="Nkongsamba">Nkongsamba</option>
+                                            <option value="Bafoussam">Bafoussam</option>
+                                            <option value="Buea">buea</option>
+                                            <option value="limbe">Limbé</option>
+                                            <option value="Kribi">kribi</option>
+                                            <option value="Edea">Edea</option>
+                                            <option value="Dschang">Dschang</option>
+                                            <option value="Ebolowa">Ebolowa</option>
+                                            <option value="Ngaoundéré">Ngaoundéré</option>
+                                            <option value="Bertoua">Bertoua</option>
+                                            <option value="Loum">Loum</option>
+                                            <option value="Kumba">Kumba</option>
+                                            <option value="Foumban">Foumban</option>
+                                            <option value="Tiko">Tiko</option>
+                                            <option value="Bafang">Bafang</option>
+                                            <option value="Sangmélima">Sangmélima</option>
+                                            <option value="Mbanga">Mbanga</option>
+                                            <option value="Mélong">Mélong</option>
+                                </select>
+                               </div>                       
+                             </div>
                             <div class="col-xs-5 grp">
                             <label for="start">Né(e) le:</label>
                         </div>
@@ -170,25 +230,30 @@ if(!isset($_SESSION['username'])) {
                         <div class="col-xs-9 grp">
                             <input type="text" id="slogan" name="slogan" value="" placeholder="Slogan. Exp: la Tigresse">                            <small><b>ATTENTION:</b> Veuillez ne pas écrire les services, les tarifs ou les textes sexuellement explicites. Être discrète et transcrire vos offres.</small>
                         </div>
+                        
                         <div class="col-xs-3 grp">
-                            <label for="ethnicity">Origine:*</label>
+                            <label for="ethnicity">Origin:*</label>
                         </div>
                         <div class="col-xs-5 grp">
                             <div class="bloc">
                                   <div class="select" name="region">
                                     <select>
-                                      <option>De quelle Region est vous? </option>
-                                      <option value="0">Centre</option>
+                                      <option> Région </option>
+                                      <option value="0">l’Extrême-Nord</option>
                                       <option value="1">Nord</option>
-                                      <option value="2">Ouest</option>
-                                      <option value="3">Sud-Ouest</option>
-                                      <option value="4">Autre a préciser</option>
+                                      <option value="2">l’Adamaoua</option>
+                                      <option value="3">l’Est</option>
+                                      <option value="4">Centre</option>
+                                      <option value="5">Sud</option>
+                                      <option value="6">Littoral</option>
+                                      <option value="7">l'Ouest</option>
+                                      <option value="8">Nord-Ouest</option>
+                                      <option value="9">Sud-Ouest</option>
                                     </select>
                                   </div>
                                 </div>
                             </div>
                          </div>
-
                          <div class="col-xs-3 grp">
                         <label for="nationality">Nationalité:*</label>
                         </div>
@@ -201,24 +266,42 @@ if(!isset($_SESSION['username'])) {
                                       <option value="1">Tchadien(ne)</option>
                                       <option value="2">Nigerien(ne)</option>
                                       <option value="3">Congolais(e)</option>
-                                      <option value="4">Autre a préciser</option>
+                                      <option value="4">guinéen(ne)</option>
+                                      <option value="5">Autre</option>
                                     </select>
                                   </div>
                                 </div>
                             </div>
                          </div>
                        </div>
-					   
+                        <div class="col-xs-12">
+                 <div class="box">
+                     <h3 class="heading heading3 photo profile">Télécharger Photos</h3>
+                     <small>Postait une photo sensulle et discrete qui transcrit vos atouts sexsulles et plus ...
+                      pas de photo pronographique. si non votre compte sérait <b>Bloqué<b>. </small>
+                        <div class="row">
+                            <div class="col-xs-4 grp">
+                               
+                            </div>
+                            <div class="col-xs-6 grp">
+                                <div class="col-md-12 col-sm-12">
+                <form action="" class="dropzone dz-clickable" id="pictures">
+                    <div class="upload-msg"><i class="fa fa-image">
+                        </i>Téléchargez<a class="btn btn-success">Cliquez ici</a></div>
+                <div class="dz-default dz-message"><span></span></div></form>
+            </div>
+                            </div>
+                        </div>
+                 </div>
+             </div>
 				    </div>
 				  </div>
-			 
-		    
 			<div class="col-xs-6">
 				   <div class="box">
 					   <h3 class="heading"> option </h3>
 					   <div class="row">
                         <div class="col-xs-3 grp">
-                        <label for="ethnicity">Epilation Maillot:*</label>
+                        <label for="ethnicity">Epilation*</label>
                         </div>
                         <div class="col-xs-5 grp">
                             <div class="bloc">
@@ -232,22 +315,20 @@ if(!isset($_SESSION['username'])) {
                                   </div>
                                 </div>
                             </div>
-
                          </div>
                      <div class="box">
                          <div class="col-xs-12"></div>
-                         <div class="col-xs-3 grp">
+                 <div class="col-xs-3 grp">
                     <label for="tattoo">Tattoo:</label>
                 </div>
-                        <div class="col-xs-9 grp"><div class="radio">
+                <div class="col-xs-9 grp"><div class="radio">
                         <label>
                         <input type="radio" id="tatoo" name="tattoo" value="Oui">Oui</label>
-                    </div>
-                    <div class="radio"><label>
+               </div>
+                <div class="radio"><label>
                         <input type="radio" id="tatoo" name="tattoo" value="Non" checked="checked">Non</label>
-                    </div>
-                    </div>
-						 <div class="box">
+                </div>
+            </div>	
                     <div class="col-xs-3 grp">
                         <label for="piercing">Piercings:</label>
                 </div>
@@ -259,8 +340,7 @@ if(!isset($_SESSION['username'])) {
 						<div class="radio"><label>
                         <input type="radio" id="piercing" name="piercing" value="Oui" checked="checked">Non</label>
                     </div>
-                    </div>
-						 </div>
+                    </div> 
                     </div>
                     </div>
 			  </div>
