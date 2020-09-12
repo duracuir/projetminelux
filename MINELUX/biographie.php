@@ -349,10 +349,7 @@ if(!isset($_SESSION['username'])) {
                      <div class="nextandbackBtns">
                       <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save" name="Save">Enregistrer</a>
                      </div>
-                    </div>
-            
-				
-			
+                    </div>				
 			</div>
         </form>
         </main>

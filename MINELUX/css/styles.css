@@ -4,6 +4,7 @@ body
 {
     font-family: 'Open sans' , sans-serif;
     font-size: 16px;
+    background: #f7f7f7;
 }
 
 h1, h2, h3, h4, h5, h6, ul, p
@@ -667,33 +668,49 @@ img
 }
 /*Presentation des Minettes*/
 
-#home .row-sm
-{
+.content {
+    width: 80%;
+    float: left;
+    display: block;
+    padding: 0 7px;
+}
+#home .escorts {
+    margin-bottom: 30px;
+}
+div {
+    display: block;
+}
+#home .row-sm {
     margin: -7px;
 }
-#home .row-sm> [class*="col-"]
-{
-    padding: 10px;
+.row:before{
+    display: table;
+    content: " ";
 }
-.img-full
-{
-    display: block;
-    width: 100%;
-    height: auto;
+#home .row-sm> [class*="col-"], #home .row-sm> .one-6, #home .row-sm> .one-7, #home .row-sm> .five-6 {
+    padding: 7px;
 }
-.col-xs-4
-{
-    width: 33.33%;
+.col-xs-4 {
+    width: 33.33333333%;
 }
-#home .escort .img
-{
+#home .escort .img {
     position: relative;
     width: 302px;
     height: 443px;
     background: #fff;
 }
-#home .escort .img .badges
-{
+.img-full {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+#home .escort .img .badges {
     position: absolute;
     top: 0;
     left: 0;
@@ -701,109 +718,121 @@ img
     bottom: 0;
     z-index: 2;
 }
-#home .escort .img .badges .top-left
-{
+#home .escort .img .badges .top-left {
     position: absolute;
     top: -3px;
     left: -3px;
 }
-.ribbon
-{
-    width: 132px;
-    height: 132px;
-}
-#home .escort .img .badges .top-right
-{
+#home .escort .img .badges .top-right {
     position: absolute;
     top: 0;
     right: 8px;
 }
-#home .escort .img .badges .top-right .badge-md
-{
-    display: block;
-    margin: 8px;
-    fill: #000;
-    background: #fff;
-    width: 50px;
-    height: 50px;
-    position: relative;
-}
-#home .escort .img .badges .bottom-left
-{
+#home .escort .img .badges .bottom-left {
     position: absolute;
     bottom: 8px;
     left: 8px;
 }
-#home .escort .img .badges .bottom-left .badge-md
-{
+#home .escort .img .badges .bottom-left .badge-md {
     display: block;
     margin-top: 8px;
     fill: #000;
-    background: #fff;
+    background: #fff ;
     width: 50px;
     height: 50px;
     position: relative;
 }
-#home .escort .img .overlay .name
-{
-    font-weight: 700;
-    font-size: 22px;
-}
-.listing_desc 
-{
-    height: 30px;
-    overflow: hidden;
-    color: #fff;
-    padding: 0 10px;
-    font-size: 10px;
-}
-#home .escort .img .overlay .city, #home .escort .img .overlay .name, #home .escort .img .overlay .age  {
-    color: #fff;
-    z-index: 4;
-    position: relative;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 18px;
-}
-#home .escort .img .overlay .city, #home .escort .img .overlay .name, #home .escort .img .overlay .age
- {
-    color: #fff;
-    z-index: 4;
-    position: relative;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 18px;
-}
-#home .escort .img .overlay .git 
-{
-    z-index: 4;
-    position: relative;
-    border: 1px solid #fff;
-    margin-top: 25px;
-    color: #fff;
-}
-#home .escort .img .overlay
-{
+#home .escort .img .overlay{
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0.0.0.0,7);
     text-align: center;
     padding-top: 145px;
-    cursor: pointer;
-    opacity: 
-    /*-webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;*/
-    transition: all 200ms ease;
+   
 }
-.profile_a
-{
+.img:hover{
+    opacity: 0.7;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    transition: all 200ms ease;
+    
+}
+.img span {
+    visibility: hidden;
+
+}
+.img :hover span{
+    
+    visibility: visible;
+
+}
+#home .escort .img .overlay .name {
+    font-weight: 700;
+    font-size: 22px;
+}
+#home .escort .img .overlay .city, #home .escort .img .overlay .name, #home .escort .img .overlay .age {
+    color: #fff;
+    z-index: 4;
+    position: relative;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+}
+.listing_desc {
+    height: 30px;
+   /*overflow: hidden;*/
+    color: #fff;
+    padding: 0 10px;
+    font-size: 10px;
+}
+h1, h2, h3, h4, h5, h6, ul, p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+#home .escort .img .overlay .git {
+    z-index: 4;
+    position: relative;
+    border: 1px solid #fff;
+    margin-top: 25px;
+}
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, ul:last-child, p:last-child {
+    margin-bottom: 0;
+}
+.btn {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    transition: all 200ms ease;
+    letter-spacing: 0.05em;
+    padding: 8px 16px;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+   }
+.profile_a {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -816,9 +845,8 @@ a, a:hover, a:focus, a:active:focus, button, button:hover, button:focus, button:
     text-decoration: none;
     outline: none;
 }
-#home .escorts
-{
-    margin-bottom: 30px;
+a{
+    background-color: transparent;
 }
 
 

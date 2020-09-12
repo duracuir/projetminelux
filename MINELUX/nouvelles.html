@@ -1,0 +1,430 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <tilte></tilte>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/nouvelles.css">
+        <script src="js/script.js"></script>
+        <script type="application/javascript">
+                var user_info = { 'logged_in':false, 'user_id': null, 'user_type': null };
+                var signon_link = "/auth/log_in/";
+        var env = 'production';
+                var translate = { 'show_more': 'Voire plus', 'show_less': 'Voire moins' };
+                    </script>
+    </head>
+    
+    <body id="home">
+        <svg id="svg-source" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter id="filter-shadow" x="0" y="0" width="100%" height="100%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur>
+            <feOffset dx="1" dy="1"></feOffset>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.3"></feFuncA>
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="icon-real-photos">
+        <polygon points="16.67,4 13.85,20 16.89,20 19.1,7.48 56.52,14.07 52.18,38.69 48,37.96 48,50.14 53.05,51.03 60,11.64"></polygon>
+        <path d="M4,20v40h44V20H4z M45,48H7V23h38V48z M41,45H11l5-7l5,4l5-7l5,5l5-8L41,45z M15,28c-1.66,0-3,1.34-3,3c0,1.66,1.34,3,3,3 c1.66,0,3-1.34,3-3C18,29.34,16.66,28,15,28z"></path>
+    </g>
+    <g id="icon-discretion-guaranteed">
+        <path d="M50,28v-6c0-9.93-8.08-18-18-18c-9.93,0-18,8.07-18,18v6H8v32h48V28H50z M34,42.45V51c0,1.1-0.9,2-2,2s-2-0.9-2-2v-8.55 c-1.19-0.69-2-1.97-2-3.45c0-2.21,1.79-4,4-4s4,1.79,4,4C36,40.48,35.19,41.75,34,42.45z M18,28v-6c0-7.72,6.28-14,14-14 s14,6.28,14,14v6H18z"></path>
+    </g>
+    <g id="icon-trusted-website">
+        <path d="M49.97,19.19L49.32,14l-4.17-3.15L42,6.68l-5.19-0.65L32,4l-4.81,2.03L22,6.68l-3.15,4.17L14.68,14l-0.65,5.19L12,24 l2.03,4.81L14.68,34l4.17,3.16L22,41.32l5.19,0.65L32,44l4.81-2.03L42,41.32l3.15-4.17L49.32,34l0.65-5.19L52,24L49.97,19.19z M34.5,32.54h-4v-11.5l-3,1.5v-4l4-2h3V32.54z"></path>
+        <path d="M56,54l-7.7-1.33L45.61,60l-8.58-14.86l0.57-0.24l4.77-0.6l1.25-0.16l0.76-1.01l2.9-3.83l0.15-0.11L56,54z M26.4,44.89 l-4.77-0.6l-1.26-0.16l-0.76-1.01l-2.9-3.83l-0.15-0.11L8,54l7.7-1.33l2.7,7.33l8.58-14.86L26.4,44.89z"></path>
+    </g>
+    
+</svg>
+        <header>
+                <div class="top-nav">
+                <div class="container clearfix">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#top recherche">Top Recherché</a></li>
+                        <li><a href="#top favorites">Top Favorites</a></li>
+                        <li><a href="#nouvelles">Nouvelles</a></li>
+                    </ul>
+
+                    <div class="pull-left"></div>
+                    <div class="pull-right">
+                        <a class="btn btn-primary" href="connexion.php">S'identifier</a>
+                        <a class="btn btn-tertiary" href="login2.php">S'inscrire</a>
+                        <a class="btn btn-secondary" href="contact.html">Nous Contacter</a>
+                    </div>
+                </div>
+                </div>
+                </div>
+                <div class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="logo" href=""><img src="logo/main-logo.png" class="img-responsive" alt="Cameroun Escortes"></a>
+                    </div>
+                    <div id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="/index.html/">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/minette/new/">Nouvelle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/minette/girls/">Filles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/minette/homme/">Hommes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/minette/vip/">VIP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/minette/tours/">Tournées de Ville</a></li>
+            </div>
+                </div>  
+            </div>
+            <div class="page-heading">
+            <div class="container">
+            <div class="row">
+                <div class="col-xs-4 back"></div>
+                <div class="col-xs-4">
+                    <h1 class="page-title"> nouveau Minettes </h1>
+                </div>
+                <div class="col-xs-4">
+                    <p class="views">Total des minettes disponible : . . .</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            </nav>
+            <div class="city-list">
+                <div class="container clearfix">
+                    <div class="row">
+                        <div class="one-6 city"><a title="minette yaounde" href="/minette/yaounde/">Yaounde</a></div>
+                        <div class="one-6 city"><a title="minette douala" href="/minette/douala/">Douala</a></div>
+                        <div class="one-6 city"><a title="minette Bamenda" href="/minette/Bamenda/">Bamenda</a></div>
+                        <div class="one-6 city"><a title="minette Nkongsamba" href="/minette/Nkongsamba/">Nkongsamba</a></div>
+                        <div class="one-6 city"><a title="minette Bafouassam" href="/minette/Bafouassam/">Bafouassam</a></div>
+                        <div class="one-6 city"><a title="minette Buea" href="/minette/buea/">Buea</a></div>
+                        <div class="one-6 city"><a title="minette limbe" href="/minette/limbe/">Limbe</a></div>
+                        <div class="one-6 city"><a title="minette kribi" href="/minette/kribi/">Kribi</a></div>
+                        <div class="one-6 city"><a title="minette edea" href="/minette/edea/">Edea</a></div>
+                        <div class="one-6 city"><a title="minette dschang" href="/minette/dschang/">Dschang</a></div>
+                        <div class="one-6 city"><a title="minette ebolowa" href="/minette/ebolowa/">Ebolowa</a></div>
+                        <div class="one-6 city"><a title="minette ngaoundere" href="/minette/ngaoundere/">Ngaoundéré</a></div>
+                        <div class="one-6 city"><a title="minette Bertoua" href="/minette/Bertoua/">Bertoua</a></div>
+                        <div class="one-6 city"><a title="minette Loum" href="/minette/Loum/">Loum</a></div>
+                        <div class="one-6 city"><a title="minette Kumba" href="/minette/Kumba/">Kumba</a></div>
+                        <div class="one-6 city"><a title="minette Foumban" href="/minette/Foumban/">Foumban</a></div>
+                        <div class="one-6 city"><a title="minette Mbouda" href="/minette/Mbouda/">Mbouda</a></div>
+                        <div class="one-6 city"><a title="minette Tiko" href="/minette/Tiko/">Tiko</a></div>
+                        <div class="one-6 city"><a title="minette Bafang" href="/minette/Bafang/">Bafang</a></div>
+                        <div class="one-6 city"><a title="minette Sangmélima" href="/minette/Sangmélima/">Sangmélima</a></div>
+                        <div class="one-6 city"><a title="minette Mbanga" href="/minette/Mbanga/">Mbanga</a></div>
+                        <div class="one-6 city"><a title="minette Mélong" href="/minette/Mélong/">Mélong</a></div>
+                    </div>
+                    <div class="row collaspse" id="more-cities"></div>
+                    <div id="home_city-select" class="pull-left"><div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" title="choisissez une ville"><span class="filter-option pull-left">Choisissez une ville </span>
+                        <span class="bs-caret"><span class="caret"></span></span>
+                    </button>
+                    <div class="dropdown-menu open"><div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off"></div>
+                    <ul class="dropdown-menu inner" role="menu">
+                        <li data-original-index="0" class="selected"><a tabindex="0" class style data-tokens="null"></a></li>
+                        <li data-original-index="1" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Yaounde</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="2" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Douala</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="3" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Bamenda</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="4" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Nkongsamba</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="5" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Bafoussam</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="6" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Buea</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="7" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Limbe</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="8" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Kribi</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="9" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Edea</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="10" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Dschang</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="11" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Ebolowa</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="12" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Ngaoundere</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="13" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Bertoua</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="14" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Loum</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="15" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Kumba</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="16" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Foumban</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="17" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Mbouda</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="18" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Tiko</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="19" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Bafang</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="20" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Sangmélima</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="21" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Mbanga</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                        <li data-original-index="22" class="selected"><a tabindex="0" class style data-tokens="null"><span class="text"> Melong</span><span class="glyphicon glyphicon-ok ckeck-mark"></span></a>
+                    </ul>
+                </div>
+                    <select class="selectpicker" data-live-seach="true" tabindex="-5">
+                        <option value>Choisissez une ville</option>
+                        <option value="/minette/yaounde/">Yaoundé</option>
+                        <option value="/minette/Douala/">Douala</option>
+                        <option value="/minette/Bamenda/">Bamenda</option>
+                        <option value="/minette/Nkongsamba/">Nkongsamba</option>
+                        <option value="/minette/Bafoussam/">Bafoussam</option>
+                        <option value="/minette/Buea/">Buea</option>
+                        <option value="/minette/limbe/">Limbe</option>
+                        <option value="/minette/Kribi/">Kribi</option>
+                        <option value="/minette/edea/">Edea</option>
+                        <option value="/minette/edea/">Dschang</option>
+                        <option value="/minette/edea/">Ebolowa</option>
+                        <option value="/minette/edea/">Ngauondere</option>
+                    </select>
+                </div>
+                </div>
+                <a href="javascript:void(0);" class="btn btn-primary show-more-cities pull-right" data-toggle="collaspse" data-target="#more-cities"><span>Voir plus</span></a>                   
+                </div>
+            </div>
+        </header>
+        	<div class="container">
+        		<ol class="breadcrumb">
+        			<li class="breadcrumb-item"><a href="">minette au Cameroun</a> </li>
+        			<li class="breadcrumb-item active">Nouveau minette au Cameroun</li></ol>
+			</div>
+		<main class="container">
+															<style>
+															    .escort {
+															        background: #fff;
+															        box-shadow: 0 0 1px 0 #c7c7c7;
+															        display: -webkit-box;
+															        display: -moz-box;
+															        display: -ms-flexbox;
+															        display: -webkit-flex;
+															        display: flex;
+															    }
+
+															    .slider {
+															        height: 228px;
+															        display: -webkit-box;
+															        display: -moz-box;
+															        display: -ms-flexbox;
+															        display: -webkit-flex;
+															        display: flex;
+															        padding-left:5px;
+															        margin: auto;
+															    }
+
+															    .slider .primary {
+															        height: 100%;
+															        width:156px;
+															    }
+
+															    .slider .secondary {
+															        height: 50%;
+															        width: 100%;
+															        overflow: hidden;
+															        position: relative;
+															    }
+
+															    .slider .secondary img {
+															        width: 100%;
+															        top: 0;
+															        position: absolute;
+															        bottom: 0;
+															        margin: auto;
+															    }
+
+															    .details {
+															        padding: 20px;
+															    }
+
+															    .details h5 {
+															        margin-bottom: 2px;
+															        font-size: 17px;
+
+															    }
+
+															    .details small {
+															        font-weight: bold;
+															        font-size: 14px;
+															        margin-right: 9px;
+															    }
+
+															    .details p {
+															        font-size: 14px;
+															        line-height: 13px;
+															        color: #615f5f;
+															        margin-bottom: 0;
+															        margin-top: 8px;
+															    }
+
+															    .escort .status {
+															        position: absolute;
+															        top: 20px;
+															        right: 20px;
+															        background: #ffffff;
+															        width: auto;
+															        display: inline-block;
+															        padding: 2px 8px;
+															        font-weight: bolder;
+															        color: #260f01;
+															        font-size: 14px;
+															    }
+
+															    .details .view {
+															        text-decoration: none;
+															        display: inline-block;
+															        font-size: 15px;
+															        border: 1px solid #3275df;
+															        padding: 2px 11px;
+															        color: #3275df;
+															        margin: 6px 0;
+															    }
+
+															    .details .features {
+															        list-style: none;
+															        padding: 0;
+															        margin-top: 17px;
+															    }
+
+															    .details .features li {
+															        display: inline-block;
+															        background: #eaeaea;
+															        padding: 3px 7px;
+															        color: #626060;
+															        font-size: 14px;
+															        margin-right: 5px;
+															        margin-bottom: 5px;
+															    }
+
+															    .primary, .previews {
+															        display: inline-block;
+															        height: 100%;
+															    }
+
+															    .previews {
+															        width: 166px;
+															    }
+
+															    .escort:hover {
+															        box-shadow: 0 0 4px 1px #0000003b;
+															    }
+
+															    .thumbnails {
+															        display: none;
+															    }
+
+															    .slider img {
+															        cursor: pointer;
+															    }
+															</style>
+            <div class="row">
+                <div class="sidebar">
+                   <div class="sb-widget-register"><img src="images/escort-01.jpg" alt="devenir une minette girls">
+                    <div class="side">
+                       <h4><b>Vous êtes
+                        <span>une</span>
+                        <br>
+                        Minette de lux ?<b></h4>
+                        <a href="login2.php" class="btn btn-primary">Enregistrez-vous</a>
+                    </div>
+                <div class="sb-widget-gotm">
+                    <h2 class="title">Copine du mois</h2>
+                    <a href="images/minette-01"><div class="img"><img src="images/minette-01.jpeg" alt="lolita - femme minette du mois Douala" class="img-full">
+                    	<div class="text">
+                    		<p class="name">Lolita</p>
+                    		<p class="city">Douala</p>
+                    	</div>
+                    </div>
+                </div>
+            </a>
+                </div>
+              
+					</div>
+				
+				<div class="content">
+					<div class="home-search"></div>
+						<div class="escorts">
+							<div class="row row-sm">
+								<div class="col-xs-12">
+									<div class="escort">
+										<div class="slider">
+											<a class="newgal" data-exhumbimage="//images/minette-03" href="photo love"><img src="images/minette-03.jpeg" class="primary"></a>
+											<div class="previews">
+												<div class="secondary">
+													<a class="newgal" data-exhumbimage="//images/minette-04" href="photo love"><img src="images/minette-04.jpeg" class="primary"></a>
+												</div>
+												<div class="secondary">
+													<a class="newgal" data-exhumbimage="//images/minette-05" href="photo love"><img src="images/minette-05.jpeg" class="primary"></a>
+												</div>
+											</div>
+											<div class="details">
+               									<div class="status">
+                                           				Aujourd'hui                                    
+                                        		</div>
+                							<h5><a href="">Fanny, 23 Années</a></h5>
+                							<small>limbe</small><br>
+									                <a href="" class="view">Voir plus ...</a>
+									                <p>Femme libertine recherche rencontre sexe avec un mec chaudJe suis une jeune femme charmante sexy cherchant une relation coquine et intime sans prise de tête. Je recherche un très bon amant pour du sexe suivi ou non en toute discrétion, au menu le cul, la bite, le plaisir, un point c’est tout. Contactez-moi rapidement pour </p>
+									                <ul class="features">
+                                                        <li>Noir</li>
+                                                        <li>Couleur de cheveux - Noir</li>
+                                                        <li>Longueur des cheveux - Court</li>
+                                                        <li>Piercings - Non</li>
+                                                     </ul>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                
+                                <!--juste duplique ce bout de theo mais tous les infos sur la minette doit etre importer de la page de biographie...-->
+                    </div>
+                    </div>
+					<div class="loaderdiv" style="display:none;">
+						<div class="loader">Loading...
+						</div>
+					</div>
+					<div class="text-box">
+						Le site très complet et varié offre une multitude d’offres de minette pour une clientèle variée. Vous pourrez ainsi trouver une compagnie le temps d’une soirée, ou pour quelques heures lors d’un repas privé ou professionnel. 
+									Vous recherchez des viva streets de minette girls, des punternet minette, des nouvelles minettes de luxe, des minettes indépendantes, des TOP minettes et des VIP minettes. Vous trouverez obligatoirement la partenaire de vos rêves en fonction de vos critères et de vos envies. La panoplie de minette est telle que vous trouverez certainement de minette qui vous fera passer un moment très agréable et inoubliable. Nos minettes vous offrent un moment à vous, elles se plient à vos désirs et écoutent vos attentes. Vous êtes le décideur de ce moment ensemble et vous l’emmènerez dans l’endroit de votre choix et la soirée que vous aviez prévue.
+
+									Accompagnatrice VIP 
+									L’accompagnatrice VIP est une partenaire de choix pour des clients exigeants. Vous trouverez de nouvelles minettes, nouvelles VIP minettes et nouvelles call girls sur le site. 
+									minelux.com est un annuaire présentant des annonces de minette dans tout le Cameroun, avec lesquelles vous pouvez discuter sur Whatsapp. Grâce à ce site, vous pourrez bénéficier d’attention et d’une discrétion totale concernant les services fournis. 
+									Si vous souhaitez apporter un peu de peps à votre vie plutôt monotone, vous prenez contact avec une minette qui vous plait particulièrement. Si vous êtes pris par la routine au sein de votre couple et vous avez envie de mettre un peu de piment dans votre vie sexuelle, n’hésitez pas à consulter les différentes annonces.
+
+									Des prestations sur mesure 
+									Toutes les minettes sont prêtes à satisfaire vos moindres désirs, à vous contenter selon vos envies. 
+									Plusieurs types de services sont proposés par les minettes, vous pourrez ainsi profiter de différents massages comme le massage érotique, massage intime garanti pour vous faire sentir au septième ciel. 
+									La minettes que vous aurez contactée au préalable, pourra vous joindre et convenir avec vous d’un lieu de rendez-vous en fonction de votre emploi du temps et de votre disponibilité. 
+									Des minettes boys pour le bonheur de ces dames sont également présents sur le site, vous pourrez discuter avec eux pour connaître leurs goûts et envies. Ils vous poseront des questions pour mieux cerner vos attentes. Votre satisfaction est leur priorité. 
+
+									Un site dédié aux clients 
+									Sur minelux.com, vous pourrez vous inscrire et en tant que membre, vous aurez accès aux feedbacks des clients et d’autres membres. Cette rubrique est une garantie exceptionnelle d’expérience de qualité avec vos nouvelles minettes. De nombreuses annonces sont consultables en ligne et vous pourrez découvrir les photos des candidates, vous pouvez sélectionner une minette en particulier, découvrir sa présentation et ensuite, lui envoyer un message SMS. , elle pourra vous répondre de manière immédiate. Elle se fera un grand plaisir d’indiquer dans son message tout ce que vous désirez savoir sur elle. 
+									Notre site supervise l’activité en ligne de chaque minette. Toutes les annonces sont vérifiées ainsi vous pourrez les consulter de façon sereine. 
+									Toutes les minettes sont belles naturellement. Très bien éduquées, polies, intelligentes, elles possèdent une conversation multiple et des connaissances dans plusieurs domaines. Elles pourront vous contacter et vous rencontrer sur le lieu de votre choix.  
+          </div>
+				</div>
+             </div>
+        </main>
+
+        <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <svg viewBox="0 0 64 64">
+                        <use xlink:href="#icon-real-photos"></use>
+                        </svg>
+                        <h4 class="line">Photo des Minettes réelles</h4>
+                    </div>
+                    <div class="col-xs-4">
+                        <svg viewBox="0 0 64 64">
+                        <use xlink:href="#icon-discretion-guaranteed"></use>
+                        </svg>
+                        <h4 class="line">Discretion assurée</h4>
+                    </div>
+                    <div>
+                        <div class="col-xs-4">
+                            <svg viewBox="0 0 64 64">
+                            <use xlink:href="#icon-trusted-website"></use>
+                            </svg>
+                            <h4 class="line">Minette girl Cameroun</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy"><small>© MINELUX 2020 Copyrigth All rigths reserved. V1.0 </small></div>
+    </footer>
+    </body>
+
+    </html>
+        
