@@ -606,6 +606,22 @@ input[type="radio"], input[type="checkbox"] {
     padding-left: 20px;
     font-size: 12px;
 }
+/* CONNEXION*/
+
+.top-nav .usermessage
+{
+  margin-right: 15px;
+}
+.username
+{
+  color: #39e70d;
+}
+a
+{
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+}
 
 /*FOOTER*/
 
