@@ -291,13 +291,13 @@
                     <div class="col-xs-4 escort">
                   <div href="gallery.php"><img class="img" class="img-full" data-caption="<?= $img['img_title']; ?>" src="<?= $img['img_path']; ?>">
                <div class="overlay">
-                   <span>
-                       <p class="name"></p>
-                       <p class="listing_desc"></p>
-                       <p class="city"></p>
-                       <p class="age"></p>
+                   
+                       <p class="name">....</p>
+                       <p class="listing_desc">.....</p>
+                       <p class="city">.....</p>
+                       <p class="age">....</p>
                        <p class="btn git">Voir Plus...</p>
-                   </span>
+                   
                </div>
                <a class="profile_a" href=""></a>
            </div>
@@ -329,32 +329,8 @@
       <script>
          $(document).foundation();
       </script>
-				<!--<div class="escort">
-                <div class="row row-sm">
-                    <div class="col-xs-4 escort">
-                    <div class="img"><img src="images/minette-02.jpeg" class="img-full" alt="patricia-minette cameroun yaounde">
-                        
-                        <div class="overlay">
-                            <span>
-                                <p class="name">patricia</p>
-                                <p class="listing_desc">bonjour je suis patricia.femme Fontaine sur talence</p>
-                                <p class="city">Yaoundé</p>
-                                <p class="age">(22)</p>
-                                <p class="btn git">Voir plus...</p>
-                            </span>
-                         </div>  
-                         <a class="profile_a" href="/profil/patricia-12540"></a> 
-                    
-					</div>
-				</div>
-                </div>
-                </div>-->
-
-
-
-
-
 			 </div>
+             <div class="loaderdiv" style="display:none;" wfd-id="56"><div class="loader">Loading...</div></div>
             </div>
             </div>
         </main>

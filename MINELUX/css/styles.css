@@ -748,26 +748,26 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0.0.0.0,7);
+    background: rgba(0, 0, 0, 0.7);
     text-align: center;
     padding-top: 145px;
-   
-}
-.img:hover{
-    opacity: 0.7;
+    opacity: 0;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     transition: all 200ms ease;
+}
+/*.img:hover{
+    
     
 }
-.img span {
+*//*.img span {
     visibility: hidden;
 
 }
 .img :hover span{
     
     visibility: visible;
-
+*/
 }
 #home .escort .img .overlay .name {
     font-weight: 700;
@@ -785,7 +785,7 @@ img {
 }
 .listing_desc {
     height: 30px;
-   /*overflow: hidden;*/
+   overflow: hidden;
     color: #fff;
     padding: 0 10px;
     font-size: 10px;
@@ -848,6 +848,36 @@ a, a:hover, a:focus, a:active:focus, button, button:hover, button:focus, button:
 a{
     background-color: transparent;
 }
+element.style {
+    display: none;
+}
+.loaderdiv {
+    position: relative;
+}
+.loader {
+    margin: 60px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-left: 1.1em solid #ffffff;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+.loader, .loader:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+
+
+
+
 
 
 /*FOOTER*/

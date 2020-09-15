@@ -123,6 +123,10 @@ p
     align-items: center;
     justify-content: flex-end;
 }
+h1, h2, h3, h4, h5, h6, ul, p {
+    margin: 0;
+    margin-bottom: 15px;
+}
 .conditions-cookie .conditions-buttons .link
 {
     font-size: 16px;
@@ -173,10 +177,30 @@ a{background: transparent;}
     background-position: bottom center;
     background-repeat: no-repeat; 
 }
+.conditions-cookie .conditions-image: {
+    flex-grow: 1;
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    
+}
+element.style{
+    background-image: url(../fond/conditions-images.png);
 
 
+body {
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;*/
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
 
-
+.interdit{
+    position: relative;
+    bottom: 50px;
+    top: 25px;
+}
 
 
 
