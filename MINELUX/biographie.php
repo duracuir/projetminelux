@@ -107,12 +107,12 @@ if(!isset($_SESSION['username'])) {
                     </div>
                     <div id="navbar">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="/index.html/">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/minette/new/">Nouvelle</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/minette/girls/">Filles</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/minette/homme/">Hommes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/minette/vip/">VIP</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/minette/tours/">Tournées de Ville</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="index.php">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nouvelles.html">Nouvelle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="filles.html">Filles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="garcon.html">Hommes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vip.html">VIP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="toursdeville.html">Tournées de Ville</a></li>
                     
             </div>
                 </div>

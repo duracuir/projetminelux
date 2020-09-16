@@ -1,26 +1,21 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
 	<tilte></tilte>
-=======
 <!DOCTYPE HTML>
 
 <html>
     <head>
         <tilte></tilte>
->>>>>>> 11bd2f9c005c0fd2c1e649404a24e06d13298aeb
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-<<<<<<< HEAD
 	<link rel="stylesheet" href="css/style1.css">
 </head>
  <body id="home">
-=======
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/script.js"></script>
     </head>
@@ -53,7 +48,6 @@
     </g>
     
 </svg>
->>>>>>> 11bd2f9c005c0fd2c1e649404a24e06d13298aeb
         <header>
                 <div class="top-nav">
                 <div class="container clearfix">
@@ -179,18 +173,14 @@
                 <a href="javascript:void(0);" class="btn btn-primary show-more-cities pull-right" data-toggle="collaspse" data-target="#more-cities"><span>Voir plus</span></a>                   
                 </div>
             </div>
-<<<<<<< HEAD
 	</header>
 <main class="container">
-=======
         </header>
         <main class="container">
->>>>>>> 11bd2f9c005c0fd2c1e649404a24e06d13298aeb
             <div class="row">
                 <div class="sidebar">
                    <div class="sb-widget-register"><img src="images/escort-01.jpg" alt="devenir une minette girls">
                     <div class="side">
-<<<<<<< HEAD
                        <h4>Vous êtes
                         <span>une</span>
                         <br>
@@ -200,7 +190,6 @@
                 <div class="sb-widget-gotm">
                     <h2 class="title">Copine du mois</h2>
                     <a href="images/minette-01" ><div class="img"><img src="images/minette-01.jpeg" alt="lolita - femme minette du mois Douala" class="img-full"><div class="text"><p class="name">Lolita</p><p class="city">Douala</p></div></dir></div></a>
-=======
                        <h4><b>Vous êtes
                         <span>une</span>
                         <br>
@@ -210,7 +199,6 @@
                 <div class="sb-widget-gotm">
                     <h2 class="title">Copine du mois</h2>
                     <a href="images/minette-01"><div class="img"><img src="images/minette-01.jpeg" alt="lolita - femme minette du mois Douala" class="img-full"><div class="text"><p class="name">Lolita</p><p class="city">Douala</p></div></dir></div></a>
->>>>>>> 11bd2f9c005c0fd2c1e649404a24e06d13298aeb
                 </div>
               
 					</div>
@@ -311,7 +299,6 @@
                         </form>
                     </div>
                 </div>
-<<<<<<< HEAD
 				<div class="escort">
                 <div class="row row-sm">
                     <div class="col-xs-4 escort">
@@ -323,10 +310,10 @@
 				$servername = "localhost";
 				$username = "root";
 				$password = "";
-				$dbname = "galleryphoto";
+				$dbname = "myminette";
 
 				$conn = mysqli_connect("$servername", $username, $password, $dbname);
-				$sql = "SELECT * FROM gallery ORDER BY orderGallery DESC";
+				$sql = "SELECT photos, username FROM membres ORDER BY orderGallery DESC";
 				$stmt = mysqli_stmt_init($conn);
 				if (!mysqli_stmt_prepare($stmt, $sql)) {
 					echo "SQL statement failed!";
@@ -335,9 +322,8 @@
 					$result = mysqli_stmt_get_result($stmt);
 					while ($row = mysqli_fetch_assoc($result)) {
 						echo '<a href="#">
-						<div style="background-image: url(images/gallery/'.$row["imgFullNameGallery"].');"></div>
-						<h3>'.$row["titleGallery"].'</h3>
-						<p>'.$row["descGallery"].'</p>
+						<div style="background-image: url(images/gallery/'.$row["photos"].');"></div>
+						<h3>'.$row["username"].'</h3>
 					</a>';
 					}
 				}
