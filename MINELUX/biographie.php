@@ -6,7 +6,7 @@ $db = mysqli_select_db($connection, 'myminette');
 if(isset($_POST['Save'])) {
     // $name = $_GET["username"];
  
- $query = "UPDATE `membres` SET datenaiss = '$_POST[datenaiss]', slogan = '$_POST[slogan]', region = '$_POST[region]', nationality = $_POST[nationality], epilation = '$_POST[epilation]', piercing = '$_POST[piercing]', tattoo = '$_POST[tattoo]'  WHERE username = '$_SESSION[username]' ";
+ $query = "UPDATE `membres` SET datenaiss = '$_POST[datenaiss]', slogan = '$_POST[slogan]', region = '$_POST[region]', nationality = $_POST[nationality], epilation = '$_POST[epilation]', piercing = '$_POST[piercing]', tattoo = '$_POST[tattoo]', ville = '$_POST=[ville]'  WHERE username = '$_SESSION[username]' ";
   $query_run = mysqli_query($connection, $query);
   if($query_run) {
     echo '<script type="text/javascript"> alert("Vos données ont été enregistrées avec succès") </script>';
@@ -25,7 +25,7 @@ if(!isset($_SESSION['username'])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<tilte></tilte>
+    <tilte></tilte>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -65,7 +65,7 @@ if(!isset($_SESSION['username'])) {
     
 </svg>
         <header>
-        	
+            
                 <div class="top-nav">
                 <div class="container clearfix">
                     <ul class="nav navbar-nav">
@@ -129,7 +129,7 @@ if(!isset($_SESSION['username'])) {
             </div>
             </div>
             </div>
-		</header>
+        </header>
            <main class="container">
         <form action id="bio_submit" class="submit_profile" method="post">
             <ul class="steps">
@@ -145,10 +145,10 @@ if(!isset($_SESSION['username'])) {
         <div class="row row-17">
             <div class="col-xs-6">
                <div class="row row-17">
-				   <div class="col-xs-12">
-				   <div class="box">
-					   <h3 class="heading"> presentation </h3>
-					   <div class="row">
+                   <div class="col-xs-12">
+                   <div class="box">
+                       <h3 class="heading"> presentation </h3>
+                       <div class="row">
                                <div class="col-xs-3 grp">
                                     <label for="nom">Nom*:</label>
                                 </div>
@@ -157,41 +157,7 @@ if(!isset($_SESSION['username'])) {
                             </div>
                             <div class="col-xs-1 grp">
                                 <label for="ville">Ville*</label>
-                                
-                            </div>
-                            <div class="col-xs-3 grp">
-                            <div class="btn-group bootstrap-select">
-                                <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-id="birth_date" title="18" aria-expanded="false">
-                                    <span class="filter-option pull-left">Ville</span>&nbsp;<span class="bs-caret"><span class="caret">
-                                    </span></span>
-                                </button>
-                                <div class="dropdown-menu open" style="max-height: 123px; overflow: hidden; min-height: 92px;">
-                                    <ul class="dropdown-menu inner" role="menu" style="max-height: 111px; overflow-y: auto; min-height: 80px;">
-                                        <li data-original-index="0"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Yaoundé</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="1" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Douala</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Bamenda</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Nkongsamba</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Bafouassam</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Buea</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="6"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Limbé</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="7"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Kribi</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="8"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Edéa</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="9"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Dschang</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="10"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Ebolowa</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="11"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Ngaoundéré</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="12"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Bertoua</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="13"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Loum</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="14"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Kumba</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="15"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Foumban</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="16"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Mbouda</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="17"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Tiko</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="18"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Bafang</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="19"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Sangmélima</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="20"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Mbanga</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                        <li data-original-index="21"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Mélong</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>                                       
-                                    </ul>
-                                </div>
-                            <select id="birth_date" name="birth_date" class="selectpicker" placeholder="Âge" tabindex="-98">
+                                <select id="birth_date" name="ville" class="selectpicker" placeholder="Âge" tabindex="-98">
                                     <option value="0">Ville</option>
                                             <option selected="selected" value="18">Yaoundé</option>
                                             <option value="Yaoundé">Yaoundé</option>
@@ -216,6 +182,7 @@ if(!isset($_SESSION['username'])) {
                                             <option value="Mbanga">Mbanga</option>
                                             <option value="Mélong">Mélong</option>
                                 </select>
+                            </div>                          
                                </div>                       
                              </div>
                             <div class="col-xs-5 grp">
@@ -277,7 +244,7 @@ if(!isset($_SESSION['username'])) {
                         <div class="col-xs-12">
                  <div class="box">
                      <h3 class="heading heading3 photo profile">Télécharger Photos</h3>
-                     <small>Postait une photo sensulle et discrete qui transcrit vos atouts sexsulles et plus ...
+                     <small>Postez une photo sensuelle et discrete qui transcrit vos atouts sexsulles et plus ...
                       pas de photo pronographique. si non votre compte sérait <b>Bloqué<b>. </small>
                         <div class="row">
                             <div class="col-xs-4 grp">
@@ -285,21 +252,23 @@ if(!isset($_SESSION['username'])) {
                             </div>
                             <div class="col-xs-6 grp">
                                 <div class="col-md-12 col-sm-12">
-                <form action="" class="dropzone dz-clickable" id="pictures">
-                    <div class="upload-msg"><i class="fa fa-image">
-                        </i>Téléchargez<a class="btn btn-success">Cliquez ici</a></div>
-                <div class="dz-default dz-message"><span></span></div></form>
+                <div class="gallery-upload">
+                   
+                    <a href="images.php">Charger photo profil</a>    
+                    </form> 
+                </div>
+        
             </div>
                             </div>
                         </div>
                  </div>
              </div>
-				    </div>
-				  </div>
-			<div class="col-xs-6">
-				   <div class="box">
-					   <h3 class="heading"> option </h3>
-					   <div class="row">
+                    </div>
+                  </div>
+            <div class="col-xs-6">
+                   <div class="box">
+                       <h3 class="heading"> option </h3>
+                       <div class="row">
                         <div class="col-xs-3 grp">
                         <label for="ethnicity">Epilation*</label>
                         </div>
@@ -328,7 +297,7 @@ if(!isset($_SESSION['username'])) {
                 <div class="radio"><label>
                         <input type="radio" id="tatoo" name="tattoo" value="Non" checked="checked">Non</label>
                 </div>
-            </div>	
+            </div>  
                     <div class="col-xs-3 grp">
                         <label for="piercing">Piercings:</label>
                 </div>
@@ -337,20 +306,20 @@ if(!isset($_SESSION['username'])) {
                         <label>
                         <input type="radio" id="piercing" name="piercing" value="Oui">Oui</label>
                     </div>
-						<div class="radio"><label>
+                        <div class="radio"><label>
                         <input type="radio" id="piercing" name="piercing" value="Oui" checked="checked">Non</label>
                     </div>
                     </div> 
                     </div>
                     </div>
-			  </div>
-		    
+              </div>
+            
         <div class="col-xs-12">
                      <div class="nextandbackBtns">
                       <a href="javascript:void(0);" onclick="doSave();" class="btn btn-primary save" name="Save">Enregistrer</a>
                      </div>
-                    </div>				
-			</div>
+                    </div>              
+            </div>
         </form>
         </main>
         <footer>

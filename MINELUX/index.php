@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<!--
-Developed by Robert Anthonie C. Soriano
-
--->
-<html lang="en">
-    <head>
-        <tilte></tilte>
+<html>
+<head>
+	<tilte></tilte>
         <meta charset="utf-8"/>
         <meta name="viwport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/styles.css">
-        <script src="js/script.js"></script>
-        <script src="js/vendor/jquery.js"></script>
-      <script src="js/vendor/modernizr.js"></script>
-    </head>
-   <body id="home">
-       <header>
+	<link rel="stylesheet" href="css/style1.css">
+</head>
+ <body id="home">
+        <header>
                 <div class="top-nav">
                 <div class="container clearfix">
                     <ul class="nav navbar-nav">
@@ -127,11 +120,27 @@ Developed by Robert Anthonie C. Soriano
                 <a href="javascript:void(0);" class="btn btn-primary show-more-cities pull-right" data-toggle="collaspse" data-target="#more-cities"><span>Voir plus</span></a>                   
                 </div>
             </div>
-        </header>
-
-      <!--Content goes here-->
-      <div class="content">
-           <div class="home-search">
+	</header>
+<main class="container">
+            <div class="row">
+                <div class="sidebar">
+                   <div class="sb-widget-register"><img src="images/escort-01.jpg" alt="devenir une minette girls">
+                    <div class="side">
+                       <h4>Vous êtes
+                        <span>une</span>
+                        <br>
+                        Minette de lux ?</h4>
+                        <a href="login2.php" class="btn btn-tertiary">Enregistrez-vous</a>
+                    </div>
+                <div class="sb-widget-gotm">
+                    <h2 class="title">Copine du mois</h2>
+                    <a href="images/minette-01" ><div class="img"><img src="images/minette-01.jpeg" alt="lolita - femme minette du mois Douala" class="img-full"><div class="text"><p class="name">Lolita</p><p class="city">Douala</p></div></dir></div></a>
+                </div>
+              
+					</div>
+					</div>
+            <div class="content">
+			  <div class="home-search">
                     <div class="search-toggle">
                         <a href="javascript:void(0);" class="btn s-toggle current advanced-off"><span>Normal search </span></a>
                         <a href="javascript:void(0);" class="btn s-toggle advanced-on"><span>Advanced Search</span></a>
@@ -226,41 +235,75 @@ Developed by Robert Anthonie C. Soriano
                         </form>
                     </div>
                 </div>
-          <div class="wrapper">
-            <div class="gallery-container">
-             <ul class="clearing-thumbs small-block-grid-1 medium-block-grid-2 large-block-grid-4" data-clearing>
-             <?php
-               require 'connexionBD.php';
-               $stmt = $pdo->query("SELECT * FROM tbl_photos ORDER by img_id ASC");
-               foreach ($stmt as $img) {
-               ?>
-               <li>
-                  <img data-caption="<?= $img['img_title']; ?>" src="<?= $img['img_path']; ?>">
-               </li>
-                <?php } ?>
-            </ul>
-            ?>
+				<div class="escort">
+                <div class="row row-sm">
+                    <div class="col-xs-4 escort">
+		<main>
+			<section class="gallery-links">
+			<div class="wrapper">
+				<div class="gallery-container">
+				<?php
+				$servername = "localhost";
+				$username = "root";
+				$password = "";
+				$dbname = "galleryphoto";
+
+				$conn = mysqli_connect("$servername", $username, $password, $dbname);
+				$sql = "SELECT * FROM gallery ORDER BY orderGallery DESC";
+				$stmt = mysqli_stmt_init($conn);
+				if (!mysqli_stmt_prepare($stmt, $sql)) {
+					echo "SQL statement failed!";
+				} else {
+					mysqli_stmt_execute($stmt);
+					$result = mysqli_stmt_get_result($stmt);
+					while ($row = mysqli_fetch_assoc($result)) {
+						echo '<a href="#">
+						<div style="background-image: url(images/gallery/'.$row["imgFullNameGallery"].');"></div>
+						<h3>'.$row["titleGallery"].'</h3>
+						<p>'.$row["descGallery"].'</p>
+					</a>';
+					}
+				}
+				?>
+				</div>
+			</div>
+
+		</section>
+	</main>
+</div>
+                </div>
+                </div>
+			 </div>
             </div>
-      <!--End content-->
-      <!--MODALS-->
-      <div id="uploadModal" class="reveal-modal tiny" data-reveal></div>
-      <!--END MODALS-->
-      <div id="footer">
-         <hr/>
-         <div class="row">
-            <div class="large-6 columns" style="margin-top: -15px;">
-              <!--  &copy; 2015 Robert C. Soriano -->
             </div>
-         </div>
-      </div>
-      </div>
-      <script src="js/foundation.min.js"></script>
-      <script src="js/sticky-footer.js"></script>
-      <script src="js/foundation/foundation.topbar.js"></script>
-      <script src="js/foundation/foundation.reveal.js"></script>
-      <script src="js/foundation/foundation.abide.js"></script>
-      <script>
-         $(document).foundation();
-      </script>
-   </body>
+        </main>
+        <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <svg viewBox="0 0 64 64">
+                        <use xlink:href="#icon-real-photos"></use>
+                        </svg>
+                        <h4 class="line">Photo des Minettes réelles</h4>
+                    </div>
+                    <div class="col-xs-4">
+                        <svg viewBox="0 0 64 64">
+                        <use xlink:href="#icon-discretion-guaranteed"></use>
+                        </svg>
+                        <h4 class="line">Discretion assurée</h4>
+                    </div>
+                    <div>
+                        <div class="col-xs-4">
+                            <svg viewBox="0 0 64 64">
+                            <use xlink:href="#icon-trusted-website"></use>
+                            </svg>
+                            <h4 class="line">Minette girl Cameroun</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

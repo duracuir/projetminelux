@@ -113,7 +113,7 @@ if (isset($_POST['username'])){
             <div class="container">
             <div class="row">
                 <div class="col-xs-4 back"></div>
-                <a href="/" class="btn btn-black">Retour</a>
+                <a href="index.php" class="btn btn-black">Retour</a>
                 <div class="col-xs-4">
                     <h1 class="page-title">Espace Privé</h1>
                 </div>
