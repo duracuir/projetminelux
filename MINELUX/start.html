@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <tilte></tilte>
+    
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -10,6 +10,12 @@
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/start.css">
         <script src="js/script.js"></script>
+        <script type="application/javascript">
+                var user_info = { 'logged_in':false, 'user_id': null, 'user_type': null };
+                var signon_link = "/auth/log_in/";
+        var env = 'production';
+                var translate = { 'show_more': 'Voire plus', 'show_less': 'Voire moins' };
+                    </script>
 </head>
     <body id="home" class="noscroll">
         <svg id="svg-source" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -49,47 +55,37 @@
            <div class="container conditions" wfd-id="577">
                <div class="conditions-box" wfd-id="578">
                    <div class="frame-wrap" wfd-id="580">
-                      
-
-                       <div class="frame" wfd-id="582">
-                           <div class="slidee" wfd-id="583">
-                            <p>
-                                Before proceeding you must read, understand and agree to the following statements regarding escorte.com and the material within.
-                                ADULTS ONLY DISCLAIMER
-                            </p>
-                               <h4 class="condition-title">ADULTS ONLY DISCLAIMER</h4>
-                               <p>Minette.com contains material of an adult nature relating to adult entertainment services.
-                               </p>
-                               <p>By agreeing to the following statements and entering this adult services website, you are confirming and consenting that:
-                               </p>
-                               <p>- You are of legal adult age, as defined by the country or state from where you are accessing this website, to view sexually explicit and pornographic material.<br>
-                                - You are accessing this website from a country or state where it is legal to enter adult websites or view sexually explicit or pornographic material.<br>
-                                - You are not offended by nudity, sexual imagery or any adult sexual activity.<br>
-                                - You will not permit any minor, or other person for who it is illegal, to access or view material that exists within this website.<br>
-                                - You will not use the material on this website outside the permissions mentioned within.<br>
-                                </p>
-                                <p>This website uses cookies and you permit them to be stored on your computer.
-                                </p>
-                                <p>You have read both our full terms of use and our disclaimer and agree to be bound by them.
-                                </p>
-                           </div>
-                           <div class="conditions-buttons" wfd="581">
-                               <a class="link" href="http://www.google.com">I dissagree</a>
-                               <a class="btn btn-primary" href="javascript" onclick="accept_cookie();">Enter</a>
-                           </div>
-                       </div>
-                       <div class="conditions-image">
-                        <img src="fond/corps-dame.png" alt="site pour Adult">
-                       </div>
-                   </div>
-               </div>
+                      <h2 class="conditions-title"><span>Adult Content Warning</span></h2>
+                        <div class="frame">
+<div class="slidee">
+<h4 class="condition-title">ADULTS ONLY DISCLAIMER</h4>
+<p>minelux.com contains material of an adult nature relating to adult entertainment services.</p>
+<p>Before proceeding you must read, understand and agree to the following statements regarding minelux.com and the material within.</p>
+<p>By agreeing to the following statements and entering this adult services website, you are confirming and consenting that:</p>
+<p>
+- You are of legal adult age, as defined by the country or state from where you are accessing this website, to view sexually explicit and pornographic material.<br>
+- You are accessing this website from a country or state where it is legal to enter adult websites or view sexually explicit or pornographic material.<br>
+- You are not offended by nudity, sexual imagery or any adult sexual activity.<br>
+- You will not permit any minor, or other person for who it is illegal, to access or view material that exists within this website.<br>
+- You will not use the material on this website outside the permissions mentioned within.<br>
+</p>
+<p>This website uses cookies and you permit them to be stored on your computer.</p>
+<p>You have read both our full terms of use and our disclaimer and agree to be bound by them.</p>
+</div>
+</div>
+      <div class="conditions-buttons">
+            <a href="http://www.google.com" class="link">I dissagree</a>
+            <a href="javascript:;" class="btn btn-primary" onclick="accept_cookie();">Enter</a>
+      </div>
+    </div>
+</div>
+            <div class="conditions-images" style=
+    "background-image: url(../fond/conditions-images.png)";></div>           
+                <img class="interdit" src="images/interdit.jpeg" alt="Interdit au moins de 18 ans">       
+                   
+               
            </div>
        </main> 
-
-
-
-
-
         <footer>
         <div class="footer-top">
             <div class="container">
@@ -119,5 +115,20 @@
         </div>
         <div class="copy"><small>© MINELUX 2020 Copyrigth All rigths reserved. V1.0 </small></div>
     </footer>
+    <script>
+        $('body').addClass('noscroll');
+        $('html').addClass('noscroll');
+        if (navigator.cookieEnabled === true) {
+            var cookie_w = "<main class=\"conditions-cookie\">\n<div class=\"container conditions\">\n<div class=\"conditions-box\">\n<div class=\"frame-wrap\">\n<h2 class=\"conditions-title\"><span>Adult Content Warning<\/span><\/h2>\n<div class=\"frame\">\n<div class=\"slidee\">\n<h4 class=\"condition-title\">ADULTS ONLY DISCLAIMER<\/h4>\n<p>minelux.com contains material of an adult nature relating to adult entertainment services.<\/p>\n<p>Before proceeding you must read, understand and agree to the following statements regarding minelux.com and the material within.<\/p>\n<p>By agreeing to the following statements and entering this adult services website, you are confirming and consenting that:<\/p>\n<p>\n- You are of legal adult age, as defined by the country or state from where you are accessing this website, to view sexually explicit and pornographic material.<br>\n- You are accessing this website from a country or state where it is legal to enter adult websites or view sexually explicit or pornographic material.<br>\n- You are not offended by nudity, sexual imagery or any adult sexual activity.<br>\n- You will not permit any minor, or other person for who it is illegal, to access or view material that exists within this website.<br>\n- You will not use the material on this website outside the permissions mentioned within.<br>\n<\/p>\n<p>This website uses cookies and you permit them to be stored on your computer.<\/p>\n<p>You have read both our full terms of use and our disclaimer and agree to be bound by them.<\/p>\n<\/div>\n<\/div>\n<div class=\"conditions-buttons\">\n<a href=\"http:\/\/www.google.com\" class=\"link\">I dissagree<\/a>\n<a href=\"javascript:;\" class=\"btn btn-primary\" onclick=\"accept_cookie();\">Enter<\/a>\n<\/div>\n<\/div>\n<div class=\"conditions-images\" style=\"background-image: url('\/\/fond/conditions-images.png\/img\/conditions-images.png');\"><\/div>\n<\/div>\n<\/div>\n<\/main>";
+            $(cookie_w).insertAfter('header');
+        }
+        function accept_cookie(){
+            $('body').removeClass('noscroll');
+            $('html').removeClass('noscroll');
+            $('.conditions-cookie').remove();
+            setCookie('warning', 1, 30);
+
+        }
+    </script>
 </body>
 </html>

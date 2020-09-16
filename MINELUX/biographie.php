@@ -6,7 +6,7 @@ $db = mysqli_select_db($connection, 'myminette');
 if(isset($_POST['Save'])) {
     // $name = $_GET["username"];
  
- $query = "UPDATE `membres` SET datenaiss = '$_POST[datenaiss]', slogan = '$_POST[slogan]', region = '$_POST[region]', nationality = $_POST[nationality], epilation = '$_POST[epilation]', piercing = '$_POST[piercing]', tattoo = '$_POST[tattoo]', ville = '$_POST=[ville]'  WHERE username = '$_SESSION[username]' ";
+ $query = "UPDATE `membres` SET datenaiss = '$_POST[datenaiss]', slogan = '$_POST[slogan]', region = '$_POST[region]', nationality = $_POST[nationality], epilation = '$_POST[epilation]', piercing = '$_POST[piercing]', tattoo = '$_POST[tattoo]', ville = '$_POST[ville]'  WHERE username = '$_SESSION[username]' ";
   $query_run = mysqli_query($connection, $query);
   if($query_run) {
     echo '<script type="text/javascript"> alert("Vos données ont été enregistrées avec succès") </script>';

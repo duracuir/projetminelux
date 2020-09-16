@@ -317,6 +317,7 @@ img
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+
 }
 #users .user> *
 {
@@ -328,6 +329,7 @@ img
     padding-left: 20px;
     display: flex;
     flex-direction: column;
+
 }
 #users .user-list 
 {
@@ -338,6 +340,7 @@ img
 #users .user-info> * 
 {
     max-width: 100%;
+
 }
 ul, ol
 {
@@ -461,6 +464,19 @@ img {
 #users .user-title span 
 {
     color: #3275df;
+}
+#users .user-list li::before {
+    content: '';
+     background-image: url(../fond/check.png);
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-position: center;
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background-repeat: no-repeat;
 }
 
 /*FOOTER*/
