@@ -27,7 +27,7 @@
                     mysqli_stmt_execute($stmt);
                     $result = mysqli_stmt_get_result($stmt);
                     while ($row = mysqli_fetch_assoc($result)) {
-                        echo '<a href="profilesminette.php?username=<?php echo $row->username;?>">
+                        echo '<a href="profilesminette.php?username='.$row["username"].'">
                         <div style="background-image: url(images/gallery/'.$row["photos"].');"></div>
                         <h3>'.$row["username"].'</h3>
                         <h4>'.$row["ville"].'</h4>
