@@ -300,6 +300,9 @@ script
     position: relative;
     bottom: 25px;
 }
+.attention{
+    text-align: center;
+}
 #sign_up_in #sign-in input:not([type="checkbox"]):not([type="submit"]), #sign_up_in #sign-in .bootstrap-select button, #sign_up_in #sign-up input:not([type="checkbox"]):not([type="submit"]), #sign_up_in #sign-up .bootstrap-select button 
 {
     display: block;

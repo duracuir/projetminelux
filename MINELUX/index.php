@@ -1,25 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<tilte></tilte>
-<!DOCTYPE HTML>
-
-<html>
     <head>
-        <tilte></tilte>
+    <tilte></tilte>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/style1.css">
-</head>
- <body id="home">
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/script.js"></script>
-    </head>
-    
+</head>
     <body id="home">
         <svg id="svg-source" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
@@ -174,12 +165,10 @@
                 </div>
             </div>
 	</header>
-<main class="container">
-        </header>
         <main class="container">
             <div class="row">
                 <div class="sidebar">
-                   <div class="sb-widget-register"><img src="images/escort-01.jpg" alt="devenir une minette girls">
+                   <div class="sb-widget-register"><img src="fond/escort-01.jpg" alt="devenir une minette girls">
                     <div class="side">
                        <h4>Vous êtes
                         <span>une</span>
@@ -189,18 +178,12 @@
                     </div>
                 <div class="sb-widget-gotm">
                     <h2 class="title">Copine du mois</h2>
-                    <a href="images/minette-01" ><div class="img"><img src="images/minette-01.jpeg" alt="lolita - femme minette du mois Douala" class="img-full"><div class="text"><p class="name">Lolita</p><p class="city">Douala</p></div></dir></div></a>
-                       <h4><b>Vous êtes
-                        <span>une</span>
-                        <br>
-                        Minette de lux ?<b></h4>
-                        <a href="login2.php" class="btn btn-primary">Enregistrez-vous</a>
+                    <a href="fond/minette-01.jpeg" ><div class="img"><img src="fond/minette-01.jpeg" alt="lolita - femme minette du mois Douala" class="img-full"><div class="text"><p class="name">Lolita</p><p class="city">Douala</p>
                     </div>
-                <div class="sb-widget-gotm">
-                    <h2 class="title">Copine du mois</h2>
-                    <a href="images/minette-01"><div class="img"><img src="images/minette-01.jpeg" alt="lolita - femme minette du mois Douala" class="img-full"><div class="text"><p class="name">Lolita</p><p class="city">Douala</p></div></dir></div></a>
-                </div>
-              
+                </dir>
+            </div>
+        </a>
+                    </div>
 					</div>
 					</div>
             <div class="content">
@@ -334,43 +317,7 @@
 		</section>
 	</main>
 </div>
-                </div>
-                </div>
-			 </div>
-            </div>
-            </div>
-        </main>
-        <footer>
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <svg viewBox="0 0 64 64">
-                        <use xlink:href="#icon-real-photos"></use>
-                        </svg>
-                        <h4 class="line">Photo des Minettes réelles</h4>
-                    </div>
-                    <div class="col-xs-4">
-                        <svg viewBox="0 0 64 64">
-                        <use xlink:href="#icon-discretion-guaranteed"></use>
-                        </svg>
-                        <h4 class="line">Discretion assurée</h4>
-                    </div>
-                    <div>
-                        <div class="col-xs-4">
-                            <svg viewBox="0 0 64 64">
-                            <use xlink:href="#icon-trusted-website"></use>
-                            </svg>
-                            <h4 class="line">Minette girl Cameroun</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
-=======
+               
               <?php
                require 'connexionBD.php';
                $stmt = $pdo->query("SELECT * FROM tbl_photos ORDER by img_id ASC");
@@ -382,10 +329,10 @@
                   <div href="gallery.php"><img class="img" class="img-full" data-caption="<?= $img['img_title']; ?>" src="<?= $img['img_path']; ?>">
                <div class="overlay">
                    
-                       <p class="name">....</p>
-                       <p class="listing_desc">.....</p>
-                       <p class="city">.....</p>
-                       <p class="age">....</p>
+                       <p class="name">lolita</p>
+                       <p class="listing_desc">dakar</p>
+                       <p class="city">douala</p>
+                       <p class="age">21</p>
                        <p class="btn git">Voir Plus...</p>
                    
                </div>
@@ -456,5 +403,3 @@
     </footer>
     </body>
     </html>
-        
->>>>>>> 11bd2f9c005c0fd2c1e649404a24e06d13298aeb

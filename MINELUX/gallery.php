@@ -8,12 +8,16 @@ Developed by Robert Anthonie C. Soriano
 -->
 <html lang="en">
    <head>
-      <meta charset="UTF-8">
-      <title></title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="css/biographie.css" />
-      <script src="js/vendor/jquery.js"></script>
-      <script src="js/vendor/modernizr.js"></script>
+    <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/galerie.css" />
+        <script src="js/script.js"></script>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/modernizr.js"></script>
    </head>
    <body id="edit-profile">
       <svg id="svg-source" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -107,7 +111,7 @@ Developed by Robert Anthonie C. Soriano
                 <div class="col-xs-4 back"></div>
                 <a href="index.html" class="btn btn-black">Retour</a>
                 <div class="col-xs-4">
-                    <h1 class="page-title">éditer profil de minette</h1>
+                    <h1 class="page-title">Galerie</h1>
                 </div>
             </div>
             </div>
@@ -125,7 +129,7 @@ Developed by Robert Anthonie C. Soriano
             <!-- Right Nav Section -->
             <ul class="right">
                <li class="divider"></li>
-               <li><a href="panel.php">Accueil</a></li>
+               <li><a href="panel.php">Panel</a></li>
                <li class="divider"></li>
                <li class="divider"></li>
                <li><a href="upload-photo.php" data-reveal-id="uploadModal" data-reveal-ajax="true">Ajouter Photo</a></li>
@@ -182,7 +186,15 @@ Developed by Robert Anthonie C. Soriano
       <div id="uploadModal" class="reveal-modal tiny" data-reveal></div>
       <!--END MODALS-->
       <div id="footer">
-         <hr/>
+        <script src="js/foundation.min.js"></script>
+      <script src="js/sticky-footer.js"></script>
+      <script src="js/foundation/foundation.topbar.js"></script>
+      <script src="js/foundation/foundation.reveal.js"></script>
+      <script src="js/foundation/foundation.abide.js"></script>
+      <script>
+         $(document).foundation();
+      </script>
+         </div>
          <footer>
         <div class="footer-top">
             <div class="container">
@@ -214,13 +226,5 @@ Developed by Robert Anthonie C. Soriano
     </footer>
       </div>
       </div>
-      <script src="js/foundation.min.js"></script>
-      <script src="js/sticky-footer.js"></script>
-      <script src="js/foundation/foundation.topbar.js"></script>
-      <script src="js/foundation/foundation.reveal.js"></script>
-      <script src="js/foundation/foundation.abide.js"></script>
-      <script>
-         $(document).foundation();
-      </script>
    </body>
 </html>

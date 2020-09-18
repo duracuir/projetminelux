@@ -38,8 +38,8 @@ if (isset($_POST['btn_upload']))
 <body>
 	<form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" data-abide>
 	<div class="photo-field">
-	<input type="file" name="file_img" pattern="^.+?\.(jpg|JPG|png|PNG)$" required>
-	<small class="error">Charger uniquement les JPG ou PNG.</small>
+	<input type="file" name="file_img" pattern="^.+?\.(jpeg|JPG|png|PNG|JPEG)$" required>
+	<small class="error">Charger uniquement les JPG, PNG et JPEG.</small>
 	</div>
 	<div class="title-field">
 	<input type="text" name="img_title" placeholder="Titre de l'image" required>

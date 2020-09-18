@@ -739,10 +739,8 @@ img
     height: 50px;
     position: relative;
 }
-<<<<<<< HEAD
 #home .escort .img .overlay .name
-{
-=======
+
 #home .escort .img .overlay{
     position: absolute;
     top: 0;
@@ -769,9 +767,8 @@ img
     
     visibility: visible;
 */
-}
+
 #home .escort .img .overlay .name {
->>>>>>> 11bd2f9c005c0fd2c1e649404a24e06d13298aeb
     font-weight: 700;
     font-size: 22px;
 }
@@ -793,14 +790,9 @@ img
     font-weight: 400;
     font-size: 18px;
 }
-<<<<<<< HEAD
-#home .escort .img .overlay .city, #home .escort .img .overlay .name, #home .escort .img .overlay .age
- {
-=======
 .listing_desc {
     height: 30px;
    overflow: hidden;
->>>>>>> 11bd2f9c005c0fd2c1e649404a24e06d13298aeb
     color: #fff;
     z-index: 4;
     position: relative;
@@ -829,9 +821,9 @@ img
     text-align: center;
     padding-top: 145px;
     cursor: pointer;
-    opacity: 
-    /*-webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;*/
+    opacity: 0; 
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
     transition: all 200ms ease;
 }
 .profile_a
@@ -884,6 +876,8 @@ element.style {
 
 
 
+
+
 /*FOOTER*/
 
 .footer-top
@@ -895,30 +889,54 @@ element.style {
     vertical-align: middle;
 
 }
-.footer-top svg
-{
-    fill: #fff;
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
 
-}
 .line
 {
     position: relative;
     bottom: 15px;
 }
-footer
-{
+footer {
     background: #000;
     margin-top: 93px;
+    color: #7a7a7a;
+    padding-bottom: 10px;
+}
+.copy
+{
+    text-align: center;
+    font-size: 100;
     color: #fff;
-    padd.110px;
+
+}
+/*icon svg*/
+.footer-top svg {
+    fill: #fff;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+.footer-top h4 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
     text-transform: uppercase;
-    font-weight: bold;
+    vertical-align: text-bottom;
+    display: inline-block;
+    position: relative;
+    top: 3px;
 }
 
-///////////////////////GELERIE PHOTOS///////////////////////////////////////
+
+
+
+
+
+
+
+/*GELERIE PHOTOS*/
 
 
 .gallery-container a:hover {

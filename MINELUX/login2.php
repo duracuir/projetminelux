@@ -105,7 +105,7 @@ if(isset($_POST['forminscription'])) {
                        $statement = $pdo -> prepare( "INSERT INTO `membres` (username, password, phone, email)
                              VALUES ('$username', '$password', '$phone', '$email')");
                         $statement->execute(['username'=> $username, 'password' => $password, 'phone'=> $phone, 'email'=> $email]);
-                            echo "<p style='color: green; background-color: lightgreen;'>Votre compte a été créé, veuillez vous connecter</p>";
+                            echo "<p style='color: green;'>Votre compte a été créé, veuillez vous connecter</p>";
                     } else {
                       echo "<p style='color: red;'>Les adresses mails ne correspondent pas</p>";
                     }
@@ -130,7 +130,7 @@ if(isset($_POST['forminscription'])) {
 
 ?>
 
-                        <p class="attention">Veuillez remplir le formulaire suivant et cliquez "S'enregistrer"</p>
+                        <p class="attention">Veuillez remplir le formulaire suivant et cliquez sur : "S'inscrire"</p>
                             <div class="INSCRIPTION">
                             <input type="hidden" id="user_type" name="user_type" value="2" placeholder="type de compte">
                             <input type="text" id="username" name="username" placeholder="Nom utilisateur" /><br>
