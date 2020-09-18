@@ -88,6 +88,7 @@ if(!isset($_SESSION['username'])) {
                                 
                                 }
                      ?>
+                     
                         </a>
                         </span>   
                         <a class="btn btn-secondary" href="contact.html">Nous Contacter</a>
@@ -245,20 +246,21 @@ if(!isset($_SESSION['username'])) {
                      <h3 class="heading heading3 photo profile">Télécharger Photos</h3>
                      <small>Postez une photo sensuelle et discrete qui transcrit vos atouts sexsulles et plus ...
                       pas de photo pronographique. si non votre compte sérait <b>Bloqué<b>. </small>
-                                        <div class="row">
-                                            <div class="col-xs-4 grp">
-
-                                            </div>
-                                            <div class="col-xs-6 grp">
-                                                <div class="col-md-12 col-sm-12">
-                                              <div class="gallery-upload">
-
-                                                      <a href="images.php">Charger photo profil</a>    
-                                                      </form> 
-                                                  </div>
-                                              </div>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 grp">
+                               
+                            </div>
+                            <div class="col-xs-6 grp">
+                                <div class="col-md-12 col-sm-12">
+                <div class="gallery-upload">
+                   
+                    <a href="images.php">Charger photo profil</a>    
+                    </form> 
+                </div>
+        
+            </div>
+                            </div>
+                        </div>
                  </div>
              </div>
                     </div>
