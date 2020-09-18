@@ -1,4 +1,19 @@
-
+ <?php
+    require("connexionBD.php");
+initMigration($pdo);
+if (isset($_GET["username"])) {
+  $username = $_GET["username"];
+  try {
+    $statement = $pdo->prepare( 
+     "SELECT username, photos, (YEAR(CURDATE())-date_format(datenaiss, '%Y')) as datenaiss, ville FROM membres WHERE username = :username ORDER BY orderGallery DESC"
+      );
+    $statement->execute(["username" => $username]);
+    $results = $statement->fetchAll(PDO::FETCH_OBJ);
+  } catch (PDOException $e) {
+      echo "<h4 style='color: red;'>".$e->getMessage(). "</h4>";
+  }
+}
+?> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -174,14 +189,19 @@
                 </div>
                 
 <!-- INFORMATION DETAILLES SUR LA MINETTE-->
-</div>
+</div>    
+<form class="updating" action="profilesminette.php?username=<?php echo $results->username;?>" method="POST">                 
             <div class="col-xs-8">
                 <div class="box info">
                     <div class="row">
                         <div class="col-xs-8">
                             <h2 class="person">
-                                <span class="name">nom de la minette</span>
-                                <span class="city">(age)</span><br>
+                                <span class="name"><?php echo
+            $results->username;?></span>
+                                <span class="city">(<?php echo
+            $results->ville;?>)</span><br> 
+</form>
+
                                 <span class="age">ville</span>
                             </h2>
                         </div>

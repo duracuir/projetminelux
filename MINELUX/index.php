@@ -19,7 +19,7 @@
                 $dbname = "myminette";
 
                 $conn = mysqli_connect("$servername", $username, $password, $dbname);
-                $sql = "SELECT photos, username FROM membres ORDER BY orderGallery DESC";
+                $sql = "SELECT username, photos, (YEAR(CURDATE())-date_format(datenaiss, '%Y')) as datenaiss, ville FROM membres ORDER BY orderGallery DESC";
                 $stmt = mysqli_stmt_init($conn);
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
                     echo "SQL statement failed!";
@@ -27,9 +27,11 @@
                     mysqli_stmt_execute($stmt);
                     $result = mysqli_stmt_get_result($stmt);
                     while ($row = mysqli_fetch_assoc($result)) {
-                        echo '<a href="#">
+                        echo '<a href="profilesminette.php?username=<?php echo $row->username;?>">
                         <div style="background-image: url(images/gallery/'.$row["photos"].');"></div>
                         <h3>'.$row["username"].'</h3>
+                        <h4>'.$row["ville"].'</h4>
+                        <h3>'.$row["datenaiss"].'</h3>
                     </a>';
                     }
                 }
