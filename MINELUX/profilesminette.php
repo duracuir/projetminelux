@@ -1,4 +1,19 @@
-
+ <?php
+    require("connexionBD.php");
+initMigration($pdo);
+if (isset($_GET["username"])) {
+  $username = $_GET["username"];
+  try {
+    $statement = $pdo->prepare( 
+     "SELECT username, photos, (YEAR(CURDATE())-date_format(datenaiss, '%Y')) as datenaiss, ville, epilation,tattoo, langue, piercing, apropos FROM membres WHERE username = :username ORDER BY orderGallery DESC"
+      );
+    $statement->execute(["username" => $username]);
+    $results = $statement->fetchAll(PDO::FETCH_OBJ);
+  } catch (PDOException $e) {
+      echo "<h4 style='color: red;'>".$e->getMessage(). "</h4>";
+  }
+}
+?> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -174,16 +189,21 @@
                 </div>
                 
 <!-- INFORMATION DETAILLES SUR LA MINETTE-->
-</div>
+</div>    
+<form class="updating" action="profilesminette.php?username=<?php echo $username;?>" method="POST">                 
             <div class="col-xs-8">
                 <div class="box info">
                     <div class="row">
                         <div class="col-xs-8">
                             <h2 class="person">
-                                <span class="name">nom de la minette</span>
-                                <span class="city">(age)</span><br>
-                                <span class="age">ville</span>
+                            <?php foreach ($results as $user) { ?>
+                                <span class="name"><?php echo $username;?></span>
+                                <span class="city">(<?php echo $results[0]->datenaiss;?>)</span><br> 
+   
+
+                                <span class="age"><?php echo $results[0]->ville;?></span>
                             </h2>
+                                                     <?php } ?>
                         </div>
                         <div class="col-xs-4 clearfix gotm_div">
                                 <a href="javascript:void(0);" class="btn btn-primary cta">Votez pour moi !</a>
@@ -197,24 +217,23 @@
                                     <div class="col-xs-6 label-ct">Sexe</div>
                                     <div class="col-xs-6">:</div>                            
                                     <div class="col-xs-6 label-ct">Âge</div>
-                                    <div class="col-xs-6">:</div>
+                                    <div class="col-xs-6">:<?php echo $results[0]->datenaiss;?></div>
                                     <div class="col-xs-6 label-ct">Orientation sexuelles</div>
                                     <div class="col-xs-6">:</div>
                                     <div class="col-xs-6 label-ct">Services offerts pour</div><div class="col-xs-6"><span>:</span><br><span></span></div>                               
 								</div>
                             </div>
                         </div>
-
                      <div class="col-xs-6">
                          <div class="list">
                             <div class="col-xs-6 label-ct">Epilation du maillot</div>
-							<div class="col-xs-6">:</div>
+							<div class="col-xs-6">:<?php echo $results[0]->epilation;?></div>
                             <div class="col-xs-6 label-ct">Tattoo</div>
-                            <div class="col-xs-6">:</div> 
+                            <div class="col-xs-6">:<?php echo $results[0]->tattoo;?></div> 
                             <div class="col-xs-6 label-ct">Piercings</div>
-                            <div class="col-xs-6">:</div>
+                            <div class="col-xs-6">:<?php echo $results[0]->piercing;?></div>
                             <div class="col-xs-6 label-ct">Langues</div>
-                            <div class="col-xs-6">:</div>
+                            <div class="col-xs-6">:<?php echo $results[0]->langue;?></div>
                             
                             <div class="col-xs-6 label-ct">Disponible pour</div>
                             <div class="col-xs-6">
@@ -224,11 +243,10 @@
                         </div>
                         </div>
                      </div>
-                    </div>
-               
+                    </div>              
                 <div class="box about">
                     <h3 class="box-title half">A propos de moi</h3>
-                    <p></p>
+                    <p><?php echo $results[0]->apropos;?></p>
                     <p><br></p>
                     <p></p>
                     <p></p>
@@ -236,7 +254,7 @@
                     <p><br></p>
                     <p></p>                
                 </div>
-
+</form>
                 <div class="col-xs-6">
                             <div class="box prices">
                                 <h3 class="box-title">Mon Cadeau</h3>
